@@ -12,6 +12,5 @@ for i=1,100 do
 
 	y = y + 1
 	print(sum)
-	print("success")
 end
 
