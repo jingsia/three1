@@ -1,0 +1,9 @@
+1	zhuangbei_1_1.png;zhuangbei_1_2.png;zhuangbei_1_3.png;zhuangbei_1_4.png	两档甲;鱼鳞甲;板甲;藤甲	80	0	0	0	0	0	0	0	0
+2	zhuangbei_2_1.png;zhuangbei_2_2.png;zhuangbei_2_3.png;zhuangbei_2_4.png	铜盔;兜盔;罩面盔;虎头盔	0	0	40	0	0	0	0	0	0
+3	zhuangbei_3_1.png;zhuangbei_3_2.png;zhuangbei_3_3.png;zhuangbei_3_4.png	夹板靴;鳞片靴;厚甲靴;虎靴	0	0	0	0	40	0	0	0	0
+4	zhuangbei_4_1.png;zhuangbei_4_2.png;zhuangbei_4_3.png;zhuangbei_4_4.png	轻甲;皮甲;革甲;犀甲	60	0	0	0	0	0	0	0	0
+5	zhuangbei_5_1.png;zhuangbei_5_2.png;zhuangbei_5_3.png;zhuangbei_5_4.png	头巾;皮帽;衬革盔;狼皮盔	0	0	30	0	0	0	0	0	0
+6	zhuangbei_6_1.png;zhuangbei_6_2.png;zhuangbei_6_3.png;zhuangbei_6_4.png	长靴;皮靴;追风靴;鹤步靴	0	0	0	0	30	0	0	0	0
+7	zhuangbei_7_1.png;zhuangbei_7_2.png;zhuangbei_7_3.png;zhuangbei_7_4.png	短剑;长剑;重剑;寒光剑	0	60	0	80	0	0	0	0	0
+8	zhuangbei_8_1.png;zhuangbei_8_2.png;zhuangbei_8_3.png;zhuangbei_8_4.png	尖头枪;长枪;两面戈;大戟	0	60	0	0	0	0	0	0	0
+9	zhuangbei_9_1.png;zhuangbei_9_2.png;zhuangbei_9_3.png;zhuangbei_9_4.png	硬木弓;短弩;大弩;机关弩	0	80	0	0	0	0	0	0	0
