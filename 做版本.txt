@@ -1,0 +1,10 @@
+1.外网登录 192.168.78.253
+2.cd bin/
+3.. rsync_fb_release.sh FB.release-2015-09-01-3-yjx.tar.gz
+
+4.登录香港中山
+ssh kingnet@192.168.7.175
+5.cd /opt/run/run-s8888-8001/
+tar -xvzf /opt/run/release/FB.release-2015-09-01-3-yjx.tar.gz
+ps aux | grep Ser
+ kill 12210
