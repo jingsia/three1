@@ -1,0 +1,114 @@
+1.回调函数定义
+void (*ev_callback)(int short, void *arg);
+
+2. event结构体
+struct event
+{
+	TAILQ_ENTRY(event) ev_next;			//增加下一个事件
+	TAILQ_ENTRY(event) ev_active_next;	//增加下一个活动事件
+	TAILQ_ENTRY(event) ev_signal_next;	//增加下一个新号
+	unsigned int min_heap_idx;			//表示该event保存在min_heap数组中的索引
+
+	struct event_base *ev_base;			//一个全局变量，管理事件， 如事件总数， 事件列表
+
+	int ev_fd;			//文件描述符，比如一个socket
+	short ev_events;	//该事件的触发信号 如 EV_READ|EV_WRITE
+	short ev_ncalls;	//触发该事件后的调用次数
+	short *ev_pncalls;	//allows deletes in callback
+	
+	struct timeval ev_timeout; //保存事件的超时时间
+
+	int ev_pri;			//smaller numbers are highter priority
+
+	void (*ev_callback)(int, short, void *arg);		//事件回调函数
+	void *ev_arg;		//回调函数的参数
+
+	int ev_res;		//result passed to event callback
+
+	int ev_flags;
+};
+
+3. event_base 结构描述
+struct event_base
+{
+	const struct eventop *evsel;		//表示选择的事件引擎 可能：epoll poll select
+	void *evbase;						//全局对象
+	int event_count;					//counts number of total events
+	int event_count_active;				//counts number of active envents
+
+	int event_gotterm;					//set to terminate loop
+	int event_break;					//set to terminate loop immediately
+
+	/*active event management*/
+	struct event_list** activequeues;
+	int nactivequeues;
+
+	/*signal handing info*/
+	struct evsignal_info sig;
+
+	struct event_list eventqueue;
+	struct timeval event_tv;		//系统当前时间
+
+	struct min_heap timeheap;		//用来检测事件是否超时的堆栈
+
+	struct timeval tv_cache;		//与event::ev_timeout进行比较，确定事件是否超时
+};
+
+4.创建事件集
+struct event_base *event_base_new(void)
+
+5.创建事件
+struct event event_new(struct event_base ,evutil_socket_t ,short ,event_callback_fn,void*)
+参数一: 事件所在的事件集
+参数二: socket的描述符
+参数三: 事件类型，其中EV_READ表示等待读事件发生，EV_WRITE表示写事件发生，或者它俩的组合，EV_SIGNAL表示需要等待事件的号码，如 果不包含上述的标志，就是超时事件或者手动激活的事件。
+参数四: 事件发生时需要调用的回调函数
+参数五: 回调函数的参数值
+
+6.添加事件和删除事件
+int event_add(struct event* ev, const struct timeval* timeout);
+参数一:需要添加的事件
+参数二:事件的最大等待事件，如果是NULL，就是永久等待
+
+int event_del(struct event*)
+参数一:需要删除的事件
+
+7.分配监听事件
+int event_base_dispatch(struct event_base *);
+参数一:需要监视的事件集
+
+I/O buffer事件
+struct bufferevent* bufferevent_socket_new
+(struct event_base *base, evutil_sock_t fd, int options)
+参数一: 需要添加的事件集
+参数二: 相关的文件描述符
+参数三: 0或者是相应的BEV_OPT_*可选标志
+
+void bufferevent_setcb
+(struct bufferevent *bufev, 
+ bufferevent_data_cb readcb, 
+ bufferevent_data_cb writecb, 
+ bufferevent_event_cb eventcb, 
+ void *cbarg)
+把该函数后面的参数，赋值给第一个参数struct bufferevent *bufev定义的变量
+在readcb里面从input中读取数据，处理完毕后填充到output中
+
+int bufferevent_enable(struct bufferevent* bev, short event)
+参数一: 需要启用的bufferevent
+参数二: any combination of EV_READ |EV_WRITE
+调用event_add将读写事件加入到事件监听队列中
+
+int bufferevent_disable(struct bufferevent * bev, short event)
+参数说明: 同上
+
+size_t bufferevent_read(struct bufferevent bev, void data, size_t size)
+参数一: 读取的buffer_event事件
+参数二: 存储数据的指针
+参数三: 数据buffer的大小
+
+返回值: 读取数据的字节数
+
+int bufferevent_write(struct buffervent bev, const void data, size_t size)
+参数一: 读取的buffer_event事件
+参数二: 存储数据的指针
+参数三: 要写入的数据的大小，字节数

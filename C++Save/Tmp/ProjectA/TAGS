@@ -1,0 +1,2691 @@
+
+/home/jingsia/Tmp/ProjectA/./Core/Server/Cfg.cpp,497
+Cfg cfg;cfg11,319
+Cfg::Cfg(): tcpPort(8888), serverIp(0), serverLogId(0), dbDataPort(3306), dbObjectPort(3306),fbVersion(false), vtVersion(false), debug(false), openYear(2011), openMonth(9), openDay(23), enableWallow(false), limitLuckDraw(0),Cfg13,329
+Cfg::Cfg(): tcpPort(8888), serverIp(0), serverLogId(0), dbDataPort(3306), dbObjectPort(3306),fbVersion(false), vtVersion(false), debug(false), openYear(2011), openMonth(9), openDay(23), enableWallow(false), limitLuckDraw(0),Cfg::Cfg13,329
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/StringTokenizer.cpp,398
+StringTokenizer::StringTokenizer(const std::string& str, const std::string& separators, int options)StringTokenizer8,72
+StringTokenizer::StringTokenizer(const std::string& str, const std::string& separators, int options)StringTokenizer::StringTokenizer8,72
+StringTokenizer::~StringTokenizer()~StringTokenizer45,910
+StringTokenizer::~StringTokenizer()StringTokenizer::~StringTokenizer45,910
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/RefCountedObject.cpp,308
+RefCountedObject::RefCountedObject():_counter(1)RefCountedObject11,329
+RefCountedObject::RefCountedObject():_counter(1)RefCountedObject::RefCountedObject11,329
+RefCountedObject::~RefCountedObject()~RefCountedObject16,384
+RefCountedObject::~RefCountedObject()RefCountedObject::~RefCountedObject16,384
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex.cpp,316
+Mutex::Mutex()Mutex14,144
+Mutex::Mutex()Mutex::Mutex14,144
+Mutex::~Mutex()~Mutex19,165
+Mutex::~Mutex()Mutex::~Mutex19,165
+FastMutex::FastMutex()FastMutex24,187
+FastMutex::FastMutex()FastMutex::FastMutex24,187
+FastMutex::~FastMutex()~FastMutex29,216
+FastMutex::~FastMutex()FastMutex::~FastMutex29,216
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex_POSIX.cpp,789
+#define POCO_HAVE_MUTEX_TIMEOUTPOCO_HAVE_MUTEX_TIMEOUT10,246
+MutexImpl::MutexImpl()MutexImpl15,294
+MutexImpl::MutexImpl()MutexImpl::MutexImpl15,294
+MutexImpl::MutexImpl(bool fast)MutexImpl33,750
+MutexImpl::MutexImpl(bool fast)MutexImpl::MutexImpl33,750
+MutexImpl::~MutexImpl()~MutexImpl51,1278
+MutexImpl::~MutexImpl()MutexImpl::~MutexImpl51,1278
+bool MutexImpl::tryLockImpl(long milliseconds)tryLockImpl57,1341
+bool MutexImpl::tryLockImpl(long milliseconds)MutexImpl::tryLockImpl57,1341
+FastMutexImpl::FastMutexImpl(): MutexImpl(true)FastMutexImpl107,2470
+FastMutexImpl::FastMutexImpl(): MutexImpl(true)FastMutexImpl::FastMutexImpl107,2470
+FastMutexImpl::~FastMutexImpl()~FastMutexImpl112,2524
+FastMutexImpl::~FastMutexImpl()FastMutexImpl::~FastMutexImpl112,2524
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex_WIN32.cpp,325
+MutexImpl::MutexImpl()MutexImpl5,50
+MutexImpl::MutexImpl()MutexImpl::MutexImpl5,50
+MutexImpl::~MutexImpl()~MutexImpl13,300
+MutexImpl::~MutexImpl()MutexImpl::~MutexImpl13,300
+bool MutexImpl::tryLockImpl(long milliseconds)tryLockImpl19,360
+bool MutexImpl::tryLockImpl(long milliseconds)MutexImpl::tryLockImpl19,360
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/MemBlockPool.cpp,452
+MemBlockPool::MemBlockPool(size_t size)MemBlockPool9,300
+MemBlockPool::MemBlockPool(size_t size)MemBlockPool::MemBlockPool9,300
+MemBlockPool::~MemBlockPool()~MemBlockPool14,381
+MemBlockPool::~MemBlockPool()MemBlockPool::~MemBlockPool14,381
+void* MemBlockPool::Alloc()Alloc24,533
+void* MemBlockPool::Alloc()MemBlockPool::Alloc24,533
+void MemBlockPool::Free(void* ptr)Free47,874
+void MemBlockPool::Free(void* ptr)MemBlockPool::Free47,874
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Timespan.cpp,3816
+const Timespan::TimeDiff Timespan::MILLISECONDS = 1000;MILLISECONDS7,66
+const Timespan::TimeDiff Timespan::MILLISECONDS = 1000;Timespan::MILLISECONDS7,66
+const Timespan::TimeDiff Timespan::SECONDS      = 1000*Timespan::MILLISECONDS;SECONDS8,122
+const Timespan::TimeDiff Timespan::SECONDS      = 1000*Timespan::MILLISECONDS;Timespan::SECONDS8,122
+const Timespan::TimeDiff Timespan::MINUTES      =   60*Timespan::SECONDS;MINUTES9,201
+const Timespan::TimeDiff Timespan::MINUTES      =   60*Timespan::SECONDS;Timespan::MINUTES9,201
+const Timespan::TimeDiff Timespan::HOURS        =   60*Timespan::MINUTES;HOURS10,275
+const Timespan::TimeDiff Timespan::HOURS        =   60*Timespan::MINUTES;Timespan::HOURS10,275
+const Timespan::TimeDiff Timespan::DAYS         =   24*Timespan::HOURS;DAYS11,349
+const Timespan::TimeDiff Timespan::DAYS         =   24*Timespan::HOURS;Timespan::DAYS11,349
+Timespan::Timespan():Timespan14,423
+Timespan::Timespan():Timespan::Timespan14,423
+Timespan::Timespan(TimeDiff microseconds):Timespan20,461
+Timespan::Timespan(TimeDiff microseconds):Timespan::Timespan20,461
+Timespan::Timespan(long seconds, long microseconds):Timespan26,531
+Timespan::Timespan(long seconds, long microseconds):Timespan::Timespan26,531
+Timespan::Timespan(int days, int hours, int minutes, int seconds, int microseconds):Timespan32,639
+Timespan::Timespan(int days, int hours, int minutes, int seconds, int microseconds):Timespan::Timespan32,639
+Timespan::Timespan(const Timespan& timespan):Timespan38,863
+Timespan::Timespan(const Timespan& timespan):Timespan::Timespan38,863
+Timespan::~Timespan()~Timespan44,938
+Timespan::~Timespan()Timespan::~Timespan44,938
+Timespan& Timespan::operator = (const Timespan& timespan)operator =49,966
+Timespan& Timespan::operator = (const Timespan& timespan)Timespan::operator =49,966
+Timespan& Timespan::operator = (TimeDiff microseconds)operator =56,1070
+Timespan& Timespan::operator = (TimeDiff microseconds)Timespan::operator =56,1070
+Timespan& Timespan::assign(int days, int hours, int minutes, int seconds, int microseconds)assign63,1169
+Timespan& Timespan::assign(int days, int hours, int minutes, int seconds, int microseconds)Timespan::assign63,1169
+Timespan& Timespan::assign(long seconds, long microseconds)assign70,1417
+Timespan& Timespan::assign(long seconds, long microseconds)Timespan::assign70,1417
+void Timespan::swap(Timespan& timespan)swap77,1559
+void Timespan::swap(Timespan& timespan)Timespan::swap77,1559
+Timespan Timespan::operator + (const Timespan& d) constoperator +83,1640
+Timespan Timespan::operator + (const Timespan& d) constTimespan::operator +83,1640
+Timespan Timespan::operator - (const Timespan& d) constoperator -89,1737
+Timespan Timespan::operator - (const Timespan& d) constTimespan::operator -89,1737
+Timespan& Timespan::operator += (const Timespan& d)operator +=95,1834
+Timespan& Timespan::operator += (const Timespan& d)Timespan::operator +=95,1834
+Timespan& Timespan::operator -= (const Timespan& d)operator -=102,1926
+Timespan& Timespan::operator -= (const Timespan& d)Timespan::operator -=102,1926
+Timespan Timespan::operator + (TimeDiff microseconds) constoperator +109,2018
+Timespan Timespan::operator + (TimeDiff microseconds) constTimespan::operator +109,2018
+Timespan Timespan::operator - (TimeDiff microseconds) constoperator -115,2124
+Timespan Timespan::operator - (TimeDiff microseconds) constTimespan::operator -115,2124
+Timespan& Timespan::operator += (TimeDiff microseconds)operator +=121,2230
+Timespan& Timespan::operator += (TimeDiff microseconds)Timespan::operator +=121,2230
+Timespan& Timespan::operator -= (TimeDiff microseconds)operator -=128,2331
+Timespan& Timespan::operator -= (TimeDiff microseconds)Timespan::operator -=128,2331
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Timestamp.cpp,1668
+Timestamp::Timestamp()Timestamp14,209
+Timestamp::Timestamp()Timestamp::Timestamp14,209
+Timestamp::Timestamp(TimeVal tv)Timestamp20,249
+Timestamp::Timestamp(TimeVal tv)Timestamp::Timestamp20,249
+Timestamp::Timestamp(const Timestamp& other)Timestamp26,299
+Timestamp::Timestamp(const Timestamp& other)Timestamp::Timestamp26,299
+Timestamp::~Timestamp()~Timestamp32,368
+Timestamp::~Timestamp()Timestamp::~Timestamp32,368
+Timestamp& Timestamp::operator = (const Timestamp& other)operator =37,398
+Timestamp& Timestamp::operator = (const Timestamp& other)Timestamp::operator =37,398
+Timestamp& Timestamp::operator = (TimeVal tv)operator =44,495
+Timestamp& Timestamp::operator = (TimeVal tv)Timestamp::operator =44,495
+void Timestamp::swap(Timestamp& timestamp)swap51,573
+void Timestamp::swap(Timestamp& timestamp)Timestamp::swap51,573
+Timestamp Timestamp::fromEpochTime(std::time_t t)fromEpochTime57,654
+Timestamp Timestamp::fromEpochTime(std::time_t t)Timestamp::fromEpochTime57,654
+Timestamp Timestamp::fromUtcTime(UtcTimeVal val)fromUtcTime63,754
+Timestamp Timestamp::fromUtcTime(UtcTimeVal val)Timestamp::fromUtcTime63,754
+void Timestamp::update()update71,896
+void Timestamp::update()Timestamp::update71,896
+Timestamp Timestamp::fromFileTimeNP(UInt32 fileTimeLow, UInt32 fileTimeHigh)fromFileTimeNP102,1493
+Timestamp Timestamp::fromFileTimeNP(UInt32 fileTimeLow, UInt32 fileTimeHigh)Timestamp::fromFileTimeNP102,1493
+void Timestamp::toFileTimeNP(UInt32& fileTimeLow, UInt32& fileTimeHigh) consttoFileTimeNP117,1874
+void Timestamp::toFileTimeNP(UInt32& fileTimeLow, UInt32& fileTimeHigh) constTimestamp::toFileTimeNP117,1874
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/TimeUtil.cpp,100
+UInt32 TimeUtil::_timeAdd = 0;_timeAdd3,23
+UInt32 TimeUtil::_timeAdd = 0;TimeUtil::_timeAdd3,23
+
+/home/jingsia/Tmp/ProjectA/./Core/Script/lua_tinker.cpp,8835
+void lua_tinker::init(lua_State *L)init18,509
+void lua_tinker::init(lua_State *L)lua_tinker::init18,509
+static int tostring_s64(lua_State *L)tostring_s6427,818
+static int eq_s64(lua_State *L)eq_s6436,1059
+static int lt_s64(lua_State *L)lt_s6443,1282
+static int le_s64(lua_State *L)le_s6450,1504
+void lua_tinker::init_s64(lua_State *L)init_s6457,1727
+void lua_tinker::init_s64(lua_State *L)lua_tinker::init_s6457,1727
+static int tostring_u64(lua_State *L)tostring_u6489,2539
+static int eq_u64(lua_State *L)eq_u6498,2781
+static int lt_u64(lua_State *L)lt_u64105,3013
+static int le_u64(lua_State *L)le_u64112,3244
+void lua_tinker::init_u64(lua_State *L)init_u64119,3476
+void lua_tinker::init_u64(lua_State *L)lua_tinker::init_u64119,3476
+bool lua_tinker::dofile(lua_State *L, const char *filename)dofile151,4288
+bool lua_tinker::dofile(lua_State *L, const char *filename)lua_tinker::dofile151,4288
+bool lua_tinker::dostring(lua_State *L, const char* buff)dostring178,4783
+bool lua_tinker::dostring(lua_State *L, const char* buff)lua_tinker::dostring178,4783
+bool lua_tinker::dobuffer(lua_State *L, const char* buff, size_t len)dobuffer184,4979
+bool lua_tinker::dobuffer(lua_State *L, const char* buff, size_t len)lua_tinker::dobuffer184,4979
+static void call_stack(lua_State* L, int n)call_stack213,5673
+int lua_tinker::on_error(lua_State *L)on_error241,6331
+int lua_tinker::on_error(lua_State *L)lua_tinker::on_error241,6331
+void lua_tinker::print_error(lua_State *L, const char* fmt, ...)print_error251,6531
+void lua_tinker::print_error(lua_State *L, const char* fmt, ...)lua_tinker::print_error251,6531
+void lua_tinker::enum_stack(lua_State *L)enum_stack276,7008
+void lua_tinker::enum_stack(lua_State *L)lua_tinker::enum_stack276,7008
+char* lua_tinker::read(lua_State *L, int index)read319,8458
+char* lua_tinker::read(lua_State *L, int index)lua_tinker::read319,8458
+const char* lua_tinker::read(lua_State *L, int index)read325,8561
+const char* lua_tinker::read(lua_State *L, int index)lua_tinker::read325,8561
+char lua_tinker::read(lua_State *L, int index)read331,8676
+char lua_tinker::read(lua_State *L, int index)lua_tinker::read331,8676
+unsigned char lua_tinker::read(lua_State *L, int index)read337,8777
+unsigned char lua_tinker::read(lua_State *L, int index)lua_tinker::read337,8777
+short lua_tinker::read(lua_State *L, int index)read343,8896
+short lua_tinker::read(lua_State *L, int index)lua_tinker::read343,8896
+unsigned short lua_tinker::read(lua_State *L, int index)read349,8999
+unsigned short lua_tinker::read(lua_State *L, int index)lua_tinker::read349,8999
+long lua_tinker::read(lua_State *L, int index)read355,9120
+long lua_tinker::read(lua_State *L, int index)lua_tinker::read355,9120
+unsigned long lua_tinker::read(lua_State *L, int index)read361,9221
+unsigned long lua_tinker::read(lua_State *L, int index)lua_tinker::read361,9221
+int lua_tinker::read(lua_State *L, int index)read367,9340
+int lua_tinker::read(lua_State *L, int index)lua_tinker::read367,9340
+unsigned int lua_tinker::read(lua_State *L, int index)read373,9439
+unsigned int lua_tinker::read(lua_State *L, int index)lua_tinker::read373,9439
+float lua_tinker::read(lua_State *L, int index)read379,9556
+float lua_tinker::read(lua_State *L, int index)lua_tinker::read379,9556
+double lua_tinker::read(lua_State *L, int index)read385,9659
+double lua_tinker::read(lua_State *L, int index)lua_tinker::read385,9659
+bool lua_tinker::read(lua_State *L, int index)read391,9764
+bool lua_tinker::read(lua_State *L, int index)lua_tinker::read391,9764
+void lua_tinker::read(lua_State *L, int index)read400,9939
+void lua_tinker::read(lua_State *L, int index)lua_tinker::read400,9939
+long long lua_tinker::read(lua_State *L, int index)read406,10011
+long long lua_tinker::read(lua_State *L, int index)lua_tinker::read406,10011
+unsigned long long lua_tinker::read(lua_State *L, int index)read414,10203
+unsigned long long lua_tinker::read(lua_State *L, int index)lua_tinker::read414,10203
+lua_tinker::table lua_tinker::read(lua_State *L, int index)read423,10423
+lua_tinker::table lua_tinker::read(lua_State *L, int index)lua_tinker::read423,10423
+void lua_tinker::push(lua_State *L, char ret)push432,10764
+void lua_tinker::push(lua_State *L, char ret)lua_tinker::push432,10764
+void lua_tinker::push(lua_State *L, unsigned char ret)push438,10851
+void lua_tinker::push(lua_State *L, unsigned char ret)lua_tinker::push438,10851
+void lua_tinker::push(lua_State *L, short ret)push444,10947
+void lua_tinker::push(lua_State *L, short ret)lua_tinker::push444,10947
+void lua_tinker::push(lua_State *L, unsigned short ret)push450,11035
+void lua_tinker::push(lua_State *L, unsigned short ret)lua_tinker::push450,11035
+void lua_tinker::push(lua_State *L, long ret)push456,11132
+void lua_tinker::push(lua_State *L, long ret)lua_tinker::push456,11132
+void lua_tinker::push(lua_State *L, unsigned long ret)push462,11219
+void lua_tinker::push(lua_State *L, unsigned long ret)lua_tinker::push462,11219
+void lua_tinker::push(lua_State *L, int ret)push468,11315
+void lua_tinker::push(lua_State *L, int ret)lua_tinker::push468,11315
+void lua_tinker::push(lua_State *L, unsigned int ret)push474,11401
+void lua_tinker::push(lua_State *L, unsigned int ret)lua_tinker::push474,11401
+void lua_tinker::push(lua_State *L, float ret)push480,11496
+void lua_tinker::push(lua_State *L, float ret)lua_tinker::push480,11496
+void lua_tinker::push(lua_State *L, double ret)push486,11584
+void lua_tinker::push(lua_State *L, double ret)lua_tinker::push486,11584
+void lua_tinker::push(lua_State *L, char* ret)push492,11673
+void lua_tinker::push(lua_State *L, char* ret)lua_tinker::push492,11673
+void lua_tinker::push(lua_State *L, const char* ret)push498,11761
+void lua_tinker::push(lua_State *L, const char* ret)lua_tinker::push498,11761
+void lua_tinker::push(lua_State *L, bool ret)push504,11855
+void lua_tinker::push(lua_State *L, bool ret)lua_tinker::push504,11855
+void lua_tinker::push(lua_State *L, lua_value* ret)push510,11943
+void lua_tinker::push(lua_State *L, lua_value* ret)lua_tinker::push510,11943
+void lua_tinker::push(lua_State *L, long long ret)push516,12057
+void lua_tinker::push(lua_State *L, long long ret)lua_tinker::push516,12057
+void lua_tinker::push(lua_State *L, unsigned long long ret)push524,12273
+void lua_tinker::push(lua_State *L, unsigned long long ret)lua_tinker::push524,12273
+void lua_tinker::push(lua_State *L, lua_tinker::table ret)push533,12517
+void lua_tinker::push(lua_State *L, lua_tinker::table ret)lua_tinker::push533,12517
+void lua_tinker::pop(lua_State *L)pop542,12871
+void lua_tinker::pop(lua_State *L)lua_tinker::pop542,12871
+lua_tinker::table lua_tinker::pop(lua_State *L)pop548,12938
+lua_tinker::table lua_tinker::pop(lua_State *L)lua_tinker::pop548,12938
+static void invoke_parent(lua_State *L)invoke_parent556,13264
+int lua_tinker::meta_get(lua_State *L)meta_get578,13644
+int lua_tinker::meta_get(lua_State *L)lua_tinker::meta_get578,13644
+int lua_tinker::meta_set(lua_State *L)meta_set606,14199
+int lua_tinker::meta_set(lua_State *L)lua_tinker::meta_set606,14199
+void lua_tinker::push_meta(lua_State *L, const char* name)push_meta627,14594
+void lua_tinker::push_meta(lua_State *L, const char* name)lua_tinker::push_meta627,14594
+lua_tinker::table_obj::table_obj(lua_State* L, int index)table_obj636,14960
+lua_tinker::table_obj::table_obj(lua_State* L, int index)lua_tinker::table_obj::table_obj636,14960
+lua_tinker::table_obj::~table_obj()~table_obj644,15102
+lua_tinker::table_obj::~table_obj()lua_tinker::table_obj::~table_obj644,15102
+void lua_tinker::table_obj::inc_ref()inc_ref652,15193
+void lua_tinker::table_obj::inc_ref()lua_tinker::table_obj::inc_ref652,15193
+void lua_tinker::table_obj::dec_ref()dec_ref657,15246
+void lua_tinker::table_obj::dec_ref()lua_tinker::table_obj::dec_ref657,15246
+bool lua_tinker::table_obj::validate()validate663,15322
+bool lua_tinker::table_obj::validate()lua_tinker::table_obj::validate663,15322
+lua_tinker::table::table(lua_State* L)table697,15955
+lua_tinker::table::table(lua_State* L)lua_tinker::table::table697,15955
+lua_tinker::table::table(lua_State* L, const char* name)table706,16080
+lua_tinker::table::table(lua_State* L, const char* name)lua_tinker::table::table706,16080
+lua_tinker::table::table(lua_State* L, int index)table724,16408
+lua_tinker::table::table(lua_State* L, int index)lua_tinker::table::table724,16408
+lua_tinker::table::table(const table& input)table736,16576
+lua_tinker::table::table(const table& input)lua_tinker::table::table736,16576
+lua_tinker::table::~table()~table743,16668
+lua_tinker::table::~table()lua_tinker::table::~table743,16668
+
+/home/jingsia/Tmp/ProjectA/./Core/Script/Script.cpp,865
+namespace ScriptScript12,333
+Script::Script()Script15,353
+Script::Script()Script::Script::Script15,353
+Script::~Script()~Script22,432
+Script::~Script()Script::Script::~Script22,432
+void Script::doFile(const char * fn)doFile27,471
+void Script::doFile(const char * fn)Script::Script::doFile27,471
+Table Script::getTable()getTable35,583
+Table Script::getTable()Script::Script::getTable35,583
+Table Script::getTable(int index)getTable40,632
+Table Script::getTable(int index)Script::Script::getTable40,632
+Table Script::getTable( const char * name)getTable45,697
+Table Script::getTable( const char * name)Script::Script::getTable45,697
+void Script::reload()reload50,770
+void Script::reload()Script::Script::reload50,770
+void Script::addPackagePath()addPackagePath62,937
+void Script::addPackagePath()Script::Script::addPackagePath62,937
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/HoneyFall.cpp,1309
+namespace GObjectGObject11,316
+HoneyFall::HoneyFall(Player * pl):m_Owner(pl)HoneyFall14,337
+HoneyFall::HoneyFall(Player * pl):m_Owner(pl)GObject::HoneyFall::HoneyFall14,337
+HonyeFall:~HoneyFall()~HoneyFall19,434
+HonyeFall:~HoneyFall()GObject::~HoneyFall19,434
+UInt32 HoneyFall::getHftValue(HoneyFallType hft)getHftValue24,463
+UInt32 HoneyFall::getHftValue(HoneyFallType hft)GObject::HoneyFall::getHftValue24,463
+void HoneyFall:;setHftValue(HoneyFallType hft, UInt32 value)setHftValue32,576
+void HoneyFall:;setHftValue(HoneyFallType hft, UInt32 value)GObject::setHftValue32,576
+UInt32 HoneyFall::inHftValue(HoneyFallType hft, UInt32 inc)inHftValue40,700
+UInt32 HoneyFall::inHftValue(HoneyFallType hft, UInt32 inc)GObject::HoneyFall::inHftValue40,700
+void HoneyFall::updateHftValueToDB(HoneyFallType hft)updateHftValueToDB50,851
+void HoneyFall::updateHftValueToDB(HoneyFallType hft)GObject::HoneyFall::updateHftValueToDB50,851
+UInt32 HonyeFall::getChanceFromHft(UInt8 q, UInt8 lv, HoneyFallType hft)getChanceFromHft55,1070
+UInt32 HonyeFall::getChanceFromHft(UInt8 q, UInt8 lv, HoneyFallType hft)GObject::HonyeFall::getChanceFromHft55,1070
+bool HoneyFall::checkHft(HoneyFallType hft)checkHft62,1231
+bool HoneyFall::checkHft(HoneyFallType hft)GObject::HoneyFall::checkHft62,1231
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Player.cpp,260
+Player::Player()Player9,269
+Player::Player()Player::Player9,269
+Player::~Player()~Player15,321
+Player::~Player()Player::~Player15,321
+HoneyFall * Player::getHoneyFall()getHoneyFall21,372
+HoneyFall * Player::getHoneyFall()Player::getHoneyFall21,372
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Package.cpp,0
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/PetPackage.cpp,3094
+namespace GObjectGObject26,716
+	static int getRandomPetEqGemColorIdx(UInt32 score, UInt8 type)getRandomPetEqGemColorIdx28,736
+	static int getRandomPetEqGemColorIdx(UInt32 score, UInt8 type)GObject::getRandomPetEqGemColorIdx28,736
+	PetPackage::PetPackage(Player* player) : Package(player),PetPackage65,1316
+	PetPackage::PetPackage(Player* player) : Package(player),GObject::PetPackage::PetPackage65,1316
+	PetPackage::~PetPackage()~PetPackage70,1414
+	PetPackage::~PetPackage()GObject::PetPackage::~PetPackage70,1414
+	void PetPackage::UnInit()UnInit74,1448
+	void PetPackage::UnInit()GObject::PetPackage::UnInit74,1448
+	ItemBase* PetPackage::AddItemFromDB(UInt32 id, UInt32 num, bool bind)AddItemFromDB90,1761
+	ItemBase* PetPackage::AddItemFromDB(UInt32 id, UInt32 num, bool bind)GObject::PetPackage::AddItemFromDB90,1761
+	ItemBase * PetPackage::AddExistEquip(ItemPetEq * equip, bool fromDB)AddExistEquip106,2328
+	ItemBase * PetPackage::AddExistEquip(ItemPetEq * equip, bool fromDB)GObject::PetPackage::AddExistEquip106,2328
+	ItemPetEq * PetPackage::FindPetEquip(FairyPet *& pet, UInt16 petId, UInt8 *& pos, UInt64 id)FindPetEquip119,2611
+	ItemPetEq * PetPackage::FindPetEquip(FairyPet *& pet, UInt16 petId, UInt8 *& pos, UInt64 id)GObject::PetPackage::FindPetEquip119,2611
+	ItemBase* PetPackage::AddPetEquipN(UInt32 typeId, UInt32 num, bool bind, bool silence, UInt16 FromWhere)AddPetEquipN130,2916
+	ItemBase* PetPackage::AddPetEquipN(UInt32 typeId, UInt32 num, bool bind, bool silence, UInt16 FromWhere)GObject::PetPackage::AddPetEquipN130,2916
+	ItemBase * PetPackage::AddPetEquip(ItemPetEq * equip, bool notify, UInt16 FromWhere)AddPetEquip142,3222
+	ItemBase * PetPackage::AddPetEquip(ItemPetEq * equip, bool notify, UInt16 FromWhere)GObject::PetPackage::AddPetEquip142,3222
+	bool PetPackage::TryAddPetItem(ItemBase* item, UInt16 num)TryAddPetItem174,5291
+	bool PetPackage::TryAddPetItem(ItemBase* item, UInt16 num)GObject::PetPackage::TryAddPetItem174,5291
+	bool PetPackage::DelPetItem(UInt64 id, UInt16 num, bool bind, UInt16 toWhere)DelPetItem187,5612
+	bool PetPackage::DelPetItem(UInt64 id, UInt16 num, bool bind, UInt16 toWhere)GObject::PetPackage::DelPetItem187,5612
+	bool PetPackage::DelPetEquip(UInt64 id, UInt16 toWhere)DelPetEquip224,6891
+	bool PetPackage::DelPetEquip(UInt64 id, UInt16 toWhere)GObject::PetPackage::DelPetEquip224,6891
+	ItemBase* PetPackage::AddPetItem(UInt32 typeId, UInt32 num, bool bind, bool notify, UInt16 FromWhere)AddPetItem247,7805
+	ItemBase* PetPackage::AddPetItem(UInt32 typeId, UInt32 num, bool bind, bool notify, UInt16 FromWhere)GObject::PetPackage::AddPetItem247,7805
+	UInt8 PetPackage::MergePetGem(UInt16 gemId1, UInt16 gemId2, UInt16& ogid)MergePetGem299,9755
+	UInt8 PetPackage::MergePetGem(UInt16 gemId1, UInt16 gemId2, UInt16& ogid)GObject::PetPackage::MergePetGem299,9755
+	UInt8 PetPackage::AttachPetGem(UInt32 petId, UInt64 equipId, UInt16 gemId)AttachPetGem349,10989
+	UInt8 PetPackage::AttachPetGem(UInt32 petId, UInt64 equipId, UInt16 gemId)GObject::PetPackage::AttachPetGem349,10989
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Item.cpp,179
+namespace GObjectGObject12,337
+void ItemEquip::DoEquipBind(bool checkType)DoEquipBind15,358
+void ItemEquip::DoEquipBind(bool checkType)GObject::ItemEquip::DoEquipBind15,358
+
+/home/jingsia/Tmp/ProjectA/./Core/Server/Cfg.h,5535
+#define _CFG_H__CFG_H_9,279
+enum RPServerTypeRPServerType11,296
+	e_rp_none = 0,e_rp_none13,316
+	e_rp_xinyun = 1,'e_rp_xinyun14,332
+	e_rp_lianmen = 2,e_rp_lianmen15,351
+class CfgCfg18,374
+	Cfg();Cfg21,394
+	Cfg();Cfg::Cfg21,394
+	void load(const char * = NULL);load22,402
+	void load(const char * = NULL);Cfg::load22,402
+	inline void setFilename(const char * fn) { filename = fn;}setFilename23,435
+	inline void setFilename(const char * fn) { filename = fn;}Cfg::setFilename23,435
+	UInt16		tcpPort;tcpPort25,496
+	UInt16		tcpPort;Cfg::tcpPort25,496
+	UInt32		serverIp;serverIp26,514
+	UInt32		serverIp;Cfg::serverIp26,514
+	std::string ifName;ifName27,533
+	std::string ifName;Cfg::ifName27,533
+	std::string scriptPath;scriptPath28,554
+	std::string scriptPath;Cfg::scriptPath28,554
+	std::string reportPath0;reportPath029,579
+	std::string reportPath0;Cfg::reportPath029,579
+	std::string reportPath1;reportPath130,605
+	std::string reportPath1;Cfg::reportPath130,605
+	UInt32		serverLogId;serverLogId31,631
+	UInt32		serverLogId;Cfg::serverLogId31,631
+	std::string announceFile;announceFile32,653
+	std::string announceFile;Cfg::announceFile32,653
+	std::string dbDataHost;dbDataHost34,681
+	std::string dbDataHost;Cfg::dbDataHost34,681
+	UInt16		dbDataPort;dbDataPort35,706
+	UInt16		dbDataPort;Cfg::dbDataPort35,706
+	std::string dbDataUser;dbDataUser36,727
+	std::string dbDataUser;Cfg::dbDataUser36,727
+	std::string dbDataPassword;dbDataPassword37,752
+	std::string dbDataPassword;Cfg::dbDataPassword37,752
+	std::string dbDataSource;dbDataSource38,781
+	std::string dbDataSource;Cfg::dbDataSource38,781
+	std::string dbObjectHost;dbObjectHost40,809
+	std::string dbObjectHost;Cfg::dbObjectHost40,809
+	UInt16		dbObjectPort;dbObjectPort41,836
+	UInt16		dbObjectPort;Cfg::dbObjectPort41,836
+	std::string dbObjectUser;dbObjectUser42,859
+	std::string dbObjectUser;Cfg::dbObjectUser42,859
+	std::string dbObjectPassword;dbObjectPassword43,886
+	std::string dbObjectPassword;Cfg::dbObjectPassword43,886
+	std::string dbObjectSource;dbObjectSource44,917
+	std::string dbObjectSource;Cfg::dbObjectSource44,917
+	std::string dbLockHost;dbLockHost46,947
+	std::string dbLockHost;Cfg::dbLockHost46,947
+	UInt16		dbLockPort;dbLockPort47,972
+	UInt16		dbLockPort;Cfg::dbLockPort47,972
+	std::string dbLockUser;dbLockUser48,993
+	std::string dbLockUser;Cfg::dbLockUser48,993
+	std::string dbLockPassword;dbLockPassword49,1018
+	std::string dbLockPassword;Cfg::dbLockPassword49,1018
+	std::string dbLockSource;dbLockSource50,1047
+	std::string dbLockSource;Cfg::dbLockSource50,1047
+	std::string dbLogHost;dbLogHost52,1075
+	std::string dbLogHost;Cfg::dbLogHost52,1075
+	UInt16		dbLogPort;dbLogPort53,1099
+	UInt16		dbLogPort;Cfg::dbLogPort53,1099
+	std::string dbLogUser;dbLogUser54,1119
+	std::string dbLogUser;Cfg::dbLogUser54,1119
+	std::string dbLogPassword;dbLogPassword55,1143
+	std::string dbLogPassword;Cfg::dbLogPassword55,1143
+	std::string dbLogSource;dbLogSource56,1171
+	std::string dbLogSource;Cfg::dbLogSource56,1171
+	std::string cryptKey1, cryptKey2;cryptKey158,1198
+	std::string cryptKey1, cryptKey2;Cfg::cryptKey158,1198
+	std::string cryptKey1, cryptKey2;cryptKey258,1198
+	std::string cryptKey1, cryptKey2;Cfg::cryptKey258,1198
+	inline void setTcpPort(UInt16 p) {tcpPort = p};setTcpPort61,1242
+	inline void setTcpPort(UInt16 p) {tcpPort = p};Cfg::setTcpPort61,1242
+	void setIfName(const char * iname);setIfName62,1291
+	void setIfName(const char * iname);Cfg::setIfName62,1291
+	inline void setScrptPath(const char * p){scriptPath = p;}setScrptPath63,1328
+	inline void setScrptPath(const char * p){scriptPath = p;}Cfg::setScrptPath63,1328
+	inline void setReportPath0(const char * p){reportPath0 = p;}setReportPath064,1387
+	inline void setReportPath0(const char * p){reportPath0 = p;}Cfg::setReportPath064,1387
+	inline void setReportPath1(const char * p){reportPath1 = p;}setReportPath165,1449
+	inline void setReportPath1(const char * p){reportPath1 = p;}Cfg::setReportPath165,1449
+	inline void setServerLogId(const UInt32 id){serverLogId = id;}setServerLogId66,1511
+	inline void setServerLogId(const UInt32 id){serverLogId = id;}Cfg::setServerLogId66,1511
+	inline void setAnnounceFile(const char * p){announceFile = p;}setAnnounceFile67,1575
+	inline void setAnnounceFile(const char * p){announceFile = p;}Cfg::setAnnounceFile67,1575
+	inline void setDataDataBase(const char *h, UInt16 p, const char * u, const char * pw, const char * s)setDataDataBase68,1639
+	inline void setDataDataBase(const char *h, UInt16 p, const char * u, const char * pw, const char * s)Cfg::setDataDataBase68,1639
+	inline void setObjectDatabase(const char * h, UInt16 p, const cha    r * u, const char * pw, const char * s )setObjectDatabase70,1832
+	inline void setObjectDatabase(const char * h, UInt16 p, const cha    r * u, const char * pw, const char * s )Cfg::setObjectDatabase70,1832
+	inline void setLogDatabase(const char * h, UInt16 p, const char *     u, const char * pw, const char * s )setLogDatabase72,2047
+	inline void setLogDatabase(const char * h, UInt16 p, const char *     u, const char * pw, const char * s )Cfg::setLogDatabase72,2047
+	inline void setLockDatabase(const char * h, UInt16 p, const char     * u, const char * pw, const char * s )setLockDatabase74,2244
+	inline void setLockDatabase(const char * h, UInt16 p, const char     * u, const char * pw, const char * s )Cfg::setLockDatabase74,2244
+
+/home/jingsia/Tmp/ProjectA/./Core/Server/ServerTypes.h,1619
+#define _SERVERTYPES_H__SERVERTYPES_H_9,295
+struct ServerInforServerInfor11,320
+	std::string m_Ip;m_Ip13,341
+	std::string m_Ip;ServerInfor::m_Ip13,341
+	UInt16		m_Port;m_Port14,360
+	UInt16		m_Port;ServerInfor::m_Port14,360
+	std::string m_DBIp;m_DBIp15,377
+	std::string m_DBIp;ServerInfor::m_DBIp15,377
+	UInt16		m_DBPort;m_DBPort16,398
+	UInt16		m_DBPort;ServerInfor::m_DBPort16,398
+	WORKER_THREAD_COUNTRY_1 = 0,WORKER_THREAD_COUNTRY_121,428
+	WORKER_THREAD_COUNTRY_2,WORKER_THREAD_COUNTRY_222,458
+	WORKER_THREAD_NEUTRAL,WORKER_THREAD_NEUTRAL23,484
+	WORKER_THREAD_WORLD,WORKER_THREAD_WORLD24,508
+	WORKER_THREAD_LOGIN,WORKER_THREAD_LOGIN25,530
+	WORKER_THREAD_SORT,WORKER_THREAD_SORT26,552
+	WORKER_THREAD_DB,WORKER_THREAD_DB28,574
+	WORKER_THREAD_DB1,WORKER_THREAD_DB129,593
+	WORKER_THREAD_DB2,WORKER_THREAD_DB230,613
+	WORKER_THREAD_DB3,WORKER_THREAD_DB331,633
+	WORKER_THREAD_DB4,WORKER_THREAD_DB432,653
+	WORKER_THREAD_DB5,WORKER_THREAD_DB533,673
+	WORKER_THREAD_DB6,WORKER_THREAD_DB634,693
+	WORKER_THREAD_DB7,WORKER_THREAD_DB735,713
+	WORKER_THREAD_DB8,WORKER_THREAD_DB836,733
+	WORKER_THREAD_DB_LOG,WORKER_THREAD_DB_LOG37,753
+	WORKER_THREAD_DB_LOG1,WORKER_THREAD_DB_LOG138,776
+	WORKER_THREAD_LOAD,WORKER_THREAD_LOAD39,800
+	MAX_THREAD_NUMMAX_THREAD_NUM41,822
+#define COUNTRY_EMEI COUNTRY_EMEI44,842
+#define COUNTRY_KUNLUN COUNTRY_KUNLUN45,887
+#define COUNTRY_NEUTRAL COUNTRY_NEUTRAL46,934
+#define COUNTRY_MAX COUNTRY_MAX47,980
+#define LEVEL_MAX LEVEL_MAX49,1029
+#define CLAN_LEVEL_MAX CLAN_LEVEL_MAX50,1053
+#define NEWGUILDSTEP_MAX NEWGUILDSTEP_MAX51,1081
+
+/home/jingsia/Tmp/ProjectA/./Core/Server/GlobalObject.h,2044
+#define _GLOBALOBJECT_H__GLOBALOBJECT_H_8,296
+class GlobalObject : public Singleton<GlobalObject>GlobalObject17,503
+	const static size_t MIN_MEMBLOCK_SIZE = 128;MIN_MEMBLOCK_SIZE19,557
+	const static size_t MIN_MEMBLOCK_SIZE = 128;GlobalObject::MIN_MEMBLOCK_SIZE19,557
+	const static size_t MEMPOOL_NUM = 10;MEMPOOL_NUM21,604
+	const static size_t MEMPOOL_NUM = 10;GlobalObject::MEMPOOL_NUM21,604
+	GlobalObject(): m_MaxPoolSize(0)GlobalObject24,655
+	GlobalObject(): m_MaxPoolSize(0)GlobalObject::GlobalObject24,655
+	virtual ~GlobalObject() {};~GlobalObject29,736
+	virtual ~GlobalObject() {};GlobalObject::~GlobalObject29,736
+	bool Init();Init33,813
+	bool Init();GlobalObject::Init33,813
+	void UnInit();UnInit35,828
+	void UnInit();GlobalObject::UnInit35,828
+	void PushMsg(const MgHdrType& hdr, void* msgBody);PushMsg39,885
+	void PushMsg(const MgHdrType& hdr, void* msgBody);GlobalObject::PushMsg39,885
+	inline bool GetMsgQueue(UInt8 workerId, MsgQueue& popMsgQueue)GetMsgQueue41,938
+	inline bool GetMsgQueue(UInt8 workerId, MsgQueue& popMsgQueue)GlobalObject::GetMsgQueue41,938
+	void * AllocMsgBlock(size_t size);AllocMsgBlock57,1277
+	void * AllocMsgBlock(size_t size);GlobalObject::AllocMsgBlock57,1277
+	void * FreeMsgBlock(void* ptr);FreeMsgBlock58,1313
+	void * FreeMsgBlock(void* ptr);GlobalObject::FreeMsgBlock58,1313
+	MsgQueue	m_MsgQueue[MAX_THREAD_NUM];m_MsgQueue61,1356
+	MsgQueue	m_MsgQueue[MAX_THREAD_NUM];GlobalObject::m_MsgQueue61,1356
+	FastMutex	m_MsgQueueCs[MAX_THREAD_NUM];m_MsgQueueCs62,1394
+	FastMutex	m_MsgQueueCs[MAX_THREAD_NUM];GlobalObject::m_MsgQueueCs62,1394
+	MemBlockPool* m_Pools[MEMPOOL_NUM];m_Pools64,1436
+	MemBlockPool* m_Pools[MEMPOOL_NUM];GlobalObject::m_Pools64,1436
+	size_t		m_MaxPoolSize;m_MaxPoolSize66,1474
+	size_t		m_MaxPoolSize;GlobalObject::m_MaxPoolSize66,1474
+inline void GlobalObject::PushMsg(const MsgHdrType& hdr, void* msgBody)PushMsg71,1534
+inline void GlobalObject::PushMsg(const MsgHdrType& hdr, void* msgBody)GlobalObject::PushMsg71,1534
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/StringTokenizer.h,2460
+#define _STRINGTOKENIZER_H__STRINGTOKENIZER_H_2,28
+class StringTokenizerStringTokenizer9,139
+	StringTokenizer(const std::string& str, const std::string& separators, int num = 0);StringTokenizer12,171
+	StringTokenizer(const std::string& str, const std::string& separators, int num = 0);StringTokenizer::StringTokenizer12,171
+	~StringTokenizer();~StringTokenizer14,258
+	~StringTokenizer();StringTokenizer::~StringTokenizer14,258
+	enum OptionsOptions16,280
+	enum OptionsStringTokenizer::Options16,280
+		TOK_IGNORE_EMPTY = 1,TOK_IGNORE_EMPTY18,297
+		TOK_IGNORE_EMPTY = 1,StringTokenizer::TOK_IGNORE_EMPTY18,297
+		TOK_TRIM         = 2TOK_TRIM19,321
+		TOK_TRIM         = 2StringTokenizer::TOK_TRIM19,321
+	typedef std::vector<std::string>::const_iterator iterator;iterator22,349
+	typedef std::vector<std::string>::const_iterator iterator;StringTokenizer::iterator22,349
+	iterator begin() const;begin24,410
+	iterator begin() const;StringTokenizer::begin24,410
+	iterator end() const;end25,435
+	iterator end() const;StringTokenizer::end25,435
+	const std::string& operator [] (const std::size_t index) const;operator []27,459
+	const std::string& operator [] (const std::size_t index) const;StringTokenizer::operator []27,459
+	std::size_t count() const;count29,525
+	std::size_t count() const;StringTokenizer::count29,525
+	StringTokenizer(const StringTokenizer&);StringTokenizer32,563
+	StringTokenizer(const StringTokenizer&);StringTokenizer::StringTokenizer32,563
+	StringTokenizer& operator = (const StringTokenizer&);operator =33,605
+	StringTokenizer& operator = (const StringTokenizer&);StringTokenizer::operator =33,605
+	std::vector<std::string> _tokens;_tokens35,661
+	std::vector<std::string> _tokens;StringTokenizer::_tokens35,661
+inline StringTokenizer::iterator StringTokenizer::begin() constbegin38,700
+inline StringTokenizer::iterator StringTokenizer::begin() constStringTokenizer::begin38,700
+inline StrngTokenizer::iterator StringTokenizer::end() constend43,794
+inline StrngTokenizer::iterator StringTokenizer::end() constStringTokenizer::end43,794
+inline std::size_t StringTokenizer::count() constcount48,883
+inline std::size_t StringTokenizer::count() constStringTokenizer::count48,883
+inline std::string& StringTokenizer::operator [] (std::size_t index) constoperator []53,962
+inline std::string& StringTokenizer::operator [] (std::size_t index) constStringTokenizer::operator []53,962
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/RefCountedObject.h,1569
+#define Foundation_RefCountedObject_INCLUDEDFoundation_RefCountedObject_INCLUDED9,327
+class RefCountedObjectRefCountedObject11,373
+	RefCountedObject();RefCountedObject14,406
+	RefCountedObject();RefCountedObject::RefCountedObject14,406
+	void duplicate() const;duplicate16,428
+	void duplicate() const;RefCountedObject::duplicate16,428
+	void release() const;release17,453
+	void release() const;RefCountedObject::release17,453
+	int referenceCount() const;referenceCount18,476
+	int referenceCount() const;RefCountedObject::referenceCount18,476
+	~RefCountedObject();~RefCountedObject21,517
+	~RefCountedObject();RefCountedObject::~RefCountedObject21,517
+	RefCountedObject(const RefCountedObject&);RefCountedObject24,549
+	RefCountedObject(const RefCountedObject&);RefCountedObject::RefCountedObject24,549
+	RefCountedObject& operator = (const RefCountedObject&);operator =25,593
+	RefCountedObject& operator = (const RefCountedObject&);RefCountedObject::operator =25,593
+	mutable AtomicCounter _counter;_counter27,651
+	mutable AtomicCounter _counter;RefCountedObject::_counter27,651
+inline RefCountedObject::referenceCount() constreferenceCount30,688
+inline RefCountedObject::referenceCount() constRefCountedObject::referenceCount30,688
+inline inline void RefCountedObject::duplicate() constduplicate35,767
+inline inline void RefCountedObject::duplicate() constRefCountedObject::duplicate35,767
+inline void RefCountedObject::release() constrelease40,841
+inline void RefCountedObject::release() constRefCountedObject::release40,841
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/SingletonHolder.h,522
+#define Foundation_SingletonHolder_INCLUDEDFoundation_SingletonHolder_INCLUDED8,318
+class SingletonHolderSingletonHolder15,456
+	SingletonHolder():SingletonHolder18,488
+	SingletonHolder():SingletonHolder::SingletonHolder18,488
+	~SingletonHolder()~SingletonHolder23,524
+	~SingletonHolder()SingletonHolder::~SingletonHolder23,524
+	S* get()get28,565
+	S* get()SingletonHolder::get28,565
+	S* _pS;_pS36,657
+	S* _pS;SingletonHolder::_pS36,657
+	FastMutex _m;_m37,666
+	FastMutex _m;SingletonHolder::_m37,666
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex.h,3799
+#define Foundation_Mutex_INCLUDEDFoundation_Mutex_INCLUDED2,34
+class Mutex: private MutexImplMutex18,239
+	typedef ScopedLocker<Mutex> ScopedLock;ScopedLock29,689
+	typedef ScopedLocker<Mutex> ScopedLock;Mutex::ScopedLock29,689
+	Mutex();Mutex31,731
+	Mutex();Mutex::Mutex31,731
+	~Mutex();~Mutex34,767
+	~Mutex();Mutex::~Mutex34,767
+	void lock();lock37,805
+	void lock();Mutex::lock37,805
+	void lock(long milliseconds);lock41,896
+	void lock(long milliseconds);Mutex::lock41,896
+	bool tryLock();tryLock50,1394
+	bool tryLock();Mutex::tryLock50,1394
+	bool tryLock(long milliseconds);tryLock55,1580
+	bool tryLock(long milliseconds);Mutex::tryLock55,1580
+	void unlock();unlock64,2049
+	void unlock();Mutex::unlock64,2049
+	Mutex(const Mutex&);Mutex69,2150
+	Mutex(const Mutex&);Mutex::Mutex69,2150
+	Mutex& operator = (const Mutex&);operator =70,2172
+	Mutex& operator = (const Mutex&);Mutex::operator =70,2172
+class FastMutex: private FastMutexImplFastMutex74,2212
+	typedef ScopedLocker<FastMutex> ScopedLock;ScopedLock84,2666
+	typedef ScopedLocker<FastMutex> ScopedLock;FastMutex::ScopedLock84,2666
+	FastMutex();FastMutex86,2712
+	FastMutex();FastMutex::FastMutex86,2712
+	~FastMutex();~FastMutex89,2752
+	~FastMutex();FastMutex::~FastMutex89,2752
+	void lock();lock92,2794
+	void lock();FastMutex::lock92,2794
+	void lock(long milliseconds);lock96,2885
+	void lock(long milliseconds);FastMutex::lock96,2885
+	bool tryLock();tryLock105,3383
+	bool tryLock();FastMutex::tryLock105,3383
+	bool tryLock(long milliseconds);tryLock110,3569
+	bool tryLock(long milliseconds);FastMutex::tryLock110,3569
+	void unlock();unlock119,4038
+	void unlock();FastMutex::unlock119,4038
+	FastMutex(const FastMutex&);FastMutex124,4139
+	FastMutex(const FastMutex&);FastMutex::FastMutex124,4139
+	FastMutex& operator = (const FastMutex&);operator =125,4169
+	FastMutex& operator = (const FastMutex&);FastMutex::operator =125,4169
+class NullMutexNullMutex129,4217
+	typedef ScopedLocker<NullMutex> ScopedLock;ScopedLock136,4511
+	typedef ScopedLocker<NullMutex> ScopedLock;NullMutex::ScopedLock136,4511
+	NullMutex()NullMutex138,4557
+	NullMutex()NullMutex::NullMutex138,4557
+	~NullMutex()~NullMutex143,4606
+	~NullMutex()NullMutex::~NullMutex143,4606
+	void lock()lock148,4657
+	void lock()NullMutex::lock148,4657
+	void lock(long)lock153,4697
+	void lock(long)NullMutex::lock153,4697
+	bool tryLock()tryLock158,4741
+	bool tryLock()NullMutex::tryLock158,4741
+	bool tryLock(long)tryLock164,4823
+	bool tryLock(long)NullMutex::tryLock164,4823
+	void unlock()unlock170,4909
+	void unlock()NullMutex::unlock170,4909
+inline void Mutex::lock()lock180,4972
+inline void Mutex::lock()Mutex::lock180,4972
+inline void Mutex::lock(long milliseconds)lock186,5017
+inline void Mutex::lock(long milliseconds)Mutex::lock186,5017
+inline bool Mutex::tryLock()tryLock193,5127
+inline bool Mutex::tryLock()Mutex::tryLock193,5127
+inline bool Mutex::tryLock(long milliseconds)tryLock199,5185
+inline bool Mutex::tryLock(long milliseconds)Mutex::tryLock199,5185
+inline void Mutex::unlock()unlock205,5272
+inline void Mutex::unlock()Mutex::unlock205,5272
+inline void FastMutex::lock()lock211,5321
+inline void FastMutex::lock()FastMutex::lock211,5321
+inline void FastMutex::lock(long milliseconds)lock217,5370
+inline void FastMutex::lock(long milliseconds)FastMutex::lock217,5370
+inline bool FastMutex::tryLock()tryLock224,5484
+inline bool FastMutex::tryLock()FastMutex::tryLock224,5484
+inline bool FastMutex::tryLock(long milliseconds)tryLock230,5546
+inline bool FastMutex::tryLock(long milliseconds)FastMutex::tryLock230,5546
+inline void FastMutex::unlock()unlock236,5637
+inline void FastMutex::unlock()FastMutex::unlock236,5637
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex_POSIX.h,1425
+#define Foundation_Mutex_POSIX_INCLUDEDFoundation_Mutex_POSIX_INCLUDED2,40
+class MutexImplMutexImpl11,169
+	MutexImpl();MutexImpl14,198
+	MutexImpl();MutexImpl::MutexImpl14,198
+	MutexImpl(bool fast);MutexImpl15,212
+	MutexImpl(bool fast);MutexImpl::MutexImpl15,212
+	~MutexImpl();~MutexImpl16,235
+	~MutexImpl();MutexImpl::~MutexImpl16,235
+	void lockImpl();lockImpl17,250
+	void lockImpl();MutexImpl::lockImpl17,250
+	bool tryLockImpl();tryLockImpl18,268
+	bool tryLockImpl();MutexImpl::tryLockImpl18,268
+	bool tryLockImpl(long milliseconds);tryLockImpl19,289
+	bool tryLockImpl(long milliseconds);MutexImpl::tryLockImpl19,289
+	void unlockImpl();unlockImpl20,327
+	void unlockImpl();MutexImpl::unlockImpl20,327
+	pthread_mutex_t _mutex;_mutex23,357
+	pthread_mutex_t _mutex;MutexImpl::_mutex23,357
+class  FastMutexImpl: public MutexImplFastMutexImpl27,387
+	FastMutexImpl();FastMutexImpl30,439
+	FastMutexImpl();FastMutexImpl::FastMutexImpl30,439
+	~FastMutexImpl();~FastMutexImpl31,457
+	~FastMutexImpl();FastMutexImpl::~FastMutexImpl31,457
+inline void MutexImpl::lockImpl()lockImpl38,498
+inline void MutexImpl::lockImpl()MutexImpl::lockImpl38,498
+inline bool MutexImpl::tryLockImpl()tryLockImpl45,618
+inline bool MutexImpl::tryLockImpl()MutexImpl::tryLockImpl45,618
+inline void MutexImpl::unlockImpl()unlockImpl58,824
+inline void MutexImpl::unlockImpl()MutexImpl::unlockImpl58,824
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Mutex_WIN32.h,1127
+#define Foundation_Mutex_WIN32_INCLUDEDFoundation_Mutex_WIN32_INCLUDED2,40
+class MutexImplMutexImpl9,129
+	MutexImpl();MutexImpl12,158
+	MutexImpl();MutexImpl::MutexImpl12,158
+	~MutexImpl();~MutexImpl13,172
+	~MutexImpl();MutexImpl::~MutexImpl13,172
+	void lockImpl();lockImpl14,187
+	void lockImpl();MutexImpl::lockImpl14,187
+	bool tryLockImpl();tryLockImpl15,205
+	bool tryLockImpl();MutexImpl::tryLockImpl15,205
+	bool tryLockImpl(long milliseconds);tryLockImpl16,226
+	bool tryLockImpl(long milliseconds);MutexImpl::tryLockImpl16,226
+	void unlockImpl();unlockImpl17,264
+	void unlockImpl();MutexImpl::unlockImpl17,264
+	CRITICAL_SECTION _cs;_cs20,294
+	CRITICAL_SECTION _cs;MutexImpl::_cs20,294
+typedef MutexImpl FastMutexImpl;FastMutexImpl24,322
+inline void MutexImpl::lockImpl()lockImpl30,374
+inline void MutexImpl::lockImpl()MutexImpl::lockImpl30,374
+inline bool MutexImpl::tryLockImpl()tryLockImpl43,520
+inline bool MutexImpl::tryLockImpl()MutexImpl::tryLockImpl43,520
+inline void MutexImpl::unlockImpl()unlockImpl56,683
+inline void MutexImpl::unlockImpl()MutexImpl::unlockImpl56,683
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Queue.h,1068
+#define _QUEUE_H__QUEUE_H_8,282
+class QueueQueue13,344
+	Queue()Queue16,366
+	Queue()Queue::Queue16,366
+	~Queue()~Queue20,382
+	~Queue()Queue::~Queue20,382
+	Queue(const Queue<Type>& other) : m_Queue(other.m_Queue){}Queue24,399
+	Queue(const Queue<Type>& other) : m_Queue(other.m_Queue){}Queue::Queue24,399
+	Queue<Type> & operator =(Queue<Type>& other )operator =26,460
+	Queue<Type> & operator =(Queue<Type>& other )Queue::operator =26,460
+	inline void Push(const Type& elem)Push33,565
+	inline void Push(const Type& elem)Queue::Push33,565
+	inline void Push(const Queue<Type>& other)Push38,637
+	inline void Push(const Queue<Type>& other)Queue::Push38,637
+	inline Type Pop()Pop43,766
+	inline Type Pop()Queue::Pop43,766
+	inline bool Empty() constEmpty53,893
+	inline bool Empty() constQueue::Empty53,893
+	inline void Clear()Clear58,953
+	inline void Clear()Queue::Clear58,953
+	inline int Size()Size63,1007
+	inline int Size()Queue::Size63,1007
+	std:deque<Type> m_Queue;m_Queue69,1067
+	std:deque<Type> m_Queue;Queue::m_Queue69,1067
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/MemBlockPool.h,981
+#define _MEMBLOCKPOOL_H__MEMBLOCKPOOL_H_9,297
+class MemBlockPoolMemBlockPool14,363
+	struct MemBlockMemBlock16,384
+	struct MemBlockMemBlockPool::MemBlock16,384
+		MemBlock* next;next18,404
+		MemBlock* next;MemBlockPool::MemBlock::next18,404
+		char data[1];data19,422
+		char data[1];MemBlockPool::MemBlock::data19,422
+	explicit MemBlockPool(size_t size);MemBlockPool23,451
+	explicit MemBlockPool(size_t size);MemBlockPool::MemBlockPool23,451
+	~MemBlockPool();~MemBlockPool24,488
+	~MemBlockPool();MemBlockPool::~MemBlockPool24,488
+	void* Alloc();Alloc26,507
+	void* Alloc();MemBlockPool::Alloc26,507
+	void Free(void* ptr);Free27,523
+	void Free(void* ptr);MemBlockPool::Free27,523
+	const size_t m_Size;m_Size31,557
+	const size_t m_Size;MemBlockPool::m_Size31,557
+	MemBlock* m_pBlockList;m_pBlockList32,579
+	MemBlock* m_pBlockList;MemBlockPool::m_pBlockList32,579
+	FastMutex m_Mutex;m_Mutex34,605
+	FastMutex m_Mutex;MemBlockPool::m_Mutex34,605
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Timespan.h,10663
+#define Foundation_Timespan_INCLUDEDFoundation_Timespan_INCLUDED2,37
+class TimespanTimespan10,124
+	typedef Timestamp::TimeDiff TimeDiff;TimeDiff14,219
+	typedef Timestamp::TimeDiff TimeDiff;Timespan::TimeDiff14,219
+	Timespan();Timespan16,259
+	Timespan();Timespan::Timespan16,259
+	Timespan(TimeDiff microseconds);Timespan19,304
+	Timespan(TimeDiff microseconds);Timespan::Timespan19,304
+	Timespan(long seconds, long microseconds);Timespan22,365
+	Timespan(long seconds, long microseconds);Timespan::Timespan22,365
+	Timespan(int days, int hours, int minutes, int seconds, int microseconds);Timespan26,496
+	Timespan(int days, int hours, int minutes, int seconds, int microseconds);Timespan::Timespan26,496
+	Timespan(const Timespan& timespan);Timespan29,599
+	Timespan(const Timespan& timespan);Timespan::Timespan29,599
+	~Timespan();~Timespan32,680
+	~Timespan();Timespan::~Timespan32,680
+	Timespan& operator = (const Timespan& timespan);operator =35,724
+	Timespan& operator = (const Timespan& timespan);Timespan::operator =35,724
+	Timespan& operator = (TimeDiff microseconds);operator =38,802
+	Timespan& operator = (TimeDiff microseconds);Timespan::operator =38,802
+	Timespan& assign(int days, int hours, int minutes, int seconds, int microseconds);assign41,877
+	Timespan& assign(int days, int hours, int minutes, int seconds, int microseconds);Timespan::assign41,877
+	Timespan& assign(long seconds, long microseconds);assign44,988
+	Timespan& assign(long seconds, long microseconds);Timespan::assign44,988
+	void swap(Timespan& timespan);swap48,1117
+	void swap(Timespan& timespan);Timespan::swap48,1117
+	bool operator == (const Timespan& ts) const;operator ==51,1193
+	bool operator == (const Timespan& ts) const;Timespan::operator ==51,1193
+	bool operator != (const Timespan& ts) const;operator !=52,1239
+	bool operator != (const Timespan& ts) const;Timespan::operator !=52,1239
+	bool operator >  (const Timespan& ts) const;operator >53,1285
+	bool operator >  (const Timespan& ts) const;Timespan::operator >53,1285
+	bool operator >= (const Timespan& ts) const;operator >=54,1331
+	bool operator >= (const Timespan& ts) const;Timespan::operator >=54,1331
+	bool operator <  (const Timespan& ts) const;operator <55,1377
+	bool operator <  (const Timespan& ts) const;Timespan::operator <55,1377
+	bool operator <= (const Timespan& ts) const;operator <=56,1423
+	bool operator <= (const Timespan& ts) const;Timespan::operator <=56,1423
+	bool operator == (TimeDiff microseconds) const;operator ==58,1470
+	bool operator == (TimeDiff microseconds) const;Timespan::operator ==58,1470
+	bool operator != (TimeDiff microseconds) const;operator !=59,1519
+	bool operator != (TimeDiff microseconds) const;Timespan::operator !=59,1519
+	bool operator >  (TimeDiff microseconds) const;operator >60,1568
+	bool operator >  (TimeDiff microseconds) const;Timespan::operator >60,1568
+	bool operator >= (TimeDiff microseconds) const;operator >=61,1617
+	bool operator >= (TimeDiff microseconds) const;Timespan::operator >=61,1617
+	bool operator <  (TimeDiff microseconds) const;operator <62,1666
+	bool operator <  (TimeDiff microseconds) const;Timespan::operator <62,1666
+	bool operator <= (TimeDiff microseconds) const;operator <=63,1715
+	bool operator <= (TimeDiff microseconds) const;Timespan::operator <=63,1715
+	Timespan operator + (const Timespan& d) const;operator +65,1765
+	Timespan operator + (const Timespan& d) const;Timespan::operator +65,1765
+	Timespan operator - (const Timespan& d) const;operator -66,1813
+	Timespan operator - (const Timespan& d) const;Timespan::operator -66,1813
+	Timespan& operator += (const Timespan& d);operator +=67,1861
+	Timespan& operator += (const Timespan& d);Timespan::operator +=67,1861
+	Timespan& operator -= (const Timespan& d);operator -=68,1905
+	Timespan& operator -= (const Timespan& d);Timespan::operator -=68,1905
+	Timespan operator + (TimeDiff microseconds) const;operator +70,1950
+	Timespan operator + (TimeDiff microseconds) const;Timespan::operator +70,1950
+	Timespan operator - (TimeDiff microseconds) const;operator -71,2002
+	Timespan operator - (TimeDiff microseconds) const;Timespan::operator -71,2002
+	Timespan& operator += (TimeDiff microseconds);operator +=72,2054
+	Timespan& operator += (TimeDiff microseconds);Timespan::operator +=72,2054
+	Timespan& operator -= (TimeDiff microseconds);operator -=73,2102
+	Timespan& operator -= (TimeDiff microseconds);Timespan::operator -=73,2102
+	int days() const;days75,2151
+	int days() const;Timespan::days75,2151
+	int hours() const;hours78,2205
+	int hours() const;Timespan::hours78,2205
+	int totalHours() const;totalHours81,2271
+	int totalHours() const;Timespan::totalHours81,2271
+	int minutes() const;minutes84,2338
+	int minutes() const;Timespan::minutes84,2338
+	int totalMinutes() const;totalMinutes87,2408
+	int totalMinutes() const;Timespan::totalMinutes87,2408
+	int seconds() const;seconds90,2479
+	int seconds() const;Timespan::seconds90,2479
+	int totalSeconds() const;totalSeconds93,2549
+	int totalSeconds() const;Timespan::totalSeconds93,2549
+	int milliseconds() const;milliseconds96,2620
+	int milliseconds() const;Timespan::milliseconds96,2620
+	TimeDiff totalMilliseconds() const;totalMilliseconds99,2701
+	TimeDiff totalMilliseconds() const;Timespan::totalMilliseconds99,2701
+	int microseconds() const;microseconds102,2787
+	int microseconds() const;Timespan::microseconds102,2787
+	int useconds() const;useconds106,2894
+	int useconds() const;Timespan::useconds106,2894
+	TimeDiff totalMicroseconds() const;totalMicroseconds110,2995
+	TimeDiff totalMicroseconds() const;Timespan::totalMicroseconds110,2995
+	static const TimeDiff MILLISECONDS; /// The number of microseconds in a millisecond.MILLISECONDS113,3081
+	static const TimeDiff MILLISECONDS; /// The number of microseconds in a millisecond.Timespan::MILLISECONDS113,3081
+	static const TimeDiff SECONDS;      /// The number of microseconds in a second.SECONDS114,3167
+	static const TimeDiff SECONDS;      /// The number of microseconds in a second.Timespan::SECONDS114,3167
+	static const TimeDiff MINUTES;      /// The number of microseconds in a minute.MINUTES115,3248
+	static const TimeDiff MINUTES;      /// The number of microseconds in a minute.Timespan::MINUTES115,3248
+	static const TimeDiff HOURS;        /// The number of microseconds in a hour.HOURS116,3329
+	static const TimeDiff HOURS;        /// The number of microseconds in a hour.Timespan::HOURS116,3329
+	static const TimeDiff DAYS;         /// The number of microseconds in a day.DAYS117,3408
+	static const TimeDiff DAYS;         /// The number of microseconds in a day.Timespan::DAYS117,3408
+	TimeDiff _span;_span120,3496
+	TimeDiff _span;Timespan::_span120,3496
+inline int Timespan::days() constdays127,3535
+inline int Timespan::days() constTimespan::days127,3535
+inline int Timespan::hours() consthours133,3600
+inline int Timespan::hours() constTimespan::hours133,3600
+inline int Timespan::totalHours() consttotalHours139,3674
+inline int Timespan::totalHours() constTimespan::totalHours139,3674
+inline int Timespan::minutes() constminutes145,3746
+inline int Timespan::minutes() constTimespan::minutes145,3746
+inline int Timespan::totalMinutes() consttotalMinutes151,3824
+inline int Timespan::totalMinutes() constTimespan::totalMinutes151,3824
+inline int Timespan::seconds() constseconds157,3900
+inline int Timespan::seconds() constTimespan::seconds157,3900
+inline int Timespan::totalSeconds() consttotalSeconds163,3978
+inline int Timespan::totalSeconds() constTimespan::totalSeconds163,3978
+inline int Timespan::milliseconds() constmilliseconds169,4054
+inline int Timespan::milliseconds() constTimespan::milliseconds169,4054
+inline Timespan::TimeDiff Timespan::totalMilliseconds() consttotalMilliseconds175,4144
+inline Timespan::TimeDiff Timespan::totalMilliseconds() constTimespan::totalMilliseconds175,4144
+inline int Timespan::microseconds() constmicroseconds181,4240
+inline int Timespan::microseconds() constTimespan::microseconds181,4240
+inline int Timespan::useconds() constuseconds187,4315
+inline int Timespan::useconds() constTimespan::useconds187,4315
+inline Timespan::TimeDiff Timespan::totalMicroseconds() consttotalMicroseconds193,4389
+inline Timespan::TimeDiff Timespan::totalMicroseconds() constTimespan::totalMicroseconds193,4389
+inline bool Timespan::operator == (const Timespan& ts) constoperator ==199,4472
+inline bool Timespan::operator == (const Timespan& ts) constTimespan::operator ==199,4472
+inline bool Timespan::operator != (const Timespan& ts) constoperator !=205,4566
+inline bool Timespan::operator != (const Timespan& ts) constTimespan::operator !=205,4566
+inline bool Timespan::operator >  (const Timespan& ts) constoperator >211,4660
+inline bool Timespan::operator >  (const Timespan& ts) constTimespan::operator >211,4660
+inline bool Timespan::operator >= (const Timespan& ts) constoperator >=217,4753
+inline bool Timespan::operator >= (const Timespan& ts) constTimespan::operator >=217,4753
+inline bool Timespan::operator <  (const Timespan& ts) constoperator <223,4847
+inline bool Timespan::operator <  (const Timespan& ts) constTimespan::operator <223,4847
+inline bool Timespan::operator <= (const Timespan& ts) constoperator <=229,4940
+inline bool Timespan::operator <= (const Timespan& ts) constTimespan::operator <=229,4940
+inline bool Timespan::operator == (TimeDiff microseconds) constoperator ==235,5034
+inline bool Timespan::operator == (TimeDiff microseconds) constTimespan::operator ==235,5034
+inline bool Timespan::operator != (TimeDiff microseconds) constoperator !=241,5135
+inline bool Timespan::operator != (TimeDiff microseconds) constTimespan::operator !=241,5135
+inline bool Timespan::operator >  (TimeDiff microseconds) constoperator >247,5236
+inline bool Timespan::operator >  (TimeDiff microseconds) constTimespan::operator >247,5236
+inline bool Timespan::operator >= (TimeDiff microseconds) constoperator >=253,5336
+inline bool Timespan::operator >= (TimeDiff microseconds) constTimespan::operator >=253,5336
+inline bool Timespan::operator <  (TimeDiff microseconds) constoperator <259,5437
+inline bool Timespan::operator <  (TimeDiff microseconds) constTimespan::operator <259,5437
+inline bool Timespan::operator <= (TimeDiff microseconds) constoperator <=265,5537
+inline bool Timespan::operator <= (TimeDiff microseconds) constTimespan::operator <=265,5537
+inline void swap(Timespan& s1, Timespan& s2)swap271,5638
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Timestamp.h,7602
+#define Foundation_Timestamp_INCLUDEDFoundation_Timestamp_INCLUDED2,38
+class  TimestampTimestamp10,120
+	typedef Int64 TimeVal;    /// monotonic UTC time value in microsecond resolutionTimeVal25,619
+	typedef Int64 TimeVal;    /// monotonic UTC time value in microsecond resolutionTimestamp::TimeVal25,619
+	typedef Int64 UtcTimeVal; /// monotonic UTC time value in 100 nanosecond resolutionUtcTimeVal26,701
+	typedef Int64 UtcTimeVal; /// monotonic UTC time value in 100 nanosecond resolutionTimestamp::UtcTimeVal26,701
+	typedef Int64 TimeDiff;   /// difference between two timestamps in microsecondsTimeDiff27,786
+	typedef Int64 TimeDiff;   /// difference between two timestamps in microsecondsTimestamp::TimeDiff27,786
+	Timestamp();Timestamp29,868
+	Timestamp();Timestamp::Timestamp29,868
+	Timestamp(TimeVal tv);Timestamp32,932
+	Timestamp(TimeVal tv);Timestamp::Timestamp32,932
+	Timestamp(const Timestamp& other);Timestamp35,1010
+	Timestamp(const Timestamp& other);Timestamp::Timestamp35,1010
+	~Timestamp();~Timestamp38,1071
+	~Timestamp();Timestamp::~Timestamp38,1071
+	Timestamp& operator = (const Timestamp& other);operator =41,1116
+	Timestamp& operator = (const Timestamp& other);Timestamp::operator =41,1116
+	Timestamp& operator = (TimeVal tv);operator =42,1165
+	Timestamp& operator = (TimeVal tv);Timestamp::operator =42,1165
+	void swap(Timestamp& timestamp);swap44,1203
+	void swap(Timestamp& timestamp);Timestamp::swap44,1203
+	void update();update47,1282
+	void update();Timestamp::update47,1282
+	bool operator == (const Timestamp& ts) const;operator ==50,1350
+	bool operator == (const Timestamp& ts) const;Timestamp::operator ==50,1350
+	bool operator != (const Timestamp& ts) const;operator !=51,1397
+	bool operator != (const Timestamp& ts) const;Timestamp::operator !=51,1397
+	bool operator >  (const Timestamp& ts) const;operator >52,1444
+	bool operator >  (const Timestamp& ts) const;Timestamp::operator >52,1444
+	bool operator >= (const Timestamp& ts) const;operator >=53,1491
+	bool operator >= (const Timestamp& ts) const;Timestamp::operator >=53,1491
+	bool operator <  (const Timestamp& ts) const;operator <54,1538
+	bool operator <  (const Timestamp& ts) const;Timestamp::operator <54,1538
+	bool operator <= (const Timestamp& ts) const;operator <=55,1585
+	bool operator <= (const Timestamp& ts) const;Timestamp::operator <=55,1585
+	Timestamp  operator +  (TimeDiff d) const;operator +57,1633
+	Timestamp  operator +  (TimeDiff d) const;Timestamp::operator +57,1633
+	Timestamp  operator -  (TimeDiff d) const;operator -58,1677
+	Timestamp  operator -  (TimeDiff d) const;Timestamp::operator -58,1677
+	TimeDiff   operator -  (const Timestamp& ts) const;operator -59,1721
+	TimeDiff   operator -  (const Timestamp& ts) const;Timestamp::operator -59,1721
+	Timestamp& operator += (TimeDiff d);operator +=60,1774
+	Timestamp& operator += (TimeDiff d);Timestamp::operator +=60,1774
+	Timestamp& operator -= (TimeDiff d);operator -=61,1812
+	Timestamp& operator -= (TimeDiff d);Timestamp::operator -=61,1812
+	std::time_t epochTime() const;epochTime63,1851
+	std::time_t epochTime() const;Timestamp::epochTime63,1851
+	UtcTimeVal utcTime() const;utcTime68,2018
+	UtcTimeVal utcTime() const;Timestamp::utcTime68,2018
+	TimeVal epochMicroseconds() const;epochMicroseconds73,2193
+	TimeVal epochMicroseconds() const;Timestamp::epochMicroseconds73,2193
+	TimeDiff elapsed() const;elapsed77,2339
+	TimeDiff elapsed() const;Timestamp::elapsed77,2339
+	bool isElapsed(TimeDiff interval) const;isElapsed81,2480
+	bool isElapsed(TimeDiff interval) const;Timestamp::isElapsed81,2480
+	static Timestamp fromEpochTime(std::time_t t);fromEpochTime85,2623
+	static Timestamp fromEpochTime(std::time_t t);Timestamp::fromEpochTime85,2623
+	static Timestamp fromUtcTime(UtcTimeVal val);fromUtcTime88,2718
+	static Timestamp fromUtcTime(UtcTimeVal val);Timestamp::fromUtcTime88,2718
+	static TimeVal resolution();resolution91,2815
+	static TimeVal resolution();Timestamp::resolution91,2815
+	static Timestamp fromFileTimeNP(UInt32 fileTimeLow, UInt32 fileTimeHigh);fromFileTimeNP97,3014
+	static Timestamp fromFileTimeNP(UInt32 fileTimeLow, UInt32 fileTimeHigh);Timestamp::fromFileTimeNP97,3014
+	void toFileTimeNP(UInt32& fileTimeLow, UInt32& fileTimeHigh) const;toFileTimeNP98,3089
+	void toFileTimeNP(UInt32& fileTimeLow, UInt32& fileTimeHigh) const;Timestamp::toFileTimeNP98,3089
+	TimeVal _ts;_ts102,3175
+	TimeVal _ts;Timestamp::_ts102,3175
+inline bool Timestamp::operator == (const Timestamp& ts) constoperator ==109,3211
+inline bool Timestamp::operator == (const Timestamp& ts) constTimestamp::operator ==109,3211
+inline bool Timestamp::operator != (const Timestamp& ts) constoperator !=115,3303
+inline bool Timestamp::operator != (const Timestamp& ts) constTimestamp::operator !=115,3303
+inline bool Timestamp::operator >  (const Timestamp& ts) constoperator >121,3395
+inline bool Timestamp::operator >  (const Timestamp& ts) constTimestamp::operator >121,3395
+inline bool Timestamp::operator >= (const Timestamp& ts) constoperator >=127,3486
+inline bool Timestamp::operator >= (const Timestamp& ts) constTimestamp::operator >=127,3486
+inline bool Timestamp::operator <  (const Timestamp& ts) constoperator <133,3578
+inline bool Timestamp::operator <  (const Timestamp& ts) constTimestamp::operator <133,3578
+inline bool Timestamp::operator <= (const Timestamp& ts) constoperator <=139,3669
+inline bool Timestamp::operator <= (const Timestamp& ts) constTimestamp::operator <=139,3669
+inline Timestamp Timestamp::operator + (Timestamp::TimeDiff d) constoperator +145,3761
+inline Timestamp Timestamp::operator + (Timestamp::TimeDiff d) constTimestamp::operator +145,3761
+inline Timestamp Timestamp::operator - (Timestamp::TimeDiff d) constoperator -151,3864
+inline Timestamp Timestamp::operator - (Timestamp::TimeDiff d) constTimestamp::operator -151,3864
+inline Timestamp::TimeDiff Timestamp::operator - (const Timestamp& ts) constoperator -157,3967
+inline Timestamp::TimeDiff Timestamp::operator - (const Timestamp& ts) constTimestamp::operator -157,3967
+inline Timestamp& Timestamp::operator += (Timestamp::TimeDiff d)operator +=163,4072
+inline Timestamp& Timestamp::operator += (Timestamp::TimeDiff d)Timestamp::operator +=163,4072
+inline Timestamp& Timestamp::operator -= (Timestamp::TimeDiff d)operator -=170,4169
+inline Timestamp& Timestamp::operator -= (Timestamp::TimeDiff d)Timestamp::operator -=170,4169
+inline std::time_t Timestamp::epochTime() constepochTime177,4266
+inline std::time_t Timestamp::epochTime() constTimestamp::epochTime177,4266
+inline Timestamp::UtcTimeVal Timestamp::utcTime() constutcTime183,4359
+inline Timestamp::UtcTimeVal Timestamp::utcTime() constTimestamp::utcTime183,4359
+inline Timestamp::TimeVal Timestamp::epochMicroseconds() constepochMicroseconds189,4481
+inline Timestamp::TimeVal Timestamp::epochMicroseconds() constTimestamp::epochMicroseconds189,4481
+inline Timestamp::TimeDiff Timestamp::elapsed() constelapsed195,4563
+inline Timestamp::TimeDiff Timestamp::elapsed() constTimestamp::elapsed195,4563
+inline bool Timestamp::isElapsed(Timestamp::TimeDiff interval) constisElapsed202,4660
+inline bool Timestamp::isElapsed(Timestamp::TimeDiff interval) constTimestamp::isElapsed202,4660
+inline Timestamp::TimeVal Timestamp::resolution()resolution210,4818
+inline Timestamp::TimeVal Timestamp::resolution()Timestamp::resolution210,4818
+inline void swap(Timestamp& s1, Timestamp& s2)swap216,4891
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/TimeUtil.h,3876
+#define _TIMEUTIL_H__TIMEUTIL_H_2,21
+#define localtime_r(localtime_r10,147
+class TimeUtilTimeUtil13,201
+        static UInt32 _timeAdd;_timeAdd16,230
+        static UInt32 _timeAdd;TimeUtil::_timeAdd16,230
+	static inline void Init() { tzset(); }Init18,270
+	static inline void Init() { tzset(); }TimeUtil::Init18,270
+    static void TimeAdd(UInt32 timeAdd){ _timeAdd = timeAdd;}TimeAdd19,310
+    static void TimeAdd(UInt32 timeAdd){ _timeAdd = timeAdd;}TimeUtil::TimeAdd19,310
+    static inline UInt32 MkTime(UInt32 y, UInt32 m, UInt32 d, UInt32 hh = 0, UInt32 mm = 0, UInt32 ss = 0)MkTime21,373
+    static inline UInt32 MkTime(UInt32 y, UInt32 m, UInt32 d, UInt32 hh = 0, UInt32 mm = 0, UInt32 ss = 0)TimeUtil::MkTime21,373
+	static inline UInt32 Now() { return static_cast<UInt32>(time(NULL)) + _timeAdd; }Now53,1180
+	static inline UInt32 Now() { return static_cast<UInt32>(time(NULL)) + _timeAdd; }TimeUtil::Now53,1180
+	static inline UInt8 Day(UInt32 now = Now())Day54,1263
+	static inline UInt8 Day(UInt32 now = Now())TimeUtil::Day54,1263
+	static inline UInt8 MonthDay(UInt32 now = Now())MonthDay61,1454
+	static inline UInt8 MonthDay(UInt32 now = Now())TimeUtil::MonthDay61,1454
+    static inline UInt8 Month(UInt32 now = Now())Month68,1650
+    static inline UInt8 Month(UInt32 now = Now())TimeUtil::Month68,1650
+	static inline UInt32 SharpDayT(int c = 0, UInt32 cur = Now())SharpDayT76,1856
+	static inline UInt32 SharpDayT(int c = 0, UInt32 cur = Now())TimeUtil::SharpDayT76,1856
+    static inline bool SameDay(UInt32 a, UInt32 b)SameDay87,2153
+    static inline bool SameDay(UInt32 a, UInt32 b)TimeUtil::SameDay87,2153
+    static inline int GetYYMMDD(UInt32 now = Now())GetYYMMDD96,2407
+    static inline int GetYYMMDD(UInt32 now = Now())TimeUtil::GetYYMMDD96,2407
+    static inline UInt32 SharpWeek(int c = 0, UInt32 cur = Now())SharpWeek105,2704
+    static inline UInt32 SharpWeek(int c = 0, UInt32 cur = Now())TimeUtil::SharpWeek105,2704
+    static inline UInt32 GetWeekDay(UInt32 time)GetWeekDay114,2992
+    static inline UInt32 GetWeekDay(UInt32 time)TimeUtil::GetWeekDay114,2992
+    static inline UInt32 SharpMonth(int c = 0, UInt32 cur = Now())SharpMonth122,3210
+    static inline UInt32 SharpMonth(int c = 0, UInt32 cur = Now())TimeUtil::SharpMonth122,3210
+    static inline UInt32 SharpYear(int c = 0, UInt32 cur = Now())SharpYear136,3636
+    static inline UInt32 SharpYear(int c = 0, UInt32 cur = Now())TimeUtil::SharpYear136,3636
+	static inline UInt32 SharpDay(int c = 0, UInt32 cur = Now())SharpDay149,3991
+	static inline UInt32 SharpDay(int c = 0, UInt32 cur = Now())TimeUtil::SharpDay149,3991
+	static inline UInt32 SharpHour(int c, UInt32 tm = Now())SharpHour158,4243
+	static inline UInt32 SharpHour(int c, UInt32 tm = Now())TimeUtil::SharpHour158,4243
+	static inline UInt32 SharpFourtyMin(int c, UInt32 tm = Now())SharpFourtyMin162,4347
+	static inline UInt32 SharpFourtyMin(int c, UInt32 tm = Now())TimeUtil::SharpFourtyMin162,4347
+	static inline UInt32 SharpMinute(int c, UInt32 tm = Now())SharpMinute166,4456
+	static inline UInt32 SharpMinute(int c, UInt32 tm = Now())TimeUtil::SharpMinute166,4456
+	static inline UInt64 GetTick()GetTick170,4556
+	static inline UInt64 GetTick()TimeUtil::GetTick170,4556
+    static inline void GetDMY(UInt32* pDay = NULL, UInt32* pM = NULL, UInt32* pY = NULL)GetDMY191,5081
+    static inline void GetDMY(UInt32* pDay = NULL, UInt32* pM = NULL, UInt32* pY = NULL)TimeUtil::GetDMY191,5081
+    static inline void GetNextMY(UInt32& m, UInt32* pY)GetNextMY203,5449
+    static inline void GetNextMY(UInt32& m, UInt32* pY)TimeUtil::GetNextMY203,5449
+    static inline UInt8 GetOneMonthDays(UInt32 nowTime = Now())GetOneMonthDays216,5676
+    static inline UInt8 GetOneMonthDays(UInt32 nowTime = Now())TimeUtil::GetOneMonthDays216,5676
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/Stream.h,4750
+#define _STREAM_H__STREAM_H_2,19
+class StreamStream6,60
+	static Stream& eos(Stream& st)eos9,83
+	static Stream& eos(Stream& st)Stream::eos9,83
+	Stream(): _pos(0) {}Stream14,171
+	Stream(): _pos(0) {}Stream::Stream14,171
+	Stream(UInt8 cmd, UInt8 magic = 0xFF): _pos(0)Stream15,193
+	Stream(UInt8 cmd, UInt8 magic = 0xFF): _pos(0)Stream::Stream15,193
+	Stream(const UInt8 * buf, size_t len): _pos(0)Stream19,267
+	Stream(const UInt8 * buf, size_t len): _pos(0)Stream::Stream19,267
+	Stream(std::vector<UInt8>& v): _pos(0)Stream26,375
+	Stream(std::vector<UInt8>& v): _pos(0)Stream::Stream26,375
+	void init(UInt8 cmd, UInt8 magic = 0xFF)init30,456
+	void init(UInt8 cmd, UInt8 magic = 0xFF)Stream::init30,456
+	inline operator std::vector<UInt8>&() {return _buf;}operator std::vector<UInt8>&35,570
+	inline operator std::vector<UInt8>&() {return _buf;}Stream::operator std::vector<UInt8>&35,570
+	inline operator UInt8*() {return _buf.empty() ? NULL : &_buf[0];}operator UInt8*36,624
+	inline operator UInt8*() {return _buf.empty() ? NULL : &_buf[0];}Stream::operator UInt8*36,624
+	inline size_t size() {return _buf.size();}size37,691
+	inline size_t size() {return _buf.size();}Stream::size37,691
+	inline size_t left() {return _buf.size() - _pos;}left38,735
+	inline size_t left() {return _buf.size() - _pos;}Stream::left38,735
+	inline size_t pos() {return _pos;}pos39,786
+	inline size_t pos() {return _pos;}Stream::pos39,786
+	inline bool empty() {return _buf.empty();}empty40,822
+	inline bool empty() {return _buf.empty();}Stream::empty40,822
+	inline void reset()reset41,866
+	inline void reset()Stream::reset41,866
+	inline void clear()clear45,905
+	inline void clear()Stream::clear45,905
+	size_t first_of(UInt8 b)first_of50,959
+	size_t first_of(UInt8 b)Stream::first_of50,959
+	inline void pop_front(size_t n)pop_front62,1123
+	inline void pop_front(size_t n)Stream::pop_front62,1123
+	inline void remove(size_t s, size_t n)remove69,1256
+	inline void remove(size_t s, size_t n)Stream::remove69,1256
+	inline void append_zero(size_t len)append_zero77,1440
+	inline void append_zero(size_t len)Stream::append_zero77,1440
+	inline void append(const UInt8 * buf, size_t len)append82,1535
+	inline void append(const UInt8 * buf, size_t len)Stream::append82,1535
+	inline void prepend(const UInt8 * buf, size_t len)prepend86,1635
+	inline void prepend(const UInt8 * buf, size_t len)Stream::prepend86,1635
+	inline int read(UInt8 * buf, size_t len)read90,1738
+	inline int read(UInt8 * buf, size_t len)Stream::read90,1738
+	inline Stream& operator>>(T& v)operator >>101,1963
+	inline Stream& operator>>(T& v)Stream::operator >>101,1963
+	inline Stream& operator<<(const T& v)operator <<107,2072
+	inline Stream& operator<<(const T& v)Stream::operator <<107,2072
+	inline Stream& operator>>(std::vector<UInt8>& v)operator >>112,2167
+	inline Stream& operator>>(std::vector<UInt8>& v)Stream::operator >>112,2167
+	inline Stream& operator<<(const std::vector<UInt8>& v)operator <<117,2269
+	inline Stream& operator<<(const std::vector<UInt8>& v)Stream::operator <<117,2269
+	inline Stream& operator>>(std::vector<T>& v)operator >>123,2416
+	inline Stream& operator>>(std::vector<T>& v)Stream::operator >>123,2416
+	inline Stream& operator<<(const std::vector<T>& v)operator <<135,2598
+	inline Stream& operator<<(const std::vector<T>& v)Stream::operator <<135,2598
+	inline Stream& operator>>(std::string& v)operator >>142,2771
+	inline Stream& operator>>(std::string& v)Stream::operator >>142,2771
+	inline Stream& operator<<(const std::string& v)operator <<154,2995
+	inline Stream& operator<<(const std::string& v)Stream::operator <<154,2995
+	inline Stream& operator<<(const char * v)operator <<160,3159
+	inline Stream& operator<<(const char * v)Stream::operator <<160,3159
+	inline Stream& operator<<(char * v)operator <<172,3407
+	inline Stream& operator<<(char * v)Stream::operator <<172,3407
+	inline Stream& operator<<(Stream& (*fn)(Stream&))fn184,3649
+	inline Stream& operator<<(Stream& (*fn)(Stream&))Stream::fn184,3649
+	inline Stream& operator+=(UInt32 n)operator +=188,3726
+	inline Stream& operator+=(UInt32 n)Stream::operator +=188,3726
+	inline Stream& operator-=(UInt32 n)operator -=195,3846
+	inline Stream& operator-=(UInt32 n)Stream::operator -=195,3846
+	inline T& data(size_t offset = 0)data204,3976
+	inline T& data(size_t offset = 0)Stream::data204,3976
+	inline Stream& operator<<(const Stream& v)operator <<214,4130
+	inline Stream& operator<<(const Stream& v)Stream::operator <<214,4130
+	size_t _pos;_pos220,4256
+	size_t _pos;Stream::_pos220,4256
+	std::vector<UInt8> _buf;_buf221,4270
+	std::vector<UInt8> _buf;Stream::_buf221,4270
+
+/home/jingsia/Tmp/ProjectA/./Core/Common/StreamUtil.h,273
+#define Foundation_StreamUtil_INCLUDEDFoundation_StreamUtil_INCLUDED2,39
+#		define _IOS_INIT_HACK _IOS_INIT_HACK61,1649
+#		define _IOS_INIT_HACK _IOS_INIT_HACK64,1776
+#	define common_ios_init(common_ios_init70,1848
+#	define common_ios_init(common_ios_init72,1884
+
+/home/jingsia/Tmp/ProjectA/./Core/Script/lua_tinker.h,48977
+#define _LUA_TINKER_H__LUA_TINKER_H_10,228
+namespace lua_tinkerlua_tinker22,393
+	void	init(lua_State *L);init25,435
+	void	init(lua_State *L);lua_tinker::init25,435
+	void	init_s64(lua_State *L);init_s6427,462
+	void	init_s64(lua_State *L);lua_tinker::init_s6427,462
+	void	init_u64(lua_State *L);init_u6428,492
+	void	init_u64(lua_State *L);lua_tinker::init_u6428,492
+	bool	dofile(lua_State *L, const char *filename);dofile31,536
+	bool	dofile(lua_State *L, const char *filename);lua_tinker::dofile31,536
+	bool	dostring(lua_State *L, const char* buff);dostring32,586
+	bool	dostring(lua_State *L, const char* buff);lua_tinker::dostring32,586
+	bool	dobuffer(lua_State *L, const char* buff, size_t sz);dobuffer33,634
+	bool	dobuffer(lua_State *L, const char* buff, size_t sz);lua_tinker::dobuffer33,634
+	void	enum_stack(lua_State *L);enum_stack36,712
+	void	enum_stack(lua_State *L);lua_tinker::enum_stack36,712
+	int		on_error(lua_State *L);on_error37,744
+	int		on_error(lua_State *L);lua_tinker::on_error37,744
+	void	print_error(lua_State *L, const char* fmt, ...);print_error38,774
+	void	print_error(lua_State *L, const char* fmt, ...);lua_tinker::print_error38,774
+	struct lua_valuelua_value41,857
+	struct lua_valuelua_tinker::lua_value41,857
+		virtual void to_lua(lua_State *L) = 0;to_lua43,878
+		virtual void to_lua(lua_State *L) = 0;lua_tinker::lua_value::to_lua43,878
+	template<bool C, typename A, typename B> struct if_ {};if_50,996
+	template<bool C, typename A, typename B> struct if_ {};lua_tinker::if_50,996
+	template<typename A, typename B>		struct if_<true, A, B> { typedef A type; };if_51,1053
+	template<typename A, typename B>		struct if_<true, A, B> { typedef A type; };lua_tinker::if_51,1053
+	template<typename A, typename B>		struct if_<true, A, B> { typedef A type; };type51,1053
+	template<typename A, typename B>		struct if_<true, A, B> { typedef A type; };lua_tinker::if_::type51,1053
+	template<typename A, typename B>		struct if_<false, A, B> { typedef B type; };if_52,1132
+	template<typename A, typename B>		struct if_<false, A, B> { typedef B type; };lua_tinker::if_52,1132
+	template<typename A, typename B>		struct if_<false, A, B> { typedef B type; };type52,1132
+	template<typename A, typename B>		struct if_<false, A, B> { typedef B type; };lua_tinker::if_::type52,1132
+	struct is_ptr { static const bool value = false; };is_ptr55,1235
+	struct is_ptr { static const bool value = false; };lua_tinker::is_ptr55,1235
+	struct is_ptr { static const bool value = false; };value55,1235
+	struct is_ptr { static const bool value = false; };lua_tinker::is_ptr::value55,1235
+	struct is_ptr<A*> { static const bool value = true; };is_ptr57,1310
+	struct is_ptr<A*> { static const bool value = true; };lua_tinker::is_ptr57,1310
+	struct is_ptr<A*> { static const bool value = true; };value57,1310
+	struct is_ptr<A*> { static const bool value = true; };lua_tinker::is_ptr::value57,1310
+	struct is_ref { static const bool value = false; };is_ref60,1389
+	struct is_ref { static const bool value = false; };lua_tinker::is_ref60,1389
+	struct is_ref { static const bool value = false; };value60,1389
+	struct is_ref { static const bool value = false; };lua_tinker::is_ref::value60,1389
+	struct is_ref<A&> { static const bool value = true; };is_ref62,1464
+	struct is_ref<A&> { static const bool value = true; };lua_tinker::is_ref62,1464
+	struct is_ref<A&> { static const bool value = true; };value62,1464
+	struct is_ref<A&> { static const bool value = true; };lua_tinker::is_ref::value62,1464
+	struct remove_const { typedef A type; };remove_const65,1543
+	struct remove_const { typedef A type; };lua_tinker::remove_const65,1543
+	struct remove_const { typedef A type; };type65,1543
+	struct remove_const { typedef A type; };lua_tinker::remove_const::type65,1543
+	struct remove_const<const A> { typedef A type; };remove_const67,1607
+	struct remove_const<const A> { typedef A type; };lua_tinker::remove_const67,1607
+	struct remove_const<const A> { typedef A type; };type67,1607
+	struct remove_const<const A> { typedef A type; };lua_tinker::remove_const::type67,1607
+	struct base_type { typedef A type; };base_type70,1681
+	struct base_type { typedef A type; };lua_tinker::base_type70,1681
+	struct base_type { typedef A type; };type70,1681
+	struct base_type { typedef A type; };lua_tinker::base_type::type70,1681
+	struct base_type<A*> { typedef A type; };base_type72,1742
+	struct base_type<A*> { typedef A type; };lua_tinker::base_type72,1742
+	struct base_type<A*> { typedef A type; };type72,1742
+	struct base_type<A*> { typedef A type; };lua_tinker::base_type::type72,1742
+	struct base_type<A&> { typedef A type; };base_type74,1807
+	struct base_type<A&> { typedef A type; };lua_tinker::base_type74,1807
+	struct base_type<A&> { typedef A type; };type74,1807
+	struct base_type<A&> { typedef A type; };lua_tinker::base_type::type74,1807
+	struct class_type { typedef typename remove_const<typename base_type<A>::type>::type type; };class_type77,1873
+	struct class_type { typedef typename remove_const<typename base_type<A>::type>::type type; };lua_tinker::class_type77,1873
+	struct class_type { typedef typename remove_const<typename base_type<A>::type>::type type; };type77,1873
+	struct class_type { typedef typename remove_const<typename base_type<A>::type>::type type; };lua_tinker::class_type::type77,1873
+	enum { no = 1, yes = 2 };no80,2004
+	enum { no = 1, yes = 2 };lua_tinker::no80,2004
+	enum { no = 1, yes = 2 };yes80,2004
+	enum { no = 1, yes = 2 };lua_tinker::yes80,2004
+	typedef char (& no_type )[no];no_type81,2031
+	typedef char (& no_type )[no];lua_tinker::no_type81,2031
+	typedef char (& yes_type)[yes];yes_type82,2063
+	typedef char (& yes_type)[yes];lua_tinker::yes_type82,2063
+	struct int_conv_type { int_conv_type(int); };int_conv_type84,2097
+	struct int_conv_type { int_conv_type(int); };lua_tinker::int_conv_type84,2097
+	struct int_conv_type { int_conv_type(int); };int_conv_type84,2097
+	struct int_conv_type { int_conv_type(int); };lua_tinker::int_conv_type::int_conv_type84,2097
+	no_type int_conv_tester (...);int_conv_tester86,2145
+	no_type int_conv_tester (...);lua_tinker::int_conv_tester86,2145
+	yes_type int_conv_tester (int_conv_type);int_conv_tester87,2177
+	yes_type int_conv_tester (int_conv_type);lua_tinker::int_conv_tester87,2177
+	no_type vfnd_ptr_tester (const volatile char *);vfnd_ptr_tester89,2221
+	no_type vfnd_ptr_tester (const volatile char *);lua_tinker::vfnd_ptr_tester89,2221
+	no_type vfnd_ptr_tester (const volatile short *);vfnd_ptr_tester90,2271
+	no_type vfnd_ptr_tester (const volatile short *);lua_tinker::vfnd_ptr_tester90,2271
+	no_type vfnd_ptr_tester (const volatile int *);vfnd_ptr_tester91,2322
+	no_type vfnd_ptr_tester (const volatile int *);lua_tinker::vfnd_ptr_tester91,2322
+	no_type vfnd_ptr_tester (const volatile long *);vfnd_ptr_tester92,2371
+	no_type vfnd_ptr_tester (const volatile long *);lua_tinker::vfnd_ptr_tester92,2371
+	no_type vfnd_ptr_tester (const volatile double *);vfnd_ptr_tester93,2421
+	no_type vfnd_ptr_tester (const volatile double *);lua_tinker::vfnd_ptr_tester93,2421
+	no_type vfnd_ptr_tester (const volatile float *);vfnd_ptr_tester94,2473
+	no_type vfnd_ptr_tester (const volatile float *);lua_tinker::vfnd_ptr_tester94,2473
+	no_type vfnd_ptr_tester (const volatile bool *);vfnd_ptr_tester95,2524
+	no_type vfnd_ptr_tester (const volatile bool *);lua_tinker::vfnd_ptr_tester95,2524
+	yes_type vfnd_ptr_tester (const volatile void *);vfnd_ptr_tester96,2574
+	yes_type vfnd_ptr_tester (const volatile void *);lua_tinker::vfnd_ptr_tester96,2574
+	template <typename T> T* add_ptr(T&);add_ptr98,2626
+	template <typename T> T* add_ptr(T&);lua_tinker::add_ptr98,2626
+	template <bool C> struct bool_to_yesno { typedef no_type type; };bool_to_yesno100,2666
+	template <bool C> struct bool_to_yesno { typedef no_type type; };lua_tinker::bool_to_yesno100,2666
+	template <bool C> struct bool_to_yesno { typedef no_type type; };type100,2666
+	template <bool C> struct bool_to_yesno { typedef no_type type; };lua_tinker::bool_to_yesno::type100,2666
+	template <> struct bool_to_yesno<true> { typedef yes_type type; };bool_to_yesno101,2733
+	template <> struct bool_to_yesno<true> { typedef yes_type type; };lua_tinker::bool_to_yesno101,2733
+	template <> struct bool_to_yesno<true> { typedef yes_type type; };type101,2733
+	template <> struct bool_to_yesno<true> { typedef yes_type type; };lua_tinker::bool_to_yesno::type101,2733
+	struct is_enumis_enum104,2825
+	struct is_enumlua_tinker::is_enum104,2825
+		static T arg;arg106,2844
+		static T arg;lua_tinker::is_enum::arg106,2844
+		static const bool value = ( (sizeof(int_conv_tester(arg)) == sizeof(yes_type)) && (sizeof(vfnd_ptr_tester(add_ptr(arg))) == sizeof(yes_type)) );value107,2860
+		static const bool value = ( (sizeof(int_conv_tester(arg)) == sizeof(yes_type)) && (sizeof(vfnd_ptr_tester(add_ptr(arg))) == sizeof(yes_type)) );lua_tinker::is_enum::value107,2860
+	struct void2val { static T invoke(void* input){ return *(T*)input; } };void2val113,3082
+	struct void2val { static T invoke(void* input){ return *(T*)input; } };lua_tinker::void2val113,3082
+	struct void2val { static T invoke(void* input){ return *(T*)input; } };invoke113,3082
+	struct void2val { static T invoke(void* input){ return *(T*)input; } };lua_tinker::void2val::invoke113,3082
+	struct void2ptr { static T* invoke(void* input){ return (T*)input; } };void2ptr115,3177
+	struct void2ptr { static T* invoke(void* input){ return (T*)input; } };lua_tinker::void2ptr115,3177
+	struct void2ptr { static T* invoke(void* input){ return (T*)input; } };invoke115,3177
+	struct void2ptr { static T* invoke(void* input){ return (T*)input; } };lua_tinker::void2ptr::invoke115,3177
+	struct void2ref { static T& invoke(void* input){ return *(T*)input; } };void2ref117,3272
+	struct void2ref { static T& invoke(void* input){ return *(T*)input; } };lua_tinker::void2ref117,3272
+	struct void2ref { static T& invoke(void* input){ return *(T*)input; } };invoke117,3272
+	struct void2ref { static T& invoke(void* input){ return *(T*)input; } };lua_tinker::void2ref::invoke117,3272
+	struct void2typevoid2type120,3369
+	struct void2typelua_tinker::void2type120,3369
+		static T invoke(void* ptr)invoke122,3390
+		static T invoke(void* ptr)lua_tinker::void2type::invoke122,3390
+	struct useruser134,3678
+	struct userlua_tinker::user134,3678
+		user(void* p) : m_p(p) {}user136,3694
+		user(void* p) : m_p(p) {}lua_tinker::user::user136,3694
+		virtual ~user() {}~user137,3722
+		virtual ~user() {}lua_tinker::user::~user137,3722
+		void* m_p;m_p138,3743
+		void* m_p;lua_tinker::user::m_p138,3743
+	struct user2type { static T invoke(lua_State *L, int index) { return void2type<T>::invoke(lua_touserdata(L, index)); } };user2type142,3783
+	struct user2type { static T invoke(lua_State *L, int index) { return void2type<T>::invoke(lua_touserdata(L, index)); } };lua_tinker::user2type142,3783
+	struct user2type { static T invoke(lua_State *L, int index) { return void2type<T>::invoke(lua_touserdata(L, index)); } };invoke142,3783
+	struct user2type { static T invoke(lua_State *L, int index) { return void2type<T>::invoke(lua_touserdata(L, index)); } };lua_tinker::user2type::invoke142,3783
+	struct lua2enum { static T invoke(lua_State *L, int index) { return (T)(int)lua_tonumber(L, index); } };lua2enum145,3929
+	struct lua2enum { static T invoke(lua_State *L, int index) { return (T)(int)lua_tonumber(L, index); } };lua_tinker::lua2enum145,3929
+	struct lua2enum { static T invoke(lua_State *L, int index) { return (T)(int)lua_tonumber(L, index); } };invoke145,3929
+	struct lua2enum { static T invoke(lua_State *L, int index) { return (T)(int)lua_tonumber(L, index); } };lua_tinker::lua2enum::invoke145,3929
+	struct lua2objectlua2object148,4058
+	struct lua2objectlua_tinker::lua2object148,4058
+		static T invoke(lua_State *L, int index)invoke150,4080
+		static T invoke(lua_State *L, int index)lua_tinker::lua2object::invoke150,4080
+	T lua2type(lua_State *L, int index)lua2type162,4370
+	T lua2type(lua_State *L, int index)lua_tinker::lua2type162,4370
+	struct val2user : userval2user171,4536
+	struct val2user : userlua_tinker::val2user171,4536
+		val2user() : user(new T) {}val2user173,4563
+		val2user() : user(new T) {}lua_tinker::val2user::val2user173,4563
+		val2user(T1 t1) : user(new T(t1)) {}val2user176,4618
+		val2user(T1 t1) : user(new T(t1)) {}lua_tinker::val2user::val2user176,4618
+		val2user(T1 t1, T2 t2) : user(new T(t1, t2)) {}val2user179,4695
+		val2user(T1 t1, T2 t2) : user(new T(t1, t2)) {}lua_tinker::val2user::val2user179,4695
+		val2user(T1 t1, T2 t2, T3 t3) : user(new T(t1, t2, t3)) {}val2user182,4796
+		val2user(T1 t1, T2 t2, T3 t3) : user(new T(t1, t2, t3)) {}lua_tinker::val2user::val2user182,4796
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4) : user(new T(t1, t2, t3,t4)) {}val2user185,4921
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4) : user(new T(t1, t2, t3,t4)) {}lua_tinker::val2user::val2user185,4921
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5) : user(new T(t1, t2, t3,t4,t5)) {}val2user188,5069
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5) : user(new T(t1, t2, t3,t4,t5)) {}lua_tinker::val2user::val2user188,5069
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6) : user(new T(t1, t2, t3,t4,t5,t6)) {}val2user191,5240
+		val2user(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6) : user(new T(t1, t2, t3,t4,t5,t6)) {}lua_tinker::val2user::val2user191,5240
+		~val2user() { delete ((T*)m_p); }~val2user193,5332
+		~val2user() { delete ((T*)m_p); }lua_tinker::val2user::~val2user193,5332
+	struct ptr2user : userptr2user197,5395
+	struct ptr2user : userlua_tinker::ptr2user197,5395
+		ptr2user(T* t) : user((void*)t) {}ptr2user199,5422
+		ptr2user(T* t) : user((void*)t) {}lua_tinker::ptr2user::ptr2user199,5422
+	struct ref2user : userref2user203,5486
+	struct ref2user : userlua_tinker::ref2user203,5486
+		ref2user(T& t) : user(&t) {}ref2user205,5513
+		ref2user(T& t) : user(&t) {}lua_tinker::ref2user::ref2user205,5513
+	void push_meta(lua_State *L, const char* name);push_meta208,5549
+	void push_meta(lua_State *L, const char* name);lua_tinker::push_meta208,5549
+	struct val2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(val2user<T>))) val2user<T>(input); } };val2lua212,5632
+	struct val2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(val2user<T>))) val2user<T>(input); } };lua_tinker::val2lua212,5632
+	struct val2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(val2user<T>))) val2user<T>(input); } };invoke212,5632
+	struct val2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(val2user<T>))) val2user<T>(input); } };lua_tinker::val2lua::invoke212,5632
+	struct ptr2lua { static void invoke(lua_State *L, T* input){ if(input) new(lua_newuserdata(L, sizeof(ptr2user<T>))) ptr2user<T>(input); else lua_pushnil(L); } };ptr2lua214,5786
+	struct ptr2lua { static void invoke(lua_State *L, T* input){ if(input) new(lua_newuserdata(L, sizeof(ptr2user<T>))) ptr2user<T>(input); else lua_pushnil(L); } };lua_tinker::ptr2lua214,5786
+	struct ptr2lua { static void invoke(lua_State *L, T* input){ if(input) new(lua_newuserdata(L, sizeof(ptr2user<T>))) ptr2user<T>(input); else lua_pushnil(L); } };invoke214,5786
+	struct ptr2lua { static void invoke(lua_State *L, T* input){ if(input) new(lua_newuserdata(L, sizeof(ptr2user<T>))) ptr2user<T>(input); else lua_pushnil(L); } };lua_tinker::ptr2lua::invoke214,5786
+	struct ref2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(ref2user<T>))) ref2user<T>(input); } };ref2lua216,5971
+	struct ref2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(ref2user<T>))) ref2user<T>(input); } };lua_tinker::ref2lua216,5971
+	struct ref2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(ref2user<T>))) ref2user<T>(input); } };invoke216,5971
+	struct ref2lua { static void invoke(lua_State *L, T& input){ new(lua_newuserdata(L, sizeof(ref2user<T>))) ref2user<T>(input); } };lua_tinker::ref2lua::invoke216,5971
+	struct enum2lua { static void invoke(lua_State *L, T val) { lua_pushnumber(L, (int)val); } };enum2lua219,6126
+	struct enum2lua { static void invoke(lua_State *L, T val) { lua_pushnumber(L, (int)val); } };lua_tinker::enum2lua219,6126
+	struct enum2lua { static void invoke(lua_State *L, T val) { lua_pushnumber(L, (int)val); } };invoke219,6126
+	struct enum2lua { static void invoke(lua_State *L, T val) { lua_pushnumber(L, (int)val); } };lua_tinker::enum2lua::invoke219,6126
+	struct object2luaobject2lua222,6244
+	struct object2lualua_tinker::object2lua222,6244
+		static void invoke(lua_State *L, T val)invoke224,6266
+		static void invoke(lua_State *L, T val)lua_tinker::object2lua::invoke224,6266
+	void type2lua(lua_State *L, T val)type2lua240,6666
+	void type2lua(lua_State *L, T val)lua_tinker::type2lua240,6666
+	T upvalue_(lua_State *L)upvalue_250,6844
+	T upvalue_(lua_State *L)lua_tinker::upvalue_250,6844
+	T read(lua_State *L, int index)				{ return lua2type<T>(L, index); }read257,6986
+	T read(lua_State *L, int index)				{ return lua2type<T>(L, index); }lua_tinker::read257,6986
+	template<>	char*				read(lua_State *L, int index);read259,7057
+	template<>	char*				read(lua_State *L, int index);lua_tinker::read259,7057
+	template<>	const char*			read(lua_State *L, int index);read260,7109
+	template<>	const char*			read(lua_State *L, int index);lua_tinker::read260,7109
+	template<>	char				read(lua_State *L, int index);read261,7166
+	template<>	char				read(lua_State *L, int index);lua_tinker::read261,7166
+	template<>	unsigned char		read(lua_State *L, int index);read262,7217
+	template<>	unsigned char		read(lua_State *L, int index);lua_tinker::read262,7217
+	template<>	short				read(lua_State *L, int index);read263,7275
+	template<>	short				read(lua_State *L, int index);lua_tinker::read263,7275
+	template<>	unsigned short		read(lua_State *L, int index);read264,7327
+	template<>	unsigned short		read(lua_State *L, int index);lua_tinker::read264,7327
+	template<>	long				read(lua_State *L, int index);read265,7386
+	template<>	long				read(lua_State *L, int index);lua_tinker::read265,7386
+	template<>	unsigned long		read(lua_State *L, int index);read266,7437
+	template<>	unsigned long		read(lua_State *L, int index);lua_tinker::read266,7437
+	template<>	int					read(lua_State *L, int index);read267,7495
+	template<>	int					read(lua_State *L, int index);lua_tinker::read267,7495
+	template<>	unsigned int		read(lua_State *L, int index);read268,7546
+	template<>	unsigned int		read(lua_State *L, int index);lua_tinker::read268,7546
+	template<>	float				read(lua_State *L, int index);read269,7603
+	template<>	float				read(lua_State *L, int index);lua_tinker::read269,7603
+	template<>	double				read(lua_State *L, int index);read270,7655
+	template<>	double				read(lua_State *L, int index);lua_tinker::read270,7655
+	template<>	bool				read(lua_State *L, int index);read271,7708
+	template<>	bool				read(lua_State *L, int index);lua_tinker::read271,7708
+	template<>	void				read(lua_State *L, int index);read272,7759
+	template<>	void				read(lua_State *L, int index);lua_tinker::read272,7759
+	template<>	long long			read(lua_State *L, int index);read273,7810
+	template<>	long long			read(lua_State *L, int index);lua_tinker::read273,7810
+	template<>	unsigned long long	read(lua_State *L, int index);read274,7865
+	template<>	unsigned long long	read(lua_State *L, int index);lua_tinker::read274,7865
+	template<>	table				read(lua_State *L, int index);read275,7927
+	template<>	table				read(lua_State *L, int index);lua_tinker::read275,7927
+	void push(lua_State *L, T ret)					{ type2lua<T>(L, ret); }push279,8032
+	void push(lua_State *L, T ret)					{ type2lua<T>(L, ret); }lua_tinker::push279,8032
+	template<>	void push(lua_State *L, char ret);push281,8094
+	template<>	void push(lua_State *L, char ret);lua_tinker::push281,8094
+	template<>	void push(lua_State *L, unsigned char ret);push282,8141
+	template<>	void push(lua_State *L, unsigned char ret);lua_tinker::push282,8141
+	template<>	void push(lua_State *L, short ret);push283,8197
+	template<>	void push(lua_State *L, short ret);lua_tinker::push283,8197
+	template<>	void push(lua_State *L, unsigned short ret);push284,8245
+	template<>	void push(lua_State *L, unsigned short ret);lua_tinker::push284,8245
+	template<>	void push(lua_State *L, long ret);push285,8302
+	template<>	void push(lua_State *L, long ret);lua_tinker::push285,8302
+	template<>	void push(lua_State *L, unsigned long ret);push286,8349
+	template<>	void push(lua_State *L, unsigned long ret);lua_tinker::push286,8349
+	template<>	void push(lua_State *L, int ret);push287,8405
+	template<>	void push(lua_State *L, int ret);lua_tinker::push287,8405
+	template<>	void push(lua_State *L, unsigned int ret);push288,8451
+	template<>	void push(lua_State *L, unsigned int ret);lua_tinker::push288,8451
+	template<>	void push(lua_State *L, float ret);push289,8506
+	template<>	void push(lua_State *L, float ret);lua_tinker::push289,8506
+	template<>	void push(lua_State *L, double ret);push290,8554
+	template<>	void push(lua_State *L, double ret);lua_tinker::push290,8554
+	template<>	void push(lua_State *L, char* ret);push291,8603
+	template<>	void push(lua_State *L, char* ret);lua_tinker::push291,8603
+	template<>	void push(lua_State *L, const char* ret);push292,8651
+	template<>	void push(lua_State *L, const char* ret);lua_tinker::push292,8651
+	template<>	void push(lua_State *L, bool ret);push293,8705
+	template<>	void push(lua_State *L, bool ret);lua_tinker::push293,8705
+	template<>	void push(lua_State *L, lua_value* ret);push294,8752
+	template<>	void push(lua_State *L, lua_value* ret);lua_tinker::push294,8752
+	template<>	void push(lua_State *L, long long ret);push295,8805
+	template<>	void push(lua_State *L, long long ret);lua_tinker::push295,8805
+	template<>	void push(lua_State *L, unsigned long long ret);push296,8857
+	template<>	void push(lua_State *L, unsigned long long ret);lua_tinker::push296,8857
+	template<>	void push(lua_State *L, table ret);push297,8918
+	template<>	void push(lua_State *L, table ret);lua_tinker::push297,8918
+	T pop(lua_State *L) { T t = read<T>(L, -1); lua_pop(L, 1); return t; }pop301,9020
+	T pop(lua_State *L) { T t = read<T>(L, -1); lua_pop(L, 1); return t; }lua_tinker::pop301,9020
+	template<>	void	pop(lua_State *L);pop303,9093
+	template<>	void	pop(lua_State *L);lua_tinker::pop303,9093
+	template<>	table	pop(lua_State *L);pop304,9129
+	template<>	table	pop(lua_State *L);lua_tinker::pop304,9129
+	struct functorfunctor308,9312
+	struct functorlua_tinker::functor308,9312
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4,T5,T6)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5),read<T6>(L,6))); return 1; }invoke310,9331
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4,T5,T6)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5),read<T6>(L,6))); return 1; }lua_tinker::functor::invoke310,9331
+	struct functor<RVal,T1,T2,T3,T4,T5>functor314,9608
+	struct functor<RVal,T1,T2,T3,T4,T5>lua_tinker::functor314,9608
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4,T5)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5))); return 1; }invoke316,9648
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4,T5)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5))); return 1; }lua_tinker::functor::invoke316,9648
+	struct functor<RVal,T1,T2,T3,T4>functor320,9895
+	struct functor<RVal,T1,T2,T3,T4>lua_tinker::functor320,9895
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4))); return 1; }invoke322,9932
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3,T4)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4))); return 1; }lua_tinker::functor::invoke322,9932
+	struct functor<RVal,T1,T2,T3>functor326,10149
+	struct functor<RVal,T1,T2,T3>lua_tinker::functor326,10149
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3))); return 1; }invoke328,10183
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2,T3)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3))); return 1; }lua_tinker::functor::invoke328,10183
+	struct functor<RVal,T1,T2>functor332,10370
+	struct functor<RVal,T1,T2>lua_tinker::functor332,10370
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2)>(L)(read<T1>(L,1),read<T2>(L,2))); return 1; }invoke334,10401
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1,T2)>(L)(read<T1>(L,1),read<T2>(L,2))); return 1; }lua_tinker::functor::invoke334,10401
+	struct functor<RVal,T1>functor338,10558
+	struct functor<RVal,T1>lua_tinker::functor338,10558
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1)>(L)(read<T1>(L,1))); return 1; }invoke340,10586
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)(T1)>(L)(read<T1>(L,1))); return 1; }lua_tinker::functor::invoke340,10586
+	struct functor<RVal>functor344,10713
+	struct functor<RVal>lua_tinker::functor344,10713
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)()>(L)()); return 1; }invoke346,10738
+		static int invoke(lua_State *L) { push(L,upvalue_<RVal(*)()>(L)()); return 1; }lua_tinker::functor::invoke346,10738
+	struct functor<void, T1, T2, T3, T4, T5, T6>functor351,10917
+	struct functor<void, T1, T2, T3, T4, T5, T6>lua_tinker::functor351,10917
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4,T5,T6)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5),read<T6>(L,6)); return 0; }invoke353,10966
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4,T5,T6)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5),read<T6>(L,6)); return 0; }lua_tinker::functor::invoke353,10966
+	struct functor<void, T1, T2, T3, T4, T5>functor357,11220
+	struct functor<void, T1, T2, T3, T4, T5>lua_tinker::functor357,11220
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4,T5)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5)); return 0; }invoke359,11265
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4,T5)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4),read<T5>(L,5)); return 0; }lua_tinker::functor::invoke359,11265
+	struct functor<void, T1, T2, T3, T4>functor363,11489
+	struct functor<void, T1, T2, T3, T4>lua_tinker::functor363,11489
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4)); return 0; }invoke365,11530
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3,T4)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3),read<T4>(L,4)); return 0; }lua_tinker::functor::invoke365,11530
+	struct functor<void, T1, T2, T3>functor369,11724
+	struct functor<void, T1, T2, T3>lua_tinker::functor369,11724
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3)); return 0; }invoke371,11761
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2,T3)>(L)(read<T1>(L,1),read<T2>(L,2),read<T3>(L,3)); return 0; }lua_tinker::functor::invoke371,11761
+	struct functor<void, T1, T2>functor375,11925
+	struct functor<void, T1, T2>lua_tinker::functor375,11925
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2)>(L)(read<T1>(L,1),read<T2>(L,2)); return 0; }invoke377,11958
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1,T2)>(L)(read<T1>(L,1),read<T2>(L,2)); return 0; }lua_tinker::functor::invoke377,11958
+	struct functor<void, T1>functor381,12092
+	struct functor<void, T1>lua_tinker::functor381,12092
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1)>(L)(read<T1>(L,1)); return 0; }invoke383,12121
+		static int invoke(lua_State *L) { upvalue_<void(*)(T1)>(L)(read<T1>(L,1)); return 0; }lua_tinker::functor::invoke383,12121
+	struct functor<void>functor387,12227
+	struct functor<void>lua_tinker::functor387,12227
+		static int invoke(lua_State *L) { upvalue_<void(*)()>(L)(); return 0; }invoke389,12252
+		static int invoke(lua_State *L) { upvalue_<void(*)()>(L)(); return 0; }lua_tinker::functor::invoke389,12252
+	void push_functor(lua_State *L, RVal (*func)())push_functor394,12373
+	void push_functor(lua_State *L, RVal (*func)())lua_tinker::push_functor394,12373
+	void push_functor(lua_State *L, RVal (*func)(T1))push_functor400,12516
+	void push_functor(lua_State *L, RVal (*func)(T1))lua_tinker::push_functor400,12516
+	void push_functor(lua_State *L, RVal (*func)(T1,T2))push_functor406,12677
+	void push_functor(lua_State *L, RVal (*func)(T1,T2))lua_tinker::push_functor406,12677
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3))push_functor412,12857
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3))lua_tinker::push_functor412,12857
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4))push_functor418,13056
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4))lua_tinker::push_functor418,13056
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4,T5))push_functor424,13274
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4,T5))lua_tinker::push_functor424,13274
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4,T5,T6))push_functor430,13511
+	void push_functor(lua_State *L, RVal (*func)(T1,T2,T3,T4,T5,T6))lua_tinker::push_functor430,13511
+	struct var_basevar_base436,13671
+	struct var_baselua_tinker::var_base436,13671
+		virtual void get(lua_State *L) = 0;get438,13691
+		virtual void get(lua_State *L) = 0;lua_tinker::var_base::get438,13691
+		virtual void set(lua_State *L) = 0;set439,13729
+		virtual void set(lua_State *L) = 0;lua_tinker::var_base::set439,13729
+	struct mem_var : var_basemem_var443,13806
+	struct mem_var : var_baselua_tinker::mem_var443,13806
+		V T::*_var;_var445,13836
+		V T::*_var;lua_tinker::mem_var::T::_var445,13836
+		mem_var(V T::*val) : _var(val) {}mem_var446,13850
+		mem_var(V T::*val) : _var(val) {}lua_tinker::mem_var::mem_var446,13850
+		void get(lua_State *L)	{ push(L, read<T*>(L,1)->*(_var));		}get447,13886
+		void get(lua_State *L)	{ push(L, read<T*>(L,1)->*(_var));		}lua_tinker::mem_var::get447,13886
+		void set(lua_State *L)	{ read<T*>(L,1)->*(_var) = read<V>(L, 3);	}set448,13949
+		void set(lua_State *L)	{ read<T*>(L,1)->*(_var) = read<V>(L, 3);	}lua_tinker::mem_var::set448,13949
+	struct mem_functormem_functor453,14188
+	struct mem_functorlua_tinker::mem_functor453,14188
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4,T5,T6)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6),read<T6>(L,7)));; return 1; }invoke455,14211
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4,T5,T6)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6),read<T6>(L,7)));; return 1; }lua_tinker::mem_functor::invoke455,14211
+	struct mem_functor<RVal,T,T1,T2,T3,T4,T5>mem_functor459,14522
+	struct mem_functor<RVal,T,T1,T2,T3,T4,T5>lua_tinker::mem_functor459,14522
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4,T5)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6)));; return 1; }invoke461,14568
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4,T5)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6)));; return 1; }lua_tinker::mem_functor::invoke461,14568
+	struct mem_functor<RVal,T,T1,T2,T3,T4>mem_functor465,14849
+	struct mem_functor<RVal,T,T1,T2,T3,T4>lua_tinker::mem_functor465,14849
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5))); return 1; }invoke467,14892
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3,T4)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5))); return 1; }lua_tinker::mem_functor::invoke467,14892
+	struct mem_functor<RVal,T,T1,T2,T3>mem_functor471,15142
+	struct mem_functor<RVal,T,T1,T2,T3>lua_tinker::mem_functor471,15142
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4))); return 1; }invoke473,15182
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2,T3)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4))); return 1; }lua_tinker::mem_functor::invoke473,15182
+	struct mem_functor<RVal,T,T1, T2>mem_functor477,15402
+	struct mem_functor<RVal,T,T1, T2>lua_tinker::mem_functor477,15402
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2)>(L))(read<T1>(L,2),read<T2>(L,3))); return 1; }invoke479,15440
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1,T2)>(L))(read<T1>(L,2),read<T2>(L,3))); return 1; }lua_tinker::mem_functor::invoke479,15440
+	struct mem_functor<RVal,T,T1>mem_functor483,15630
+	struct mem_functor<RVal,T,T1>lua_tinker::mem_functor483,15630
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1)>(L))(read<T1>(L,2))); return 1; }invoke485,15664
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)(T1)>(L))(read<T1>(L,2))); return 1; }lua_tinker::mem_functor::invoke485,15664
+	struct mem_functor<RVal,T>mem_functor489,15824
+	struct mem_functor<RVal,T>lua_tinker::mem_functor489,15824
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)()>(L))()); return 1; }invoke491,15855
+		static int invoke(lua_State *L) { push(L,(read<T*>(L,1)->*upvalue_<RVal(T::*)()>(L))()); return 1; }lua_tinker::mem_functor::invoke491,15855
+	struct mem_functor<void,T,T1,T2,T3,T4,T5,T6>mem_functor495,16063
+	struct mem_functor<void,T,T1,T2,T3,T4,T5,T6>lua_tinker::mem_functor495,16063
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4,T5,T6)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6),read<T6>(L,7)); return 0; }invoke497,16112
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4,T5,T6)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6),read<T6>(L,7)); return 0; }lua_tinker::mem_functor::invoke497,16112
+	struct mem_functor<void,T,T1,T2,T3,T4,T5>mem_functor501,16400
+	struct mem_functor<void,T,T1,T2,T3,T4,T5>lua_tinker::mem_functor501,16400
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4,T5)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6)); return 0; }invoke503,16446
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4,T5)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5),read<T5>(L,6)); return 0; }lua_tinker::mem_functor::invoke503,16446
+	struct mem_functor<void,T,T1,T2,T3,T4>mem_functor507,16704
+	struct mem_functor<void,T,T1,T2,T3,T4>lua_tinker::mem_functor507,16704
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5)); return 0; }invoke509,16747
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3,T4)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4),read<T4>(L,5)); return 0; }lua_tinker::mem_functor::invoke509,16747
+	struct mem_functor<void,T,T1,T2,T3>mem_functor513,16975
+	struct mem_functor<void,T,T1,T2,T3>lua_tinker::mem_functor513,16975
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4)); return 0; }invoke515,17015
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2,T3)>(L))(read<T1>(L,2),read<T2>(L,3),read<T3>(L,4)); return 0; }lua_tinker::mem_functor::invoke515,17015
+	struct mem_functor<void,T,T1,T2>mem_functor519,17213
+	struct mem_functor<void,T,T1,T2>lua_tinker::mem_functor519,17213
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2)>(L))(read<T1>(L,2),read<T2>(L,3)); return 0; }invoke521,17250
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1,T2)>(L))(read<T1>(L,2),read<T2>(L,3)); return 0; }lua_tinker::mem_functor::invoke521,17250
+	struct mem_functor<void,T,T1>mem_functor525,17418
+	struct mem_functor<void,T,T1>lua_tinker::mem_functor525,17418
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1)>(L))(read<T1>(L,2)); return 0; }invoke527,17452
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)(T1)>(L))(read<T1>(L,2)); return 0; }lua_tinker::mem_functor::invoke527,17452
+	struct mem_functor<void,T>mem_functor531,17590
+	struct mem_functor<void,T>lua_tinker::mem_functor531,17590
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)()>(L))(); return 0; }invoke533,17621
+		static int invoke(lua_State *L)  { (read<T*>(L,1)->*upvalue_<void(T::*)()>(L))(); return 0; }lua_tinker::mem_functor::invoke533,17621
+	void push_functor(lua_State *L, RVal (T::*func)())push_functor538,17776
+	void push_functor(lua_State *L, RVal (T::*func)())lua_tinker::push_functor538,17776
+	void push_functor(lua_State *L, RVal (T::*func)() const)push_functor544,17927
+	void push_functor(lua_State *L, RVal (T::*func)() const)lua_tinker::push_functor544,17927
+	void push_functor(lua_State *L, RVal (T::*func)(T1))push_functor550,18097
+	void push_functor(lua_State *L, RVal (T::*func)(T1))lua_tinker::push_functor550,18097
+	void push_functor(lua_State *L, RVal (T::*func)(T1) const)push_functor556,18266
+	void push_functor(lua_State *L, RVal (T::*func)(T1) const)lua_tinker::push_functor556,18266
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2))push_functor562,18454
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2))lua_tinker::push_functor562,18454
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2) const)push_functor568,18642
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2) const)lua_tinker::push_functor568,18642
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3))push_functor574,18849
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3))lua_tinker::push_functor574,18849
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3) const)push_functor580,19056
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3) const)lua_tinker::push_functor580,19056
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4))push_functor586,19282
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4))lua_tinker::push_functor586,19282
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4) const)push_functor592,19508
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4) const)lua_tinker::push_functor592,19508
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5))push_functor598,19753
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5))lua_tinker::push_functor598,19753
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5) const)push_functor604,19998
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5) const)lua_tinker::push_functor604,19998
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5,T6))push_functor610,20262
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5,T6))lua_tinker::push_functor610,20262
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5,T6) const)push_functor616,20526
+	void push_functor(lua_State *L, RVal (T::*func)(T1,T2,T3,T4,T5,T6) const)lua_tinker::push_functor616,20526
+	int constructor(lua_State *L)constructor623,20797
+	int constructor(lua_State *L)lua_tinker::constructor623,20797
+	int constructor(lua_State *L)constructor633,21173
+	int constructor(lua_State *L)lua_tinker::constructor633,21173
+	int constructor(lua_State *L)constructor643,21522
+	int constructor(lua_State *L)lua_tinker::constructor643,21522
+	int constructor(lua_State *L)constructor653,21844
+	int constructor(lua_State *L)lua_tinker::constructor653,21844
+	int constructor(lua_State *L)constructor663,22139
+	int constructor(lua_State *L)lua_tinker::constructor663,22139
+	int constructor(lua_State *L)constructor673,22407
+	int constructor(lua_State *L)lua_tinker::constructor673,22407
+	int constructor(lua_State *L)constructor683,22648
+	int constructor(lua_State *L)lua_tinker::constructor683,22648
+	int destroyer(lua_State *L)destroyer694,22890
+	int destroyer(lua_State *L)lua_tinker::destroyer694,22890
+	void def(lua_State* L, const char* name, F func)def702,23022
+	void def(lua_State* L, const char* name, F func)lua_tinker::def702,23022
+	void set(lua_State* L, const char* name, T object)set712,23251
+	void set(lua_State* L, const char* name, T object)lua_tinker::set712,23251
+	T get(lua_State* L, const char* name)get720,23415
+	T get(lua_State* L, const char* name)lua_tinker::get720,23415
+	void decl(lua_State* L, const char* name, T object)decl728,23567
+	void decl(lua_State* L, const char* name, T object)lua_tinker::decl728,23567
+	RVal call(lua_State* L, const char* name)call735,23685
+	RVal call(lua_State* L, const char* name)lua_tinker::call735,23685
+	RVal call(lua_State* L, const char* name, T1 arg)call759,24161
+	RVal call(lua_State* L, const char* name, T1 arg)lua_tinker::call759,24161
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2)call784,24675
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2)lua_tinker::call784,24675
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3)call810,25231
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3)lua_tinker::call810,25231
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4)call837,25827
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4)lua_tinker::call837,25827
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)call865,26463
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)lua_tinker::call865,26463
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)call894,27139
+	RVal call(lua_State* L, const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)lua_tinker::call894,27139
+	int meta_get(lua_State *L);meta_get925,27757
+	int meta_get(lua_State *L);lua_tinker::meta_get925,27757
+	int meta_set(lua_State *L);meta_set926,27786
+	int meta_set(lua_State *L);lua_tinker::meta_set926,27786
+	void class_add(lua_State* L, const char* name)class_add930,27853
+	void class_add(lua_State* L, const char* name)lua_tinker::class_add930,27853
+	void class_inh(lua_State* L)class_inh958,28439
+	void class_inh(lua_State* L)lua_tinker::class_inh958,28439
+	void class_con(lua_State* L,F func)class_con972,28724
+	void class_con(lua_State* L,F func)lua_tinker::class_con972,28724
+	void class_def(lua_State* L, const char* name, F func)class_def988,29053
+	void class_def(lua_State* L, const char* name, F func)lua_tinker::class_def988,29053
+	void class_mem(lua_State* L, const char* name, VAR BASE::*val)class_mem1003,29405
+	void class_mem(lua_State* L, const char* name, VAR BASE::*val)lua_tinker::class_mem1003,29405
+	struct class_nameclass_name1016,29714
+	struct class_namelua_tinker::class_name1016,29714
+		static const char* name(const char* name = NULL)name1019,29753
+		static const char* name(const char* name = NULL)lua_tinker::class_name::name1019,29753
+	struct table_objtable_obj1028,29922
+	struct table_objlua_tinker::table_obj1028,29922
+		table_obj(lua_State* L, int index);table_obj1030,29943
+		table_obj(lua_State* L, int index);lua_tinker::table_obj::table_obj1030,29943
+		~table_obj();~table_obj1031,29981
+		~table_obj();lua_tinker::table_obj::~table_obj1031,29981
+		void inc_ref();inc_ref1033,29998
+		void inc_ref();lua_tinker::table_obj::inc_ref1033,29998
+		void dec_ref();dec_ref1034,30016
+		void dec_ref();lua_tinker::table_obj::dec_ref1034,30016
+		bool validate();validate1036,30035
+		bool validate();lua_tinker::table_obj::validate1036,30035
+		void set(int index, T object)set1039,30078
+		void set(int index, T object)lua_tinker::table_obj::set1039,30078
+		T get(int index)get1050,30258
+		T get(int index)lua_tinker::table_obj::get1050,30258
+		void set(const char* name, T object)set1066,30466
+		void set(const char* name, T object)lua_tinker::table_obj::set1066,30466
+		T get(const char* name)get1077,30651
+		T get(const char* name)lua_tinker::table_obj::get1077,30651
+		void put(T object)put1094,30893
+		void put(T object)lua_tinker::table_obj::put1094,30893
+		int size()size1103,31018
+		int size()lua_tinker::table_obj::size1103,31018
+		T fetch(int index)fetch1118,31235
+		T fetch(int index)lua_tinker::table_obj::fetch1118,31235
+		void def(const char* name, F func)def1136,31492
+		void def(const char* name, F func)lua_tinker::table_obj::def1136,31492
+		RVal call(const char* name)call1146,31707
+		RVal call(const char* name)lua_tinker::table_obj::call1146,31707
+		RVal call(const char* name, T1 arg)call1170,32209
+		RVal call(const char* name, T1 arg)lua_tinker::table_obj::call1170,32209
+		RVal call(const char* name, T1 arg1, T2 arg2)call1195,32747
+		RVal call(const char* name, T1 arg1, T2 arg2)lua_tinker::table_obj::call1195,32747
+		RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3)call1221,33330
+		RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3)lua_tinker::table_obj::call1221,33330
+		lua_State*		m_L;m_L1248,33890
+		lua_State*		m_L;lua_tinker::table_obj::m_L1248,33890
+		int				m_index;m_index1249,33909
+		int				m_index;lua_tinker::table_obj::m_index1249,33909
+		const void*		m_pointer;m_pointer1250,33927
+		const void*		m_pointer;lua_tinker::table_obj::m_pointer1250,33927
+		int				m_ref;m_ref1251,33953
+		int				m_ref;lua_tinker::table_obj::m_ref1251,33953
+	struct tabletable1255,33998
+	struct tablelua_tinker::table1255,33998
+		table(lua_State* L);table1257,34015
+		table(lua_State* L);lua_tinker::table::table1257,34015
+		table(lua_State* L, int index);table1258,34038
+		table(lua_State* L, int index);lua_tinker::table::table1258,34038
+		table(lua_State* L, const char* name);table1259,34072
+		table(lua_State* L, const char* name);lua_tinker::table::table1259,34072
+		table(const table& input);table1260,34113
+		table(const table& input);lua_tinker::table::table1260,34113
+		~table();~table1261,34142
+		~table();lua_tinker::table::~table1261,34142
+		bool validate()validate1263,34155
+		bool validate()lua_tinker::table::validate1263,34155
+		void set(int index, T object)set1269,34234
+		void set(int index, T object)lua_tinker::table::set1269,34234
+		T get(int index)get1275,34328
+		T get(int index)lua_tinker::table::get1275,34328
+		void set(const char* name, T object)set1281,34411
+		void set(const char* name, T object)lua_tinker::table::set1281,34411
+		T get(const char* name)get1287,34511
+		T get(const char* name)lua_tinker::table::get1287,34511
+		int size()size1294,34655
+		int size()lua_tinker::table::size1294,34655
+		void put(T object)put1300,34726
+		void put(T object)lua_tinker::table::put1300,34726
+		T fetch(int index)fetch1306,34803
+		T fetch(int index)lua_tinker::table::fetch1306,34803
+		void def(const char* name, F func)def1313,34928
+		void def(const char* name, F func)lua_tinker::table::def1313,34928
+		RVal call(const char* name)call1319,35027
+		RVal call(const char* name)lua_tinker::table::call1319,35027
+		RVal call(const char* name, T1 arg)call1325,35140
+		RVal call(const char* name, T1 arg)lua_tinker::table::call1325,35140
+		RVal call(const char* name, T1 arg1, T2 arg2)call1331,35281
+		RVal call(const char* name, T1 arg1, T2 arg2)lua_tinker::table::call1331,35281
+		RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3)call1337,35454
+		RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3)lua_tinker::table::call1337,35454
+		table_obj*		m_obj;m_obj1344,35592
+		table_obj*		m_obj;lua_tinker::table::m_obj1344,35592
+
+/home/jingsia/Tmp/ProjectA/./Core/Script/Script.h,5940
+#define _SCRIPT_H__SCRIPT_H_2,19
+typedef lua_tinker::table Table;Table6,64
+namespace ScriptScript8,98
+class ScriptScript11,118
+class ScriptScript::Script11,118
+	Script();Script14,141
+	Script();Script::Script::Script14,141
+    virtual ~Script();~Script15,152
+    virtual ~Script();Script::Script::~Script15,152
+	virtual void init() {}init16,175
+	virtual void init() {}Script::Script::init16,175
+	virtual void postInit() {}postInit17,199
+	virtual void postInit() {}Script::Script::postInit17,199
+	void runScript(const char *);runScript18,227
+	void runScript(const char *);Script::Script::runScript18,227
+	void doFile(const char *);doFile19,258
+	void doFile(const char *);Script::Script::doFile19,258
+	void reload();reload20,286
+	void reload();Script::Script::reload20,286
+	void addPackagePath();addPackagePath23,312
+	void addPackagePath();Script::Script::addPackagePath23,312
+	lua_State * _L;_L26,348
+	lua_State * _L;Script::Script::_L26,348
+	std::string _scriptName;_scriptName27,365
+	std::string _scriptName;Script::Script::_scriptName27,365
+	Table getTable();getTable30,400
+	Table getTable();Script::Script::getTable30,400
+	Table getTable(int index);getTable31,419
+	Table getTable(int index);Script::Script::getTable31,419
+	Table getTable(const char * name);getTable32,447
+	Table getTable(const char * name);Script::Script::getTable32,447
+	void set(const char* name, T object);set35,506
+	void set(const char* name, T object);Script::Script::set35,506
+	T get(const char* name);get38,568
+	T get(const char* name);Script::Script::get38,568
+	void def(const char * name, F func);def41,617
+	void def(const char * name, F func);Script::Script::def41,617
+	void decl(const char* name, T object);decl44,678
+	void decl(const char* name, T object);Script::Script::decl44,678
+	RVal call(const char* name);call47,744
+	RVal call(const char* name);Script::Script::call47,744
+	RVal call(const char* name, T1 arg1);call49,812
+	RVal call(const char* name, T1 arg1);Script::Script::call49,812
+	RVal call(const char* name, T1 arg1, T2 arg2);call51,902
+	RVal call(const char* name, T1 arg1, T2 arg2);Script::Script::call51,902
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3);call53,1014
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3);Script::Script::call53,1014
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4);call55,1148
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4);Script::Script::call55,1148
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);call57,1304
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);Script::Script::call57,1304
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);call59,1482
+	RVal call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);Script::Script::call59,1482
+	void class_add(const char * name);class_add62,1589
+	void class_add(const char * name);Script::Script::class_add62,1589
+	void class_inh();class_inh65,1660
+	void class_inh();Script::Script::class_inh65,1660
+	void class_con(F func);class_con68,1714
+	void class_con(F func);Script::Script::class_con68,1714
+	void class_def(const char * name, F func);class_def71,1774
+	void class_def(const char * name, F func);Script::Script::class_def71,1774
+	void class_mem(const char* name, VAR BASE::*val);class_mem74,1870
+	void class_mem(const char* name, VAR BASE::*val);Script::Script::class_mem74,1870
+T Script::get( const char* name )get78,1946
+T Script::get( const char* name )Script::Script::get78,1946
+void Script::set( const char* name, T object )set84,2044
+void Script::set( const char* name, T object )Script::Script::set84,2044
+RVal Script::call( const char* name )call90,2156
+RVal Script::call( const char* name )Script::Script::call90,2156
+RVal Script::call(const char* name, T1 arg1)call96,2278
+RVal Script::call(const char* name, T1 arg1)Script::Script::call96,2278
+RVal Script::call(const char* name, T1 arg1, T2 arg2)call102,2426
+RVal Script::call(const char* name, T1 arg1, T2 arg2)Script::Script::call102,2426
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3)call108,2602
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3)Script::Script::call108,2602
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4)call114,2806
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4)Script::Script::call114,2806
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)call120,3038
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)Script::Script::call120,3038
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)call126,3298
+RVal Script::call(const char* name, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)Script::Script::call126,3298
+void Script::decl( const char* name, T object )decl132,3492
+void Script::decl( const char* name, T object )Script::Script::decl132,3492
+void Script::def( const char * name, F func )def138,3610
+void Script::def( const char * name, F func )Script::Script::def138,3610
+void Script::class_def( const char * name, F func )class_def144,3728
+void Script::class_def( const char * name, F func )Script::Script::class_def144,3728
+void Script::class_con( F func )class_con150,3861
+void Script::class_con( F func )Script::Script::class_con150,3861
+void Script::class_inh()class_inh156,3969
+void Script::class_inh()Script::Script::class_inh156,3969
+void Script::class_add( const char * name )class_add162,4054
+void Script::class_add( const char * name )Script::Script::class_add162,4054
+void Script::class_mem( const char* name, VAR BASE::*val )class_mem168,4190
+void Script::class_mem( const char* name, VAR BASE::*val )Script::Script::class_mem168,4190
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/HoneyFall.h,2187
+#define _HONEYFALL_H__HONEYFALL_H_9,291
+namespace GObjectGObject13,335
+	enum HoneyFallTypeHoneyFallType18,372
+	enum HoneyFallTypeGObject::HoneyFallType18,372
+		e_HFT_None			= 0,e_HFT_None20,395
+		e_HFT_None			= 0,GObject::e_HFT_None20,395
+		e_HFT_Equip_Enchant = 1,e_HFT_Equip_Enchant21,415
+		e_HFT_Equip_Enchant = 1,GObject::e_HFT_Equip_Enchant21,415
+		e_HFT_Trump_Enchant = 2,e_HFT_Trump_Enchant22,442
+		e_HFT_Trump_Enchant = 2,GObject::e_HFT_Trump_Enchant22,442
+		e_HFT_Trump_SJ		= 3,e_HFT_Trump_SJ23,469
+		e_HFT_Trump_SJ		= 3,GObject::e_HFT_Trump_SJ23,469
+		e_HFT_Trump_JF		= 4,e_HFT_Trump_JF24,492
+		e_HFT_Trump_JF		= 4,GObject::e_HFT_Trump_JF24,492
+		e_HFT_MAX,e_HFT_MAX25,515
+		e_HFT_MAX,GObject::e_HFT_MAX25,515
+	class HoneyFallHoneyFall28,533
+	class HoneyFallGObject::HoneyFall28,533
+			HoneyFall(Player * pl);HoneyFall31,563
+			HoneyFall(Player * pl);GObject::HoneyFall::HoneyFall31,563
+			~HoneyFall();~HoneyFall32,590
+			~HoneyFall();GObject::HoneyFall::~HoneyFall32,590
+			void updateHftValueToDB(HoneyFallType hft);updateHftValueToDB34,608
+			void updateHftValueToDB(HoneyFallType hft);GObject::HoneyFall::updateHftValueToDB34,608
+			UInt32 getHftValue(HoneyFallType hft);getHftValue35,655
+			UInt32 getHftValue(HoneyFallType hft);GObject::HoneyFall::getHftValue35,655
+			void setHftValue(UInt8 hft, UInt32 value);setHftValue36,697
+			void setHftValue(UInt8 hft, UInt32 value);GObject::HoneyFall::setHftValue36,697
+			UINt32 incHftValue(HonyeFallType hft, UInt32 inc = 1);incHftValue37,743
+			UINt32 incHftValue(HonyeFallType hft, UInt32 inc = 1);GObject::HoneyFall::incHftValue37,743
+			bool checkHft(UInt8 hft);checkHft38,801
+			bool checkHft(UInt8 hft);GObject::HoneyFall::checkHft38,801
+			UInt32 getChanceFromHft(UINt8 q, UInt8 lv, HoneyFallType hft);getChanceFromHft39,830
+			UInt32 getChanceFromHft(UINt8 q, UInt8 lv, HoneyFallType hft);GObject::HoneyFall::getChanceFromHft39,830
+			UInt32 m_hft_value[e_HFT_MAX];m_hft_value42,908
+			UInt32 m_hft_value[e_HFT_MAX];GObject::HoneyFall::m_hft_value42,908
+			Player * m_owner;m_owner43,942
+			Player * m_owner;GObject::HoneyFall::m_owner43,942
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Player.h,205
+class PlayerPlayer10,268
+		HoneyFall* getHoneyFall();getHoneyFall13,292
+		HoneyFall* getHoneyFall();Player::getHoneyFall13,292
+		HoneyFall * m_hf;m_hf16,332
+		HoneyFall * m_hf;Player::m_hf16,332
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/AttrFactor.h,406
+#define _ATTRFACTOR_H__ATTRFACTOR_H_9,293
+namespace GObjectGObject11,317
+	struct AttrFactorAttrFactor13,337
+	struct AttrFactorGObject::AttrFactor13,337
+		AttrFactor& operator =(const AttrFactor& other)operator =20,667
+		AttrFactor& operator =(const AttrFactor& other)GObject::AttrFactor::operator =20,667
+		float strength;strength29,798
+		float strength;GObject::AttrFactor::strength29,798
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Package.h,1434
+#define _PACKAGE_H__PACKAGE_H_9,287
+namespace GObjectGObject11,308
+	struct LingbaoSmeltInfoLingbaoSmeltInfo14,329
+	struct LingbaoSmeltInfoGObject::LingbaoSmeltInfo14,329
+		UInt16 gujiId;gujiId16,357
+		UInt16 gujiId;GObject::LingbaoSmeltInfo::gujiId16,357
+		UInt16 itemId;itemId17,374
+		UInt16 itemId;GObject::LingbaoSmeltInfo::itemId17,374
+		UInt32 value;value18,391
+		UInt32 value;GObject::LingbaoSmeltInfo::value18,391
+		UInt32 maxValue;maxValue19,407
+		UInt32 maxValue;GObject::LingbaoSmeltInfo::maxValue19,407
+		UInt8 bind;bind20,426
+		UInt8 bind;GObject::LingbaoSmeltInfo::bind20,426
+		UInt8 counts;counts21,440
+		UInt8 counts;GObject::LingbaoSmeltInfo::counts21,440
+		UInt8 purpleAdjVal;purpleAdjVal22,456
+		UInt8 purpleAdjVal;GObject::LingbaoSmeltInfo::purpleAdjVal22,456
+		UInt8 orangeAdjVal;orangeAdjVal23,478
+		UInt8 orangeAdjVal;GObject::LingbaoSmeltInfo::orangeAdjVal23,478
+		LingbaoSmeltInfo() : gujiId(0), itemId(0), value(0), maxValue(0), bind(0), counts(0), purpleAdjVal(0), orangeAdjVal(0) {}LingbaoSmeltInfo25,501
+		LingbaoSmeltInfo() : gujiId(0), itemId(0), value(0), maxValue(0), bind(0), counts(0), purpleAdjVal(0), orangeAdjVal(0) {}GObject::LingbaoSmeltInfo::LingbaoSmeltInfo25,501
+		const LingbaoSmeltInfo& operator=(LingbaoSmeltInfo& other)operator =27,626
+		const LingbaoSmeltInfo& operator=(LingbaoSmeltInfo& other)GObject::LingbaoSmeltInfo::operator =27,626
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/ItemData.h,9103
+#define _ITEMDATA_H__ITEMDATA_H_9,289
+#define ENCHANT_LEVEL_MAX ENCHANT_LEVEL_MAX13,339
+#define TRUMP_ENCHANT_LEVEL_MAX TRUMP_ENCHANT_LEVEL_MAX14,368
+#define SOCKETS_MAX SOCKETS_MAX15,403
+namespace GObjectGObject17,426
+	struct ItemDataItemData19,446
+	struct ItemDataGObject::ItemData19,446
+		UInt64 id;id21,466
+		UInt64 id;GObject::ItemData::id21,466
+		UInt64 ownerId;ownerId22,479
+		UInt64 ownerId;GObject::ItemData::ownerId22,479
+		UInt16 itemNum;itemNum23,497
+		UInt16 itemNum;GObject::ItemData::itemNum23,497
+		UInt8 bindType;bindType24,515
+		UInt8 bindType;GObject::ItemData::bindType24,515
+		bool operator < (const ItemData& item) constoperator <26,534
+		bool operator < (const ItemData& item) constGObject::ItemData::operator <26,534
+	struct TempItemDataTempItemData32,628
+	struct TempItemDataGObject::TempItemData32,628
+		UInt64 id;id34,652
+		UInt64 id;GObject::TempItemData::id34,652
+		UInt64 ownerId;ownerId35,665
+		UInt64 ownerId;GObject::TempItemData::ownerId35,665
+		UInt16 itemNum;itemNum36,683
+		UInt16 itemNum;GObject::TempItemData::itemNum36,683
+		UInt8 bind;bind37,701
+		UInt8 bind;GObject::TempItemData::bind37,701
+		UInt32 sellTime;sellTime38,715
+		UInt32 sellTime;GObject::TempItemData::sellTime38,715
+		bool operator < (const TempItemData& item) constoperator <40,735
+		bool operator < (const TempItemData& item) constGObject::TempItemData::operator <40,735
+	struct ItemEquipAttr2ItemEquipAttr246,833
+	struct ItemEquipAttr2GObject::ItemEquipAttr246,833
+		ItemEquipAttr2() : type1(0), type2(0), type3(0), value1(0), value2(0), value3(0) {}ItemEquipAttr248,859
+		ItemEquipAttr2() : type1(0), type2(0), type3(0), value1(0), value2(0), value3(0) {}GObject::ItemEquipAttr2::ItemEquipAttr248,859
+		UInt8 type1;type150,946
+		UInt8 type1;GObject::ItemEquipAttr2::type150,946
+		UInt8 type2;type251,961
+		UInt8 type2;GObject::ItemEquipAttr2::type251,961
+		UInt8 type3;type352,976
+		UInt8 type3;GObject::ItemEquipAttr2::type352,976
+		UInt16 value1;value153,991
+		UInt16 value1;GObject::ItemEquipAttr2::value153,991
+		UInt16 value2;value254,1008
+		UInt16 value2;GObject::ItemEquipAttr2::value254,1008
+		UInt16 value3;value355,1025
+		UInt16 value3;GObject::ItemEquipAttr2::value355,1025
+		inline UInt8 getCount()getCount57,1043
+		inline UInt8 getCount()GObject::ItemEquipAttr2::getCount57,1043
+		inline void appendAttrToStream(Stream& st)appendAttrToStream72,1215
+		inline void appendAttrToStream(Stream& st)GObject::ItemEquipAttr2::appendAttrToStream72,1215
+	struct ItemEquipSpiritAttrItemEquipSpiritAttr91,1630
+	struct ItemEquipSpiritAttrGObject::ItemEquipSpiritAttr91,1630
+		UInt16 spLev[4];spLev93,1661
+		UInt16 spLev[4];GObject::ItemEquipSpiritAttr::spLev93,1661
+		UInt8 spForm[3];spForm94,1680
+		UInt8 spForm[3];GObject::ItemEquipSpiritAttr::spForm94,1680
+		ItemEquipSpiritAttr() { memset(spLev, 0, sizeof(spLev)); memset(spForm, 0, sizeof(spForm));}ItemEquipSpiritAttr96,1700
+		ItemEquipSpiritAttr() { memset(spLev, 0, sizeof(spLev)); memset(spForm, 0, sizeof(spForm));}GObject::ItemEquipSpiritAttr::ItemEquipSpiritAttr96,1700
+		inline void appendAttrToStream(Stream& st)appendAttrToStream98,1796
+		inline void appendAttrToStream(Stream& st)GObject::ItemEquipSpiritAttr::appendAttrToStream98,1796
+	struct ItemEquipDataItemEquipData105,1955
+	struct ItemEquipDataGObject::ItemEquipData105,1955
+		UInt8 sockets;sockets107,1980
+		UInt8 sockets;GObject::ItemEquipData::sockets107,1980
+		UInt8 enchant;enchant108,1997
+		UInt8 enchant;GObject::ItemEquipData::enchant108,1997
+		UInt8 tRank;tRank109,2014
+		UInt8 tRank;GObject::ItemEquipData::tRank109,2014
+		UInt8 maxTRank;maxTRank110,2029
+		UInt8 maxTRank;GObject::ItemEquipData::maxTRank110,2029
+		UInt8 trumpExp;trumpExp111,2047
+		UInt8 trumpExp;GObject::ItemEquipData::trumpExp111,2047
+		UInt16 gems[SOCKETS_MAX];gems112,2065
+		UInt16 gems[SOCKETS_MAX];GObject::ItemEquipData::gems112,2065
+		ItemEquipAttr2 extraAttr2;extraAttr2113,2093
+		ItemEquipAttr2 extraAttr2;GObject::ItemEquipData::extraAttr2113,2093
+		ItemEquipSpiritAttr spiritAttr;spiritAttr114,2122
+		ItemEquipSpiritAttr spiritAttr;GObject::ItemEquipData::spiritAttr114,2122
+		ItemEquipData () : sockets(0), enchant(0), tRank(0), maxTRank(0), trumpExp(0) { memset(gems, 0, sizeof(gems));}ItemEquipData116,2157
+		ItemEquipData () : sockets(0), enchant(0), tRank(0), maxTRank(0), trumpExp(0) { memset(gems, 0, sizeof(gems));}GObject::ItemEquipData::ItemEquipData116,2157
+	struct ItemLingbaoAttrItemLingbaoAttr119,2276
+	struct ItemLingbaoAttrGObject::ItemLingbaoAttr119,2276
+		UInt8 tongling;tongling121,2303
+		UInt8 tongling;GObject::ItemLingbaoAttr::tongling121,2303
+		UInt8 lbColor;lbColor122,2321
+		UInt8 lbColor;GObject::ItemLingbaoAttr::lbColor122,2321
+		UInt8 type[4];type123,2338
+		UInt8 type[4];GObject::ItemLingbaoAttr::type123,2338
+		UInt16 value[4];value124,2355
+		UInt16 value[4];GObject::ItemLingbaoAttr::value124,2355
+		UInt16 skill[2];skill125,2374
+		UInt16 skill[2];GObject::ItemLingbaoAttr::skill125,2374
+		UInt16 factor[2];factor126,2393
+		UInt16 factor[2];GObject::ItemLingbaoAttr::factor126,2393
+		UInt32 battlePoint;battlePoint127,2413
+		UInt32 battlePoint;GObject::ItemLingbaoAttr::battlePoint127,2413
+		ItemLingbaoAttr() : tongling(0), lbColor(0), battlePoint(0)ItemLingbaoAttr129,2436
+		ItemLingbaoAttr() : tongling(0), lbColor(0), battlePoint(0)GObject::ItemLingbaoAttr::ItemLingbaoAttr129,2436
+		inline void appendAttrToStream(Stream& st)appendAttrToStream137,2651
+		inline void appendAttrToStream(Stream& st)GObject::ItemLingbaoAttr::appendAttrToStream137,2651
+		UInt16 getType(UInt8 i)getType169,3283
+		UInt16 getType(UInt8 i)GObject::ItemLingbaoAttr::getType169,3283
+		UInt16 getValue(UInt8 i)getValue177,3374
+		UInt16 getValue(UInt8 i)GObject::ItemLingbaoAttr::getValue177,3374
+	struct ItemPetAttrItemPetAttr185,3471
+	struct ItemPetAttrGObject::ItemPetAttr185,3471
+		UInt8 lv;lv187,3494
+		UInt8 lv;GObject::ItemPetAttr::lv187,3494
+		UInt32 exp;exp188,3506
+		UInt32 exp;GObject::ItemPetAttr::exp188,3506
+		UInt32 skill;skill189,3520
+		UInt32 skill;GObject::ItemPetAttr::skill189,3520
+		UInt16 gems[4];gems190,3536
+		UInt16 gems[4];GObject::ItemPetAttr::gems190,3536
+		ItemPetAttr() : lv(0), exp(0), skill(0) { memset(gems, 0, sizeof(gems));}ItemPetAttr191,3554
+		ItemPetAttr() : lv(0), exp(0), skill(0) { memset(gems, 0, sizeof(gems));}GObject::ItemPetAttr::ItemPetAttr191,3554
+		inline void appendAttrToStream(Stream& st)appendAttrToStream193,3631
+		inline void appendAttrToStream(Stream& st)GObject::ItemPetAttr::appendAttrToStream193,3631
+	struct ItemZhenyuanAttrItemZhenyuanAttr212,3960
+	struct ItemZhenyuanAttrGObject::ItemZhenyuanAttr212,3960
+		UInt8 color;color214,3988
+		UInt8 color;GObject::ItemZhenyuanAttr::color214,3988
+		UInt8 type[4];type215,4003
+		UInt8 type[4];GObject::ItemZhenyuanAttr::type215,4003
+		UInt16 value[4];value216,4020
+		UInt16 value[4];GObject::ItemZhenyuanAttr::value216,4020
+		UInt16 typeExtra[2];typeExtra217,4039
+		UInt16 typeExtra[2];GObject::ItemZhenyuanAttr::typeExtra217,4039
+		UInt16 valueExtra[2];valueExtra218,4062
+		UInt16 valueExtra[2];GObject::ItemZhenyuanAttr::valueExtra218,4062
+		ItemZhenyuanAttr() : color(0)ItemZhenyuanAttr220,4087
+		ItemZhenyuanAttr() : color(0)GObject::ItemZhenyuanAttr::ItemZhenyuanAttr220,4087
+		inline void appendAttrToStream(Stream& st)appendAttrToStream228,4288
+		inline void appendAttrToStream(Stream& st)GObject::ItemZhenyuanAttr::appendAttrToStream228,4288
+		UInt8 getAttrNum()getAttrNum254,4739
+		UInt8 getAttrNum()GObject::ItemZhenyuanAttr::getAttrNum254,4739
+	struct ItemLingshiAttrItemLingshiAttr266,4889
+	struct ItemLingshiAttrGObject::ItemLingshiAttr266,4889
+		UInt8 lv;lv268,4916
+		UInt8 lv;GObject::ItemLingshiAttr::lv268,4916
+		UInt32 exp;exp269,4928
+		UInt32 exp;GObject::ItemLingshiAttr::exp269,4928
+		IemLingshiAttr(): lv(1), exp(0) {}IemLingshiAttr271,4943
+		IemLingshiAttr(): lv(1), exp(0) {}GObject::ItemLingshiAttr::IemLingshiAttr271,4943
+	struct ItemHorcruxAttrItemHorcruxAttr274,4985
+	struct ItemHorcruxAttrGObject::ItemHorcruxAttr274,4985
+		UInt32 attr[4];attr276,5012
+		UInt32 attr[4];GObject::ItemHorcruxAttr::attr276,5012
+		ItemHorcruxAttr()ItemHorcruxAttr278,5031
+		ItemHorcruxAttr()GObject::ItemHorcruxAttr::ItemHorcruxAttr278,5031
+		void setAttr(UInt32 value0, UInt32 value1, UInt32 value2, UInt32 value3)setAttr283,5094
+		void setAttr(UInt32 value0, UInt32 value1, UInt32 value2, UInt32 value3)GObject::ItemHorcruxAttr::setAttr283,5094
+		UInt32 getAttr(UInt8 index) {if(index > 3) return 0; return attr[index];}getAttr290,5261
+		UInt32 getAttr(UInt8 index) {if(index > 3) return 0; return attr[index];}GObject::ItemHorcruxAttr::getAttr290,5261
+		const ItemHorcruxAttr& operator=(ItemHorcruxAttr& other) constoperator =292,5338
+		const ItemHorcruxAttr& operator=(ItemHorcruxAttr& other) constGObject::ItemHorcruxAttr::operator =292,5338
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/GObjectBase.h,1238
+#define _GOBJECTBASE_H__GOBJECTBASE_H_9,295
+namespace GObjectGObject11,320
+class GObjectBaseTGObjectBaseT15,383
+class GObjectBaseTGObject::GObjectBaseT15,383
+	static T * create(const K key) { return new(std::nthrow) T(key); }create18,412
+	static T * create(const K key) { return new(std::nthrow) T(key); }GObject::GObjectBaseT::create18,412
+	GObjectBaseT(const K key) : _id(key), _slot(static_cast<UInt32>(-1)) {}GObjectBaseT20,488
+	GObjectBaseT(const K key) : _id(key), _slot(static_cast<UInt32>(-1)) {}GObject::GObjectBaseT::GObjectBaseT20,488
+	inline const K getId() const {return _id;}getId21,561
+	inline const K getId() const {return _id;}GObject::GObjectBaseT::getId21,561
+	inline void setSlot(UInt32 slot) {_slot = slot;}setSlot22,605
+	inline void setSlot(UInt32 slot) {_slot = slot;}GObject::GObjectBaseT::setSlot22,605
+	inline const UInt32 getSlot() const {return _slot;}getSlot23,655
+	inline const UInt32 getSlot() const {return _slot;}GObject::GObjectBaseT::getSlot23,655
+	K _id;_id26,720
+	K _id;GObject::GObjectBaseT::_id26,720
+	UInt32 _slot;_slot27,728
+	UInt32 _slot;GObject::GObjectBaseT::_slot27,728
+	bool _trashed;_trashed28,743
+	bool _trashed;GObject::GObjectBaseT::_trashed28,743
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/GLocalObjectManager.h,886
+#define _GLOCALOBJECTMANAGER_H__GLOCALOBJECTMANAGER_H_2,32
+namespace GObjectGObject9,151
+class GLocalObjectManagerTGLocalObjectManagerT13,195
+class GLocalObjectManagerTGObject::GLocalObjectManagerT13,195
+	bool add(_V* val)add16,232
+	bool add(_V* val)GObject::GLocalObjectManagerT::add16,232
+	void remove(_V* val)remove37,608
+	void remove(_V* val)GObject::GLocalObjectManagerT::remove37,608
+	void remove(UInt32 slot)remove47,847
+	void remove(UInt32 slot)GObject::GLocalObjectManagerT::remove47,847
+	_V * operator[] (const UInt32 slot)operator []50,879
+	_V * operator[] (const UInt32 slot)GObject::GLocalObjectManagerT::operator []50,879
+	std::vector<_V *> _objs;_objs62,1068
+	std::vector<_V *> _objs;GObject::GLocalObjectManagerT::_objs62,1068
+	std::list<size_t> _empty;_empty63,1094
+	std::list<size_t> _empty;GObject::GLocalObjectManagerT::_empty63,1094
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/GGlobalObjectManager.h,4788
+#define _GGLOBALOBJECTMANAGER_H__GGLOBALOBJECTMANAGER_H_2,33
+namespace GObjectGObject11,187
+class VisitorVisitor15,230
+class VisitorGObject::Visitor15,230
+    virtual ~Visitor(){}~Visitor18,254
+    virtual ~Visitor(){}GObject::Visitor::~Visitor18,254
+    virtual bool operator()(_V* ptr) = 0;operator ()20,280
+    virtual bool operator()(_V* ptr) = 0;GObject::Visitor::operator ()20,280
+class GGlobalObjectManagerTGGlobalObjectManagerT24,363
+class GGlobalObjectManagerTGObject::GGlobalObjectManagerT24,363
+    typedef typename std::unordered_map<_VK, _V * >::iterator iterator;iterator27,401
+    typedef typename std::unordered_map<_VK, _V * >::iterator iterator;GObject::GGlobalObjectManagerT::iterator27,401
+	_V * newObject(const _VK key)newObject29,481
+	_V * newObject(const _VK key)GObject::GGlobalObjectManagerT::newObject29,481
+	_V * newObject(const _VK key, T1& v1)newObject37,641
+	_V * newObject(const _VK key, T1& v1)GObject::GGlobalObjectManagerT::newObject37,641
+	_V * newObject(const _VK key, T1& v1, T2& v2)newObject45,826
+	_V * newObject(const _VK key, T1& v1, T2& v2)GObject::GGlobalObjectManagerT::newObject45,826
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3)newObject53,1036
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3)GObject::GGlobalObjectManagerT::newObject53,1036
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3, T4& v4)newObject61,1271
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3, T4& v4)GObject::GGlobalObjectManagerT::newObject61,1271
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3, T4& v4, T5& v5)newObject69,1531
+	_V * newObject(const _VK key, T1& v1, T2& v2, T3& v3, T4& v4, T5& v5)GObject::GGlobalObjectManagerT::newObject69,1531
+	void add(_V* val)add76,1728
+	void add(_V* val)GObject::GGlobalObjectManagerT::add76,1728
+	void add(const _VK& key, _V* val)add81,1817
+	void add(const _VK& key, _V* val)GObject::GGlobalObjectManagerT::add81,1817
+	void remove(const _VK& key)remove86,1913
+	void remove(const _VK& key)GObject::GGlobalObjectManagerT::remove86,1913
+	_V * operator[] (const _VK& key)operator []91,2003
+	_V * operator[] (const _VK& key)GObject::GGlobalObjectManagerT::operator []91,2003
+	inline size_t size()size101,2227
+	inline size_t size()GObject::GGlobalObjectManagerT::size101,2227
+	void enumerate(_CBT cb, _PT param)enumerate107,2352
+	void enumerate(_CBT cb, _PT param)GObject::GGlobalObjectManagerT::enumerate107,2352
+	void enumerate(_CBT cb, _PT param , _PT2 param2)enumerate119,2647
+	void enumerate(_CBT cb, _PT param , _PT2 param2)GObject::GGlobalObjectManagerT::enumerate119,2647
+    void reset()reset130,2904
+    void reset()GObject::GGlobalObjectManagerT::reset130,2904
+    inline void resetExcept(std::set<UInt64>& eset)resetExcept141,3169
+    inline void resetExcept(std::set<UInt64>& eset)GObject::GGlobalObjectManagerT::resetExcept141,3169
+    inline _V* find(UInt64 id, int channelId, int serverId)find157,3595
+    inline _V* find(UInt64 id, int channelId, int serverId)GObject::GGlobalObjectManagerT::find157,3595
+    void enumerate(Visitor<_V>& visitor)enumerate165,3877
+    void enumerate(Visitor<_V>& visitor)GObject::GGlobalObjectManagerT::enumerate165,3877
+	inline Mutex& getMutex() { return _objMutex; }getMutex176,4134
+	inline Mutex& getMutex() { return _objMutex; }GObject::GGlobalObjectManagerT::getMutex176,4134
+	std::unordered_map<_VK, _V * >& getMap() { return _objs; }getMap177,4182
+	std::unordered_map<_VK, _V * >& getMap() { return _objs; }GObject::GGlobalObjectManagerT::getMap177,4182
+    inline iterator begin() { return _objs.begin(); }begin179,4243
+    inline iterator begin() { return _objs.begin(); }GObject::GGlobalObjectManagerT::begin179,4243
+    inline iterator end() { return _objs.end(); }end180,4297
+    inline iterator end() { return _objs.end(); }GObject::GGlobalObjectManagerT::end180,4297
+	std::unordered_map<_VK, _V * > _objs;_objs183,4359
+	std::unordered_map<_VK, _V * > _objs;GObject::GGlobalObjectManagerT::_objs183,4359
+	Mutex _objMutex;_objMutex184,4398
+	Mutex _objMutex;GObject::GGlobalObjectManagerT::_objMutex184,4398
+class GGlobalObjectManagerIStringT:GGlobalObjectManagerIStringT188,4438
+class GGlobalObjectManagerIStringT:GObject::GGlobalObjectManagerIStringT188,4438
+	void add(const std::string& key, T * val)add192,4530
+	void add(const std::string& key, T * val)GObject::GGlobalObjectManagerIStringT::add192,4530
+	void remove(const std::string& key)remove198,4682
+	void remove(const std::string& key)GObject::GGlobalObjectManagerIStringT::remove198,4682
+	T * operator[] (const std::string& key)operator []204,4826
+	T * operator[] (const std::string& key)GObject::GGlobalObjectManagerIStringT::operator []204,4826
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/GObjectManager.h,85
+#define _GOBJECTMANAGER_H__GOBJECTMANAGER_H_8,300
+namespace GObjectGObject16,457
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/PetPackage.h,6749
+#define _PETPACKAGE_H__PETPACKAGE_H_9,293
+namespace GObjectGObject11,317
+	class PetPackage : public PackagePetPackage13,337
+	class PetPackage : public PackageGObject::PetPackage13,337
+		PetPackage(Player * player);PetPackage16,384
+		PetPackage(Player * player);GObject::PetPackage::PetPackage16,384
+		~PetPackage();~PetPackage17,415
+		~PetPackage();GObject::PetPackage::~PetPackage17,415
+		void UnInit();UnInit18,432
+		void UnInit();GObject::PetPackage::UnInit18,432
+		UInt16 m_ItemSize;m_ItemSize21,460
+		UInt16 m_ItemSize;GObject::PetPackage::m_ItemSize21,460
+		UInt16 m_EquipSize;m_EquipSize22,481
+		UInt16 m_EquipSize;GObject::PetPackage::m_EquipSize22,481
+		ItemCont m_PetItems;m_PetItems23,503
+		ItemCont m_PetItems;GObject::PetPackage::m_PetItems23,503
+		ItemCont m_PetEquips;m_PetEquips24,526
+		ItemCont m_PetEquips;GObject::PetPackage::m_PetEquips24,526
+		static const UInt16 INIT_PETGEM_PACK_SIZE = 100;	//初始化仙宠宝石背包大小INIT_PETGEM_PACK_SIZE25,550
+		static const UInt16 INIT_PETGEM_PACK_SIZE = 100;	//初始化仙宠宝石背包大小GObject::PetPackage::INIT_PETGEM_PACK_SIZE25,550
+		static const UInt16 INIT_PETARM_PACK_SIZE = 200;    //初始化仙宠装备背包大小INIT_PETARM_PACK_SIZE26,637
+		static const UInt16 INIT_PETARM_PACK_SIZE = 200;    //初始化仙宠装备背包大小GObject::PetPackage::INIT_PETARM_PACK_SIZE26,637
+		inline UInt16 GetPetGemPgRestSize() constGetPetGemPgRestSize29,738
+		inline UInt16 GetPetGemPgRestSize() constGObject::PetPackage::GetPetGemPgRestSize29,738
+		inline UInt16 GetPetEqPgRestSize() constGetPetEqPgRestSize33,879
+		inline UInt16 GetPetEqPgRestSize() constGObject::PetPackage::GetPetEqPgRestSize33,879
+		inline ItemBase *  FindPetItem(UInt32 id, bool bind = true)FindPetItem37,1021
+		inline ItemBase *  FindPetItem(UInt32 id, bool bind = true)GObject::PetPackage::FindPetItem37,1021
+		inline ItemBase * FindPetEquip(UInt32 id, bool bind = true)FindPetEquip44,1225
+		inline ItemBase * FindPetEquip(UInt32 id, bool bind = true)GObject::PetPackage::FindPetEquip44,1225
+		ItemBase * AddItemFromDB(UInt32 id, UInt32 num, bool bind);AddItemFromDB53,1459
+		ItemBase * AddItemFromDB(UInt32 id, UInt32 num, bool bind);GObject::PetPackage::AddItemFromDB53,1459
+		ItemBase * AddExitEquip(ItemPetEq * equip, bool fromDB =false);AddExitEquip54,1521
+		ItemBase * AddExitEquip(ItemPetEq * equip, bool fromDB =false);GObject::PetPackage::AddExitEquip54,1521
+		ItemPetEq * FindPetEquip(FairyPet *& pet, UInt16 petId, UInt8& pos, UInt64 id);FindPetEquip55,1587
+		ItemPetEq * FindPetEquip(FairyPet *& pet, UInt16 petId, UInt8& pos, UInt64 id);GObject::PetPackage::FindPetEquip55,1587
+		ItemBase * AddPetEquip(ItemPetEq *, bool notify = false, UIn16 FromWhere = 0);AddPetEquip56,1669
+		ItemBase * AddPetEquip(ItemPetEq *, bool notify = false, UIn16 FromWhere = 0);GObject::PetPackage::AddPetEquip56,1669
+		ItemBase * AddPetEquipN(UInt32 typeId, UInt32 num, bool bind = false, bool silence = false, UInt16 FromWhere = 0 );AddPetEquipN57,1750
+		ItemBase * AddPetEquipN(UInt32 typeId, UInt32 num, bool bind = false, bool silence = false, UInt16 FromWhere = 0 );GObject::PetPackage::AddPetEquipN57,1750
+		bool TryAddPetItem(ItemBase * item, UInt16 num);TryAddPetItem58,1868
+		bool TryAddPetItem(ItemBase * item, UInt16 num);GObject::PetPackage::TryAddPetItem58,1868
+		ItemBase* AddPetItem(UInt32 typeId, UInt32 num, bool bind = false, bool notify = false, UInt16 FromWhere = 0);AddPetItem59,1919
+		ItemBase* AddPetItem(UInt32 typeId, UInt32 num, bool bind = false, bool notify = false, UInt16 FromWhere = 0);GObject::PetPackage::AddPetItem59,1919
+		bool TryDelPetItem(ItemBase * item, UInt16 num);TryDelPetItem60,2032
+		bool TryDelPetItem(ItemBase * item, UInt16 num);GObject::PetPackage::TryDelPetItem60,2032
+		bool DelPetItem(UInt64 id, UInt16 num, bool bind, UInt16 toWhere = 0);DelPetItem61,2083
+		bool DelPetItem(UInt64 id, UInt16 num, bool bind, UInt16 toWhere = 0);GObject::PetPackage::DelPetItem61,2083
+		bool DelPetEquip(UInt64 id, UInt16 toWhere = 0);DelPetEquip62,2156
+		bool DelPetEquip(UInt64 id, UInt16 toWhere = 0);GObject::PetPackage::DelPetEquip62,2156
+		UInt8 MergePetGem(UInt16 gemId1, UInt16 gemId2, UInt16& ogid);MergePetGem63,2207
+		UInt8 MergePetGem(UInt16 gemId1, UInt16 gemId2, UInt16& ogid);GObject::PetPackage::MergePetGem63,2207
+		UInt8 AttachPetGem(UInt32 petId, UInt64 equipId, UInt16 gemId);AttachPetGem64,2272
+		UInt8 AttachPetGem(UInt32 petId, UInt64 equipId, UInt16 gemId);GObject::PetPackage::AttachPetGem64,2272
+		UInt8 DetachPetGem(UInt32 petId, UInt64 equipId, UInt8 gemPos);DetachPetGem65,2338
+		UInt8 DetachPetGem(UInt32 petId, UInt64 equipId, UInt8 gemPos);GObject::PetPackage::DetachPetGem65,2338
+		UInt8 UpPetEquip(UInt16 petId, UInt64 equipId);UpPetEquip66,2404
+		UInt8 UpPetEquip(UInt16 petId, UInt64 equipId);GObject::PetPackage::UpPetEquip66,2404
+		void GetHFValue();GetHFValue67,2454
+		void GetHFValue();GObject::PetPackage::GetHFValue67,2454
+		bool EquipTo(UInt64 id, FairyPet * pet, UInt8& pos);EquipTo68,2475
+		bool EquipTo(UInt64 id, FairyPet * pet, UInt8& pos);GObject::PetPackage::EquipTo68,2475
+		UInt8 equipUpgrade(UInt32 petId, UInt64 equipId, std::string& idStr);equipUpgrade69,2530
+		UInt8 equipUpgrade(UInt32 petId, UInt64 equipId, std::string& idStr);GObject::PetPackage::equipUpgrade69,2530
+		UInt64 equipUpgrade(ItemPetEq *, ItemPetEq *);equipUpgrade70,2602
+		UInt64 equipUpgrade(ItemPetEq *, ItemPetEq *);GObject::PetPackage::equipUpgrade70,2602
+		void SendPackageItemInfor();SendPackageItemInfor72,2652
+		void SendPackageItemInfor();GObject::PetPackage::SendPackageItemInfor72,2652
+		void AppendEquipData(Stream& st, ItemPetEq * equip);AppendEquipData73,2683
+		void AppendEquipData(Stream& st, ItemPetEq * equip);GObject::PetPackage::AppendEquipData73,2683
+		void SendSingleEquipData(ItemPetEq * equip, UInt8 type);SendSingleEquipData74,2738
+		void SendSingleEquipData(ItemPetEq * equip, UInt8 type);GObject::PetPackage::SendSingleEquipData74,2738
+		void SendItemData(ItemBase * item);SendItemData75,2797
+		void SendItemData(ItemBase * item);GObject::PetPackage::SendItemData75,2797
+		ItemBase* AddRandomPetEq(UInt32 score, UInt32 typeId = 0, int cloorIdx = -1, UInt16 FromWhere = 0, bool notify = true);AddRandomPetEq77,2836
+		ItemBase* AddRandomPetEq(UInt32 score, UInt32 typeId = 0, int cloorIdx = -1, UInt16 FromWhere = 0, bool notify = true);GObject::PetPackage::AddRandomPetEq77,2836
+		ItemBase* AddRandomPetGem(UInt32 score, int lvIdx = -1);AddRandomPetGem78,2958
+		ItemBase* AddRandomPetGem(UInt32 score, int lvIdx = -1);GObject::PetPackage::AddRandomPetGem78,2958
+
+/home/jingsia/Tmp/ProjectA/./Core/GObject/Item.h,14488
+#define _ITEM_H__ITEM_H_9,281
+namespace GObjectGObject18,427
+	class ItemBase :ItemBase20,447
+	class ItemBase :GObject::ItemBase20,447
+		ItemBase(UInt64 id, const GData::ItemBaseType* itemType)ItemBase24,517
+		ItemBase(UInt64 id, const GData::ItemBaseType* itemType)GObject::ItemBase::ItemBase24,517
+		virtual ~ItemBase() {};~ItemBase27,699
+		virtual ~ItemBase() {};GObject::ItemBase::~ItemBase27,699
+		const GData::ItemBaseType& GetItemType() const {return *_itemBaseType; }GetItemType30,735
+		const GData::ItemBaseType& GetItemType() const {return *_itemBaseType; }GObject::ItemBase::GetItemType30,735
+		inline ItemClass getClass() const { return _itemBaseType->subClass;}getClass32,811
+		inline ItemClass getClass() const { return _itemBaseType->subClass;}GObject::ItemBase::getClass32,811
+		inline UInt16 GetTypeId() const { return _itemBaseType->getId();}GetTypeId33,882
+		inline UInt16 GetTypeId() const { return _itemBaseType->getId();}GObject::ItemBase::GetTypeId33,882
+		inline const sttd::string& getName() const { return _itemBaseType->getName(); }getName34,950
+		inline const sttd::string& getName() const { return _itemBaseType->getName(); }GObject::ItemBase::getName34,950
+		inline UInt8 getQuality() const { return _itemBaseType->quality; }getQuality35,1032
+		inline UInt8 getQuality() const { return _itemBaseType->quality; }GObject::ItemBase::getQuality35,1032
+		inline UInt16 getReqLev() const { return _itemBaseType->reqLev; }getReqLev36,1101
+		inline UInt16 getReqLev() const { return _itemBaseType->reqLev; }GObject::ItemBase::getReqLev36,1101
+		inline UInt32 getPrice() const { return _itemBaseType->price; }getPrice37,1169
+		inline UInt32 getPrice() const { return _itemBaseType->price; }GObject::ItemBase::getPrice37,1169
+		inline UInt16 getValueLev() const { return _itemBaseType->vLev; }getValueLev38,1235
+		inline UInt16 getValueLev() const { return _itemBaseType->vLev; }GObject::ItemBase::getValueLev38,1235
+		inline UInt16 getMaxQuantity() const { return _itemBaseType->maxQuantity;}getMaxQuantity39,1303
+		inline UInt16 getMaxQuantity() const { return _itemBaseType->maxQuantity;}GObject::ItemBase::getMaxQuantity39,1303
+		inline UInt8 getBindType() const { return _itemBaseType->bindType; }getBindType40,1380
+		inline UInt8 getBindType() const { return _itemBaseType->bindType; }GObject::ItemBase::getBindType40,1380
+		inline UInt16 getEnergy() const { return _itemBaseType->energy; }getEnergy41,1451
+		inline UInt16 getEnergy() const { return _itemBaseType->energy; }GObject::ItemBase::getEnergy41,1451
+		inline UInt8 GetCareer() const { return _itemBaseType->career; }GetCareer42,1519
+		inline UInt8 GetCareer() const { return _itemBaseType->career; }GObject::ItemBase::GetCareer42,1519
+		bool GetBindStatus() const { return m_BindStatus; }GetBindStatus44,1587
+		bool GetBindStatus() const { return m_BindStatus; }GObject::ItemBase::GetBindStatus44,1587
+		inline bool SetBindStatus(bool bindType)SetBindStatus45,1641
+		inline bool SetBindStatus(bool bindType)GObject::ItemBase::SetBindStatus45,1641
+		inline bool SetItem(UInt16 num) { m_TotalCount = num; return true;}SetItem54,1796
+		inline bool SetItem(UInt16 num) { m_TotalCount = num; return true;}GObject::ItemBase::SetItem54,1796
+		inline bool IncItem(UInt16 num) { m_TotalCount += num; return true;}IncItem55,1866
+		inline bool IncItem(UInt16 num) { m_TotalCount += num; return true;}GObject::ItemBase::IncItem55,1866
+		inline bool DecItem(UInt16 num) { if(num > m_TotalCount) return false; m_TotalCount -= num; return true; }DecItem56,1937
+		inline bool DecItem(UInt16 num) { if(num > m_TotalCount) return false; m_TotalCount -= num; return true; }GObject::ItemBase::DecItem56,1937
+		inline UInt32 SetSellTime(UInt32 sellTime) { m_SellTime = sellTime; return true; }SetSellTime57,2046
+		inline UInt32 SetSellTime(UInt32 sellTime) { m_SellTime = sellTime; return true; }GObject::ItemBase::SetSellTime57,2046
+		inline UInt16 Size() constSize58,2131
+		inline UInt16 Size() constGObject::ItemBase::Size58,2131
+		inline UInt16 Size(UInt16 num) constSize67,2368
+		inline UInt16 Size(UInt16 num) constGObject::ItemBase::Size67,2368
+		inline UInt16 Count() constCount76,2621
+		inline UInt16 Count() constGObject::ItemBase::Count76,2621
+		inline UInt16 GetLeftNum() const { return m_TotalCount % _itemBaseType->maxQuantity; }GetLeftNum82,2825
+		inline UInt16 GetLeftNum() const { return m_TotalCount % _itemBaseType->maxQuantity; }GObject::ItemBase::GetLeftNum82,2825
+		inline UInt16 GetOverlayNum() const { return _itemBaseType->maxQuantity; }GetOverlayNum83,2914
+		inline UInt16 GetOverlayNum() const { return _itemBaseType->maxQuantity; }GObject::ItemBase::GetOverlayNum83,2914
+		inline UInt32 GetSellTime() const { return m_SellTime; }GetSellTime84,2991
+		inline UInt32 GetSellTime() const { return m_SellTime; }GObject::ItemBase::GetSellTime84,2991
+		const GData::ItemBaseType* _itemBaseType;_itemBaseType87,3064
+		const GData::ItemBaseType* _itemBaseType;GObject::ItemBase::_itemBaseType87,3064
+		bool m_BindStatus;m_BindStatus89,3109
+		bool m_BindStatus;GObject::ItemBase::m_BindStatus89,3109
+		UInt16 m_TotalCount;m_TotalCount90,3130
+		UInt16 m_TotalCount;GObject::ItemBase::m_TotalCount90,3130
+		UInt32 m_SellTime;m_SellTime91,3153
+		UInt32 m_SellTime;GObject::ItemBase::m_SellTime91,3153
+	class ItemEquip::public ItemBaseItemBase94,3179
+	class ItemEquip::public ItemBaseGObject::ItemEquip::ItemBase94,3179
+		ItemEquip(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)ItemEquip97,3225
+		ItemEquip(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)GObject::ItemEquip::ItemBase::ItemEquip97,3225
+		virtual ~ItemEquip() {}~ItemEquip102,3393
+		virtual ~ItemEquip() {}GObject::ItemEquip::ItemBase::~ItemEquip102,3393
+		inline ItemEquipData& getItemEquipData() { return _itemEquipData; }getItemEquipData105,3429
+		inline ItemEquipData& getItemEquipData() { return _itemEquipData; }GObject::ItemEquip::ItemBase::getItemEquipData105,3429
+		inline const GData::AttrExtra * getAttrExtra() { return static_cast<const GData::ItemEquipType*>(_itemBaseType)->attrExtra; }getAttrExtra106,3499
+		inline const GData::AttrExtra * getAttrExtra() { return static_cast<const GData::ItemEquipType*>(_itemBaseType)->attrExtra; }GObject::ItemEquip::ItemBase::getAttrExtra106,3499
+		inline ItemEquipAttr2& getEquipAttr2() { return _itemEquipData.extraAttr2; }getEquipAttr2107,3627
+		inline ItemEquipAttr2& getEquipAttr2() { return _itemEquipData.extraAttr2; }GObject::ItemEquip::ItemBase::getEquipAttr2107,3627
+		inline ItemEquipSpiritAttr& getEquipSpiritAttr() { return _itemEquipData.spiritAttr; }getEquipSpiritAttr108,3706
+		inline ItemEquipSpiritAttr& getEquipSpiritAttr() { return _itemEquipData.spiritAttr; }GObject::ItemEquip::ItemBase::getEquipSpiritAttr108,3706
+		bool isSpirited()isSpirited110,3796
+		bool isSpirited()GObject::ItemEquip::ItemBase::isSpirited110,3796
+		inline UInt16 getAttack()getAttack122,3978
+		inline UInt16 getAttack()GObject::ItemEquip::ItemBase::getAttack122,3978
+		inline UInt16 getImgAttack()getImgAttack129,4129
+		inline UInt16 getImgAttack()GObject::ItemEquip::ItemBase::getImgAttack129,4129
+		inline UInt16 getDefend()getDefend136,4283
+		inline UInt16 getDefend()GObject::ItemEquip::ItemBase::getDefend136,4283
+		inline UInt16 getImgDefend()getImgDefend143,4434
+		inline UInt16 getImgDefend()GObject::ItemEquip::ItemBase::getImgDefend143,4434
+		void DoEquipBind(bool = false; );DoEquipBind151,4589
+		void DoEquipBind(bool = false; );GObject::ItemEquip::ItemBase::DoEquipBind151,4589
+		ItemEquipData _itemEquipData;_itemEquipData154,4635
+		ItemEquipData _itemEquipData;GObject::ItemEquip::ItemBase::_itemEquipData154,4635
+	class ItemWeapon : public ItemEquipItemWeapon157,4672
+	class ItemWeapon : public ItemEquipGObject::ItemWeapon157,4672
+		ItemWeapon(UInt64 id, const GData::ItemBaseType* itemArmorType, ItemEquipData& itemEquipData)ItemWeapon160,4721
+		ItemWeapon(UInt64 id, const GData::ItemBaseType* itemArmorType, ItemEquipData& itemEquipData)GObject::ItemWeapon::ItemWeapon160,4721
+	class ItemArmor : public ItemEquipItemArmor165,4876
+	class ItemArmor : public ItemEquipGObject::ItemArmor165,4876
+		ItemArmor(UInt64 id, const GData::ItemBaseType* itemArmorType, ItemEquipData& itemEquipData)ItemArmor168,4924
+		ItemArmor(UInt64 id, const GData::ItemBaseType* itemArmorType, ItemEquipData& itemEquipData)GObject::ItemArmor::ItemArmor168,4924
+	class ItemFashion : public ItemEquipItemFashion173,5078
+	class ItemFashion : public ItemEquipGObject::ItemFashion173,5078
+		ItemFashion(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)ItemFashion176,5128
+		ItemFashion(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)GObject::ItemFashion::ItemFashion176,5128
+	class ItemTrump : public ItemEquipItemTrump181,5284
+	class ItemTrump : public ItemEquipGObject::ItemTrump181,5284
+		ItemTrump(UInt64 id, const GData::ItemBaseType* itemTrumpType, ItemEquipData& itemEquipData)ItemTrump184,5332
+		ItemTrump(UInt64 id, const GData::ItemBaseType* itemTrumpType, ItemEquipData& itemEquipData)GObject::ItemTrump::ItemTrump184,5332
+		virtual ~ItemTrump()~ItemTrump188,5494
+		virtual ~ItemTrump()GObject::ItemTrump::~ItemTrump188,5494
+		bool fix;fix194,5563
+		bool fix;GObject::ItemTrump::fix194,5563
+		void fixSkills()fixSkills196,5576
+		void fixSkills()GObject::ItemTrump::fixSkills196,5576
+		void enchant(UInt8 enchant, GData::AttrExtra* attr)enchant242,6712
+		void enchant(UInt8 enchant, GData::AttrExtra* attr)GObject::ItemTrump::enchant242,6712
+	class ItemHalo : public ItemEquipItemHalo267,7257
+	class ItemHalo : public ItemEquipGObject::ItemHalo267,7257
+		ItemHalo(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)ItemHalo270,7304
+		ItemHalo(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)GObject::ItemHalo::ItemHalo270,7304
+	class ItemInnateTrump : public ItemEquipItemInnateTrump275,7457
+	class ItemInnateTrump : public ItemEquipGObject::ItemInnateTrump275,7457
+		ItemInnateTrump(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)ItemInnateTrump278,7511
+		ItemInnateTrump(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData)GObject::ItemInnateTrump::ItemInnateTrump278,7511
+	class ItemLingbao : public ItemEquipItemLingbao283,7672
+	class ItemLingbao : public ItemEquipGObject::ItemLingbao283,7672
+		ItemLingbao(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemLingbaoAttr& lbAttr)ItemLingbao286,7722
+		ItemLingbao(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemLingbaoAttr& lbAttr)GObject::ItemLingbao::ItemLingbao286,7722
+		inline UInt8 getLbColor() { return m_lbAttr.lbColor;}getLbColor290,7917
+		inline UInt8 getLbColor() { return m_lbAttr.lbColor;}GObject::ItemLingbao::getLbColor290,7917
+		inline bool isTongling() { return (m_lbAttr.tongling != 0);}isTongling291,7973
+		inline bool isTongling() { return (m_lbAttr.tongling != 0);}GObject::ItemLingbao::isTongling291,7973
+		ItemLingbaoAttr& getLingbaoAttr() { return m_lbAttr; }getLingbaoAttr292,8036
+		ItemLingbaoAttr& getLingbaoAttr() { return m_lbAttr; }GObject::ItemLingbao::getLingbaoAttr292,8036
+		ItemLingbaoAttr m_lbAttr;m_lbAttr295,8104
+		ItemLingbaoAttr m_lbAttr;GObject::ItemLingbao::m_lbAttr295,8104
+	class ItemPetEq : public ItemEquipItemPetEq298,8137
+	class ItemPetEq : public ItemEquipGObject::ItemPetEq298,8137
+		ItemPetEq(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemPetEqAttr & petAttr)ItemPetEq301,8185
+		ItemPetEq(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemPetEqAttr & petAttr)GObject::ItemPetEq::ItemPetEq301,8185
+		ItemPetEqAttr m_peAttr;m_peAttr306,8388
+		ItemPetEqAttr m_peAttr;GObject::ItemPetEq::m_peAttr306,8388
+	class ItemZhenyuan : public ItemEquipItemZhenyuan309,8419
+	class ItemZhenyuan : public ItemEquipGObject::ItemZhenyuan309,8419
+		ItemZhenyuan(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemZhenyuanAttr& zhyAttr)ItemZhenyuan312,8470
+		ItemZhenyuan(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemZhenyuanAttr& zhyAttr)GObject::ItemZhenyuan::ItemZhenyuan312,8470
+		ItemZhenyuanAttr& getZhyAttr() const { return m_zhyAttr; }getZhyAttr316,8670
+		ItemZhenyuanAttr& getZhyAttr() const { return m_zhyAttr; }GObject::ItemZhenyuan::getZhyAttr316,8670
+		ItemZhenyuanAttr m_zhyAttr;m_zhyAttr319,8742
+		ItemZhenyuanAttr m_zhyAttr;GObject::ItemZhenyuan::m_zhyAttr319,8742
+	class ItemLingshi : public ItemEquipItemLingshi322,8777
+	class ItemLingshi : public ItemEquipGObject::ItemLingshi322,8777
+		ItemLingshi(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemLingshiAttr& lsAttr)ItemLingshi325,8827
+		ItemLingshi(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemLingshiAttr& lsAttr)GObject::ItemLingshi::ItemLingshi325,8827
+		ItemZhenyuanAttr& getLingshiAttr() const { return m_lsAttr; }getLingshiAttr329,9022
+		ItemZhenyuanAttr& getLingshiAttr() const { return m_lsAttr; }GObject::ItemLingshi::getLingshiAttr329,9022
+		ItemLingshiAttr m_lsAttr;m_lsAttr332,9097
+		ItemLingshiAttr m_lsAttr;GObject::ItemLingshi::m_lsAttr332,9097
+	class ItemHorcrux : public ItemEquipItemHorcrux335,9130
+	class ItemHorcrux : public ItemEquipGObject::ItemHorcrux335,9130
+		ItemHorcrux(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemHorcruxAttr& horcruxAttr)ItemHorcrux338,9180
+		ItemHorcrux(UInt64 id, const GData::ItemBaseType* itemEquipType, ItemEquipData& itemEquipData, ItemHorcruxAttr& horcruxAttr)GObject::ItemHorcrux::ItemHorcrux338,9180
+		ItemHorcruxAttr& getHorcruxAttr() const { return m_horcruxAttr; }getHorcruxAttr342,9390
+		ItemHorcruxAttr& getHorcruxAttr() const { return m_horcruxAttr; }GObject::ItemHorcrux::getHorcruxAttr342,9390
+		ItemHorcruxAttr m_horcruxAttr;m_horcruxAttr345,9469
+		ItemHorcruxAttr m_horcruxAttr;GObject::ItemHorcrux::m_horcruxAttr345,9469
+
+/home/jingsia/Tmp/ProjectA/./Core/GData/ObjectBase.h,1430
+#define _OBJECTBASE_H__OBJECTBASE_H_8,292
+namespace GDataGData10,316
+	class ObjectBaseTObjectBaseT13,368
+	class ObjectBaseTGData::ObjectBaseT13,368
+		ObjectBaseT(_OKT id, std::string& name = ""):_id(id), _name(name){}ObjectBaseT16,399
+		ObjectBaseT(_OKT id, std::string& name = ""):_id(id), _name(name){}GData::ObjectBaseT::ObjectBaseT16,399
+		inline const _OKT getId() const {return _id;}getId17,469
+		inline const _OKT getId() const {return _id;}GData::ObjectBaseT::getId17,469
+		inline const std::string getName() const { return _name;};getName18,517
+		inline const std::string getName() const { return _name;};GData::ObjectBaseT::getName18,517
+		inline void std::string setName(const std::string& n) {_name = n;}setName19,578
+		inline void std::string setName(const std::string& n) {_name = n;}GData::ObjectBaseT::setName19,578
+		_OKT _id;_id21,659
+		_OKT _id;GData::ObjectBaseT::_id21,659
+		std::string _name;_name22,671
+		std::string _name;GData::ObjectBaseT::_name22,671
+	class ObjectBaseNTObjectBaseNT26,731
+	class ObjectBaseNTGData::ObjectBaseNT26,731
+		ObjectBaseNT(UInt32 id):_id(id){}ObjectBaseNT29,763
+		ObjectBaseNT(UInt32 id):_id(id){}GData::ObjectBaseNT::ObjectBaseNT29,763
+		inline const getId() const {return _id;}getId30,799
+		inline const getId() const {return _id;}GData::ObjectBaseNT::getId30,799
+		_OKT _id;_id32,854
+		_OKT _id;GData::ObjectBaseNT::_id32,854
+
+/home/jingsia/Tmp/ProjectA/./Core/GData/ItemType.h,6897
+#define _ITEM_TYPE_H__ITEM_TYPE_H_9,290
+#define L_LINGZHU_ID L_LINGZHU_ID15,360
+#define R_LINGZHU_ID R_LINGZHU_ID16,387
+enum ItemQualityItemQuality18,415
+	Item_Green	= 1,Item_Green20,434
+	Item_Blue	= 2,Item_Blue21,451
+	Item_Purple	= 3,Item_Purple22,467
+	Item_Yellow = 4,Item_Yellow23,485
+	Item_Red	= 5,Item_Red24,503
+	Item_Quality_MaxItem_Quality_Max26,519
+enum ItemClassItemClass29,541
+	Item_None	= 0,Item_None31,558
+	Item_Armor1 = 1,Item_Armor132,574
+	Item_Armor2,Item_Armor233,592
+	Item_Wepon = 200,Item_Wepon35,607
+	Item_Class_MaxItem_Class_Max38,642
+inline bool IsEquipId(UInt64 id)IsEquipId42,662
+inline bool IsEquipTypeId(UInt32 id)IsEquipTypeId47,720
+inline bool IsLingbaoTypeId(UInt32 id)IsLingbaoTypeId52,842
+inline bool IsPetEquipTypeId(UInt3 id)IsPetEquipTypeId57,928
+inline bool IsPetItem(UInt32 id)IsPetItem62,1018
+inline bool IsGemId(UInt32 id)IsGemId67,1102
+inline bool IsEquip(UInt8 subClass)IsEquip74,1229
+inline bool IsLingzhu(UInt8 subClass)IsLingzhu79,1480
+namespace GDataGData85,1619
+	struct ItemBaseType: public ObjectBaseT<UInt64>ItemBaseType87,1637
+	struct ItemBaseType: public ObjectBaseT<UInt64>GData::ItemBaseType87,1637
+		ItemClass	subClass;subClass89,1689
+		ItemClass	subClass;GData::ItemBaseType::subClass89,1689
+		UInt32      price;price90,1711
+		UInt32      price;GData::ItemBaseType::price90,1711
+		UInt16      reqLev;reqLev91,1732
+		UInt16      reqLev;GData::ItemBaseType::reqLev91,1732
+		UInt16      vLev;vLev92,1754
+		UInt16      vLev;GData::ItemBaseType::vLev92,1754
+		UInt8		quality;quality93,1774
+		UInt8		quality;GData::ItemBaseType::quality93,1774
+		UInt16      maxQuantity;maxQuantity94,1792
+		UInt16      maxQuantity;GData::ItemBaseType::maxQuantity94,1792
+		UInt8       bindType;bindType95,1819
+		UInt8       bindType;GData::ItemBaseType::bindType95,1819
+		UInt16      energy;energy96,1843
+		UInt16      energy;GData::ItemBaseType::energy96,1843
+		UInt32      trumpExp;trumpExp97,1865
+		UInt32      trumpExp;GData::ItemBaseType::trumpExp97,1865
+		UInt16      data;data98,1889
+		UInt16      data;GData::ItemBaseType::data98,1889
+		UInt8       career;career99,1909
+		UInt8       career;GData::ItemBaseType::career99,1909
+		float       salePriceUp;salePriceUp100,1931
+		float       salePriceUp;GData::ItemBaseType::salePriceUp100,1931
+		ItemBaseType(UInt64 id, std::string& n = "") : ObjectBaseT<UInt64>(id, n) {}ItemBaseType102,1959
+		ItemBaseType(UInt64 id, std::string& n = "") : ObjectBaseT<UInt64>(id, n) {}GData::ItemBaseType::ItemBaseType102,1959
+		virtual ~ItemBaseType() {}~ItemBaseType103,2038
+		virtual ~ItemBaseType() {}GData::ItemBaseType::~ItemBaseType103,2038
+		bool operator <(const ItemBaseType& other) const  {return getId() < other.getId();}operator <104,2067
+		bool operator <(const ItemBaseType& other) const  {return getId() < other.getId();}GData::ItemBaseType::operator <104,2067
+		bool operator ==(const ItemBaseType& other) const {return getId() == other.getId();}operator ==105,2153
+		bool operator ==(const ItemBaseType& other) const {return getId() == other.getId();}GData::ItemBaseType::operator ==105,2153
+		inline UInt16 Size(UInt16 num) constSize106,2240
+		inline UInt16 Size(UInt16 num) constGData::ItemBaseType::Size106,2240
+	struct ItemNormalType : public ItemBaseTypeItemNormalType116,2425
+	struct ItemNormalType : public ItemBaseTypeGData::ItemNormalType116,2425
+		ItemNormalType(UInt32 id = 0, const std::string n = "") : ItemBaseType(id, n) {}ItemNormalType118,2473
+		ItemNormalType(UInt32 id = 0, const std::string n = "") : ItemBaseType(id, n) {}GData::ItemNormalType::ItemNormalType118,2473
+		virtual ~ItemNormalType() {}~ItemNormalType119,2556
+		virtual ~ItemNormalType() {}GData::ItemNormalType::~ItemNormalType119,2556
+	struct ItemGemType : public ItemBaseTypeItemGemType122,2592
+	struct ItemGemType : public ItemBaseTypeGData::ItemGemType122,2592
+		const AttrExtra* attrExtra;attrExtra124,2637
+		const AttrExtra* attrExtra;GData::ItemGemType::attrExtra124,2637
+		ItemGemType(UInt32 id, std::string n = "", UInt32 attrId = 0) : ItemBaseType(id, n)ItemGemType125,2667
+		ItemGemType(UInt32 id, std::string n = "", UInt32 attrId = 0) : ItemBaseType(id, n)GData::ItemGemType::ItemGemType125,2667
+		virtual ~ItemGemType() {}~ItemGemType134,2885
+		virtual ~ItemGemType() {}GData::ItemGemType::~ItemGemType134,2885
+	struct ItemEquipType : public ItemBaseTypeItemEquipType137,2918
+	struct ItemEquipType : public ItemBaseTypeGData::ItemEquipType137,2918
+		const AttrExtra* attrExtra;attrExtra139,2965
+		const AttrExtra* attrExtra;GData::ItemEquipType::attrExtra139,2965
+		bool fix;fix140,2995
+		bool fix;GData::ItemEquipType::fix140,2995
+		ItemEquipType(UInt32 id, std::string n = "", UInt32 attrId = 0) : ItemBaseType(id, n), fix(false)ItemEquipType142,3008
+		ItemEquipType(UInt32 id, std::string n = "", UInt32 attrId = 0) : ItemBaseType(id, n), fix(false)GData::ItemEquipType::ItemEquipType142,3008
+		void setAttr(const AttrExtra* attr, bool fix = false)setAttr151,3241
+		void setAttr(const AttrExtra* attr, bool fix = false)GData::ItemEquipType::setAttr151,3241
+		virtual ~ItemEquipType()~ItemEquipType159,3386
+		virtual ~ItemEquipType()GData::ItemEquipType::~ItemEquipType159,3386
+	struct ItemWeaponType : public ItemEquipTypeItemWeaponType166,3472
+	struct ItemWeaponType : public ItemEquipTypeGData::ItemWeaponType166,3472
+		ItemWeaponType(UInt32 id = 0, std::string n = "", UInt32 attrId = 0) : ItemWeaponType(id, name, attrId) {}ItemWeaponType168,3521
+		ItemWeaponType(UInt32 id = 0, std::string n = "", UInt32 attrId = 0) : ItemWeaponType(id, name, attrId) {}GData::ItemWeaponType::ItemWeaponType168,3521
+	struct ItemEquipSetType:ItemEquipSetType171,3635
+	struct ItemEquipSetType:GData::ItemEquipSetType171,3635
+		const AttrExtra* attrExtra[4];attrExtra174,3687
+		const AttrExtra* attrExtra[4];GData::ItemEquipSetType::attrExtra174,3687
+		ItemEquipSetType(UInt32 id = 0, std::string n = "") : ObjectBaseT<>(id, n) {}ItemEquipSetType176,3721
+		ItemEquipSetType(UInt32 id = 0, std::string n = "") : ObjectBaseT<>(id, n) {}GData::ItemEquipSetType::ItemEquipSetType176,3721
+	typedef ObjectListT<ItemBaseType> ItemBaseTypeManager;ItemBaseTypeManager179,3806
+	typedef ObjectListT<ItemBaseType> ItemBaseTypeManager;GData::ItemBaseTypeManager179,3806
+	typedef ObjectMapT<ItemBaseType, std::string> ItemBaseTypeNameManager;ItemBaseTypeNameManager180,3862
+	typedef ObjectMapT<ItemBaseType, std::string> ItemBaseTypeNameManager;GData::ItemBaseTypeNameManager180,3862
+	typedef ObjectListT<ItemEquipSetType> ItemEquipSetTypeManager;ItemEquipSetTypeManager185,4134
+	typedef ObjectListT<ItemEquipSetType> ItemEquipSetTypeManager;GData::ItemEquipSetTypeManager185,4134
+#define ITEM_BIND_CHECK(ITEM_BIND_CHECK188,4247
+
+/home/jingsia/Tmp/ProjectA/./Core/GData/ObjectManager.h,50
+#define _OBJECTMANAGER_H__OBJECTMANAGER_H_9,299
+
+/home/jingsia/Tmp/ProjectA/./Core/GData/AttrExtra.h,2267
+#define _ATTREXTRA_H__ATTREXTRA_H_9,291
+namespace GDataGData11,314
+	class AttrExtraAttrExtra15,352
+	class AttrExtraGData::AttrExtra15,352
+		AttrExtra() : strength(0), physique(0), agility(0), intelligence(0), will(0), soul(0),AttrExtra17,372
+		AttrExtra() : strength(0), physique(0), agility(0), intelligence(0), will(0), soul(0),GData::AttrExtra::AttrExtra17,372
+		AttrExtra& operator += (const AttrExtra& other)operator +=25,730
+		AttrExtra& operator += (const AttrExtra& other)GData::AttrExtra::operator +=25,730
+		AttrExtra& operator *= (const GObject::AttrFactor& af)operator *=33,862
+		AttrExtra& operator *= (const GObject::AttrFactor& af)GData::AttrExtra::operator *=33,862
+		AttrExtra& operator += (const CittaEffect& other)operator +=41,998
+		AttrExtra& operator += (const CittaEffect& other)GData::AttrExtra::operator +=41,998
+		AttrExtra operator *(const float rate) constoperator *49,1121
+		AttrExtra operator *(const float rate) constGData::AttrExtra::operator *49,1121
+		float strength;strength59,1282
+		float strength;GData::AttrExtra::strength59,1282
+		float physique;physique60,1300
+		float physique;GData::AttrExtra::physique60,1300
+		std::vector<const SkillBase*> skills;skills63,1337
+		std::vector<const SkillBase*> skills;GData::AttrExtra::skills63,1337
+	struct AttrExtraItem:AttrExtraItem66,1382
+	struct AttrExtraItem:GData::AttrExtraItem66,1382
+		AttrExtraItem(UInt32 idx): ObjectBaseNT<>(idx) {}AttrExtraItem69,1432
+		AttrExtraItem(UInt32 idx): ObjectBaseNT<>(idx) {}GData::AttrExtraItem::AttrExtraItem69,1432
+		AttrExtra _extra;_extra70,1484
+		AttrExtra _extra;GData::AttrExtraItem::_extra70,1484
+		inline AttrExtra* operator ->() {return &_extra;}operator ->71,1504
+		inline AttrExtra* operator ->() {return &_extra;}GData::AttrExtraItem::operator ->71,1504
+		inline operator const AttrEtra*() const {return &_extra; }operator const AttrEtra*72,1556
+		inline operator const AttrEtra*() const {return &_extra; }GData::AttrExtraItem::operator const AttrEtra*72,1556
+	typedef ObjectListT<AttrExtraItem> AttrExtraManager;AttrExtraManager75,1622
+	typedef ObjectListT<AttrExtraItem> AttrExtraManager;GData::AttrExtraManager75,1622
+#define attrExtraManager attrExtraManager77,1677
+
+/home/jingsia/Tmp/ProjectA/./Core/MsgHandler/MsgTypes.h,1791
+#define _MSGTYPES_H__MSGTYPES_H_8,288
+namespace GObjectGObject12,337
+struct MsgHdrMsgHdr17,375
+	MsgHdr() : desWorkerID(0), cmdID(0), bodyLen(0) {}MsgHdr19,391
+	MsgHdr() : desWorkerID(0), cmdID(0), bodyLen(0) {}MsgHdr::MsgHdr19,391
+	MsgHdr(UInt32 id, UInt8 did, UInt32 blen) : desWorkerID(did), cmdID(id), bodyLen(blen) {}MsgHdr20,443
+	MsgHdr(UInt32 id, UInt8 did, UInt32 blen) : desWorkerID(did), cmdID(id), bodyLen(blen) {}MsgHdr::MsgHdr20,443
+	UInt8 desWorkerID;desWorkerID21,534
+	UInt8 desWorkerID;MsgHdr::desWorkerID21,534
+	UInt32 cmdID;cmdID22,554
+	UInt32 cmdID;MsgHdr::cmdID22,554
+	UInt32 bodyLen;bodyLen23,569
+	UInt32 bodyLen;MsgHdr::bodyLen23,569
+struct GameMsgHdrGameMsgHdr26,590
+	GameMsgHdr() : player(NULL) {}GameMsgHdr28,610
+	GameMsgHdr() : player(NULL) {}GameMsgHdr::GameMsgHdr28,610
+	GameMsgHdr(UInt32 id, UInt8 did, GObject::Player * pl, UInt32 blen) :GameMsgHdr29,642
+	GameMsgHdr(UInt32 id, UInt8 did, GObject::Player * pl, UInt32 blen) :GameMsgHdr::GameMsgHdr29,642
+	MsgHdr msgHdr;msgHdr32,753
+	MsgHdr msgHdr;GameMsgHdr::msgHdr32,753
+	GObject::Player * player;player33,769
+	GObject::Player * player;GameMsgHdr::player33,769
+struct LoginMsgHdrLoginMsgHdr36,800
+	LoginMsgHdr() :LoginMsgHdr38,821
+	LoginMsgHdr() :LoginMsgHdr::LoginMsgHdr38,821
+	LoginMsgHdr(UInt32 id, UInt8 did, UInt64 pid, int sess, UInt32 blen):LoginMsgHdr41,870
+	LoginMsgHdr(UInt32 id, UInt8 did, UInt64 pid, int sess, UInt32 blen):LoginMsgHdr::LoginMsgHdr41,870
+	MsgHdr msgHdr;msgHdr43,1000
+	MsgHdr msgHdr;LoginMsgHdr::msgHdr43,1000
+	UInt64 playerID;playerID44,1016
+	UInt64 playerID;LoginMsgHdr::playerID44,1016
+	int sessionID;sessionID45,1034
+	int sessionID;LoginMsgHdr::sessionID45,1034
+typedef Queue<MsgHdr *> MsgQueue;MsgQueue48,1054
