@@ -1,7 +1,6 @@
 local x = 1
 local y = 2
 
-
 for i=1,100 do
 	local sum = 0
 
